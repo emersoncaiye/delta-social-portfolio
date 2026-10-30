@@ -144,6 +144,28 @@ ul.tick li::before{content:"—";position:absolute;left:0;color:var(--rust)}
 .num-list li::before{content:counter(n);position:absolute;left:0;top:1px;font-family:Georgia,serif;font-size:12px;color:var(--rust);width:20px;height:20px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
 .note{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.7;border-top:1px dashed var(--line);padding-top:12px}
 
+/* identity / tldr / role */
+.who{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:30px}
+.who-l{flex:1;min-width:280px}
+.who .role{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:8px}
+.who .name{font-family:Georgia,serif;font-size:27px;line-height:1.2}
+.who .pos{font-size:15px;color:var(--ink2);max-width:660px;line-height:1.75;margin-top:10px}
+.who .pos b{color:var(--ink)}
+.who .contact{margin-left:auto;font-size:12.5px;color:var(--muted);line-height:1.9;text-align:right}
+.tldr{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--ink);padding:28px 32px}
+.tldr .lb{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.tldr .q{font-family:Georgia,serif;font-size:clamp(17px,2.2vw,21px);line-height:1.6;margin-bottom:20px}
+.tldr .q b{color:var(--rust)}
+.tldr ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px 28px;margin-bottom:22px}
+.tldr li{font-size:13.5px;color:var(--ink2);line-height:1.7;padding-left:16px;position:relative}
+.tldr li::before{content:"—";position:absolute;left:0;color:var(--rust)}
+.chain{display:flex;flex-wrap:wrap;gap:8px;border-top:1px dashed var(--line);padding-top:18px}
+.chain a{font-size:12px;text-decoration:none;color:var(--ink2);border:1px solid var(--line);padding:5px 11px;background:var(--bone)}
+.chain a:hover{border-color:var(--rust);color:var(--rust)}
+.chain .lbx{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);align-self:center;margin-right:4px}
+.takeaway{background:rgba(173,79,40,.06);border:1px solid rgba(173,79,40,.28);padding:14px 18px;margin-bottom:22px;font-size:14px;color:var(--ink2)}
+.takeaway b{color:var(--rust);font-size:11px;letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:6px}
+
 /* x mock */
 .xwrap{max-width:620px;width:100%;background:#15202b;border:1px solid #22303c;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.16)}
 .xbar{display:flex;align-items:center;gap:16px;padding:11px 18px;border-bottom:1px solid #22303c}
@@ -256,6 +278,7 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
 <nav>
   <div class="wrap">
     <span class="brand">Delta / 三角洲计划</span>
+    <a href="#tldr">30 秒看板</a>
     <a href="#brief">Brief</a>
     <a href="#brand">品牌拆解</a>
     <a href="#comp">竞品拆解</a>
@@ -270,23 +293,75 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
 
 <header class="hero">
   <div class="wrap">
-    <div class="kicker">Portfolio · Overseas Social Media · Spec Work</div>
+
+    <div class="who">
+      <div class="who-l">
+        <div class="role">Target Role · Overseas Content &amp; Social Media Strategy</div>
+        <!-- ↓↓↓ 换成你的真实姓名 ↓↓↓ -->
+        <div class="name">Emerson · @emersoncaiye</div>
+        <!-- ↑↑↑ 换成你的真实姓名 ↑↑↑ -->
+        <p class="pos">
+          <b>求职方向：出海内容策略 / 海外社媒。</b>
+          我没有出海内容相关的工作经历，所以围绕自己创办的循环消费品牌 Delta，把这套海外社媒策略从头做了一遍：
+          <b>竞品定位 → 内容支柱 → 平台原生文案 → 发布节奏 → 数据验收</b>，全部独立完成。这份 Case 展示的就是这个过程。
+        </p>
+        <p class="pos" style="margin-top:9px;font-size:12.5px;color:var(--muted)">
+          独立完成：品牌哲学与审美框架 · 回流机制（7 天 / 30 天 / 90 天 / 1 年以上四档）与公益机制设计 · 用户定义 · 竞品拆解 · 内容支柱 · 9 条英文成稿 · 30 天排期
+        </p>
+      </div>
+      <!-- ↓↓↓ 换成你的邮箱 / 微信 / LinkedIn ↓↓↓ -->
+      <div class="contact">✉ your@email.com<br>WeChat: your_id<br>linkedin.com/in/yourname</div>
+    </div>
+
+    <div class="kicker">Case 01 · Social Media Strategy · Own Project</div>
     <h1>Moving doesn't mean<br>living <em>ugly</em>.</h1>
     <p class="lede">
-      Delta（三角洲计划）海外社媒内容策略提案。
-      品牌依据来自官方仓库 <code>emersoncaiye/Delta</code> 的 philosophy / aesthetic / for_whom / circularity / charity 原文。
+      Delta（三角洲计划）是我自己从 0 做的循环消费品牌，这是它的<b>海外社媒内容策略提案</b>。
+      品牌侧的 philosophy / aesthetic / for_whom / circularity / charity 全部由我撰写（<code>emersoncaiye/Delta</code>）。
       路径：品牌资产 → 三轴竞品找空白 → 4 个内容支柱 → 9 条平台原生内容 → 30 天排期 → 可执行优化方案。
     </p>
     <dl class="meta">
       <div><dt>Brand</dt><dd>Delta · Objects for a moving life</dd></div>
       <div><dt>ICP</dt><dd>搬得动，但不愿将就的人</dd></div>
       <div><dt>Platforms</dt><dd>IG · TikTok · Pinterest · X · Threads · Shorts · Reddit · Substack</dd></div>
-      <div><dt>Role</dt><dd>内容策略 + 文案 + 执行排期</dd></div>
+      <div><dt>项目性质</dt><dd>自有品牌 · 本人 develop（尚未上线，无真实账号数据）</dd></div>
       <div><dt>周期</dt><dd>0–30 天启动期</dd></div>
       <div><dt>交付</dt><dd>9 条内容 / 4 张 mock / 30 天计划 / 优化方案</dd></div>
     </dl>
   </div>
 </header>
+
+<!-- TL;DR -->
+<section id="tldr" style="padding:44px 0">
+  <div class="wrap">
+    <div class="tldr">
+      <div class="lb">30 秒看板</div>
+      <div class="q">
+        我为自己创办的循环消费品牌 Delta 制定了一套海外社媒策略。虽然我没有出海内容相关的工作经历，
+        但我通过这个项目尝试走完了从竞品定位、内容支柱搭建，到平台原生写法、发布节奏和数据验收指标的完整链路。
+      </div>
+      <ul>
+        <li><b>平台适配</b>：同一件物品（一盏回流台灯）写出 8 种形态——IG 是标准、TikTok 是经历、Pinterest 是搜索答案、Reddit 是经验帖。</li>
+        <li><b>策略判断</b>：竞品按「审美 / 移动 / 循环」三轴选，证明交点为空；ICP 三个排除项恰好对应三个竞品的用户，互为验证。</li>
+        <li><b>执行能力</b>：12 个母素材复用出 68 条发布，逐日排期到搬家高峰；每项交付标注是否独立完成与判断依据。</li>
+      </ul>
+      <div class="chain">
+        <span class="lbx">案例完整链路：</span>
+        <a href="#brief">背景目标</a>
+        <a href="#brand">品牌 + ICP</a>
+        <a href="#comp">竞品拆解</a>
+        <a href="#strategy">内容策略</a>
+        <a href="#content">9 条原生内容</a>
+        <a href="#mocks">4 张 mock</a>
+        <a href="#plan">30 天发布节奏</a>
+        <a href="#opt">指标 + A/B 框架</a>
+      </div>
+    </div>
+    <div class="note" style="border-top:none;padding-top:14px">
+      自有品牌项目：Delta 由我本人 develop（仓库 <code>emersoncaiye/Delta</code> 为品牌原文），非客户委托。品牌尚未上线，因此<strong>无真实账号后台数据</strong>——竞品量级为公开可见估算，KPI 为同品类新号的经验基线，上线实测后需重设。
+    </div>
+  </div>
+</section>
 
 <!-- 00 -->
 <section id="brief">
@@ -317,6 +392,44 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
           <li><b>审美无法空谈</b>：说"我有品味"没人信，必须把标准公开成可判断的东西</li>
         </ul>
       </div>
+    </div>
+    <div class="takeaway">
+      <b>这一段的一句话结论</b>
+      品牌最大的风险不是没流量，是<strong>被归类错</strong>。所以 30 天目标的第一条不是「涨粉」，是「让海外用户能正确复述 Delta 是什么」——这条决定了后面所有 KPI 的排序。
+    </div>
+
+    <h3>背景目标（Objective &amp; Key Results）</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>层级</th><th>内容</th><th>为什么这样定</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>Objective</b></td>
+            <td>30 天内让海外目标用户<b>正确理解</b> Delta「不是二手店、不是租赁」，并产生<b>首次购买</b>与<b>首次回流</b>。</td>
+            <td>品类不存在 → 先解决认知，再谈转化；回流是新品牌独有的验证点</td>
+          </tr>
+          <tr>
+            <td><b>KR1 理解</b></td>
+            <td>评论区出现「? / how does it work / is this rental」以外的机制描述 ≥30%；X Thread 被外部引用 ≥10 次</td>
+            <td>可直接观测「定义权是否被抢到」，不需要后台数据</td>
+          </tr>
+          <tr>
+            <td><b>KR2 触达</b></td>
+            <td>Reels / TikTok 非粉丝触达占比 ≥60%；Pinterest 出站 CTR ≥1%</td>
+            <td>判断是否真在破圈，以及长尾搜索是否真的开始产生流量</td>
+          </tr>
+          <tr>
+            <td><b>KR3 转化</b></td>
+            <td>bio 链接点击率 ≥2%；邮件订阅净增 ≥300；<b>回流发起数 / 售出量 ≥15%</b></td>
+            <td>前两项是常规电商指标，最后一项是这套机制成不成立的唯一证明</td>
+          </tr>
+          <tr>
+            <td><b>约束条件</b></td>
+            <td>零广告预算；单人兼职执行；每周仅 1 个拍摄窗口；品牌方需提供物品 + 履历 + 季度捐赠数据</td>
+            <td>决定了「母素材复用」和「Threads 前置筛选」是被迫也是最优解</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="note">
       数据说明：竞品账号量级为公开可见的估算区间，用于判断内容投入规模，不作精确引用；KPI 基线为同品类新号的行业经验值，上线实测后需重设。
@@ -405,6 +518,10 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
       「只想要临时方案」= Feather 用户，「只想捡漏」= Depop 用户，「需要懂行才配用」= 品牌明确拒绝的精英消费者。
       人群定义和竞品选择互相印证，说明这两件事都做对了。
     </p>
+    <div class="takeaway">
+      <b>这一段的一句话结论</b>
+      三个竞品各占一条 Delta 需要的轴，<strong>「有标准地拥有 + 有尊严地放手」这个交点是空的</strong>——内容支柱不是从灵感来的，是从这张空位表推出来的。
+    </div>
 
     <div class="card">
       <div class="comp-head">
@@ -463,7 +580,7 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
           <tr><td>退出原因</td><td>无</td><td>合同到期</td><td>坏了才修</td><td><b>搬家 / 审美变了 / 不需要了</b></td></tr>
           <tr><td>人生场景</td><td>穿搭</td><td>搬家、首间公寓</td><td>户外使用</td><td><b>流动的生活</b></td></tr>
           <tr><td>公益</td><td>无</td><td>无</td><td>环保（非捐赠）</td><td><b>动物救助 + 儿童阅读，季度公示</b></td></tr>
-          <tr><td>价格带</td><td>低</td><td>月费中等</td><td>中高</td><td><b>$5–100 的「聪明定价」</b></td></tr>
+          <tr><td>价格带</td><td>低</td><td>月费中等</td><td>中高</td><td><b>「聪明定价」：不是最低价，是价实（价格随单品单独设定）</b></td></tr>
         </tbody>
       </table>
     </div>
@@ -488,6 +605,10 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
       支柱解决「说什么」，平台角色解决「怎么说」。同一个母素材在 8 个平台要有 8 种写法，而不是一条视频全网同步。
     </p>
 
+    <div class="takeaway">
+      <b>这一段的一句话结论</b>
+      支柱决定「说什么」，平台角色决定「怎么说」；<strong>判断每个平台值不值得投入的标准只有一个：它在用户决策链路里能不能单独完成一件事</strong>——Pinterest 负责被发现，X 负责被定义，Substack 负责被相信。
+    </div>
     <div class="grid2">
       <div class="pillar">
         <div class="pno">PILLAR 01</div>
@@ -549,6 +670,11 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
       每条都标注了<strong>「判断」</strong>——为什么在这个平台用这个形态、这个钩子、这个 CTA。
       平台适配不是把同一句话换个排版，是换叙事单位和情绪曲线。
     </p>
+    <div class="takeaway">
+      <b>阅读提示</b>
+      文案中出现的具体物品与金额（如 <code>$68</code>、<code>Under $100</code>）为<strong>示例占位</strong>，用于演示定价语言的分寸感；正式发布前替换为真实物品与其真实价格。
+      Delta 的定价为逐件设定、不走价格带，因此策略层面<strong>刻意不给出区间</strong>——「not cheap, fairly priced」是立场，不是折扣承诺。
+    </div>
 
     <div class="tbl-wrap" style="margin-bottom:32px">
       <table>
@@ -1117,6 +1243,25 @@ Subject: the lamp that moved four times (and came back)</div></dd></dl>
       </table>
     </div>
 
+    <h3 style="margin-top:44px">验证路径：数据触发的决策规则</h3>
+    <p style="font-size:13.5px;color:var(--ink2);margin-bottom:14px">
+      指标不达标时怎么办，必须提前写死——否则优化就变成「再看感觉」。以下是上线后直接照执行的 if–then 表。
+    </p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>观测信号</th><th>阈值</th><th>触发动作</th><th>对应的 A/B</th></tr></thead>
+        <tbody>
+          <tr><td>Reels 3 秒留存低</td><td>&lt;65%</td><td>重做钩子：把结论挪到第 1 帧画面，不做铺垫</td><td>测试 1</td></tr>
+          <tr><td>完播高但主页访问低</td><td>完播 ≥45% 且点击 &lt;1%</td><td>内容被当成娱乐消费 → 换成第一人称叙事，结尾留具体物件悬念</td><td>测试 2 / 5</td></tr>
+          <tr><td>保存率高、点赞低</td><td>保存 ≥1.5% 且点赞 &lt;1%</td><td><b>这说明策略生效</b>（工具型内容正常表现），加做搬家清单类胡萝卜续集</td><td>—</td></tr>
+          <tr><td>评论区仍问「这是不是租赁」</td><td>误解类提问 &gt;20%</td><td>把 C5 对照图做成每条内容的结尾固定卡，定义内容提前重发一轮</td><td>—</td></tr>
+          <tr><td>Pinterest 出站 CTR 低</td><td>&lt;0.8%</td><td>标题重写为纯搜索词、去掉所有形容词；测试不同的 Pin 高度</td><td>测试 7</td></tr>
+          <tr><td>Reddit upvote ratio 低</td><td>&lt;80%</td><td><b>停止该 subreddit 投放，不删帖</b>；语气重写为纯经验后再换一个社区</td><td>测试 8</td></tr>
+          <tr><td>回流发起数几乎为零</td><td>&lt;5%</td><td>机制没被理解 → Exit 类内容权重提到 50%，并在 DTC 物流环节排查成本</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <h3 style="margin-top:44px">90 天路线</h3>
     <ol class="num-list">
       <li><b>Day 0–30 · 抢定义</b>：铺满 4 个支柱，产出 12 个母素材 / 68 条发布。核心目标是找出哪类钩子在起效，并确认用户是否已能正确复述「Delta 是什么」——可用评论区语义抽查判断，不求转化。</li>
@@ -1140,11 +1285,14 @@ Subject: the lamp that moved four times (and came back)</div></dd></dl>
   </div>
 </section>
 
-<!-- 07 -->
+<!-- 08 -->
 <section id="proof" style="border-bottom:none">
   <div class="wrap">
-    <div class="sec-no">08 — WHY ME</div>
-    <h2>三个能力证明</h2>
+    <div class="sec-no">08 — WHAT THIS PROVES</div>
+    <h2>这份 Case 想证明的三件事</h2>
+    <p class="sec-intro" style="margin-bottom:18px">
+      不是履历，是交付物本身：下面三件事我无法用「我有 X 年经验」来证明，所以把判断写进了这份 Case 里，欢迎逐条追问为什么这么做。
+    </p>
     <div class="proof">
       <div class="card">
         <span class="pill sage">01 · 平台适配</span>
@@ -1183,7 +1331,7 @@ Subject: the lamp that moved four times (and came back)</div></dd></dl>
 <footer>
   <div class="wrap">
     <div class="serif">Delta · 海外社媒内容策略提案</div>
-    <div>Spec work · 品牌依据来自 emersoncaiye/Delta 仓库原文（philosophy / aesthetic / for_whom / circularity / charity / story）。竞品量级为公开可见估算，KPI 基线为同品类经验值，实测后需重设。</div>
+    <div>Delta 为我本人 develop 的自有品牌项目（仓库 emersoncaiye/Delta 内含 philosophy / aesthetic / for_whom / circularity / charity / story 原文），非客户委托；品牌尚未上线，无真实账号数据。竞品量级为公开可见估算，KPI 基线为同品类经验值，实测后需重设。</div>
     <div class="tag-line">
       <span>Strategy</span><span>Copywriting</span><span>Content Ops</span><span>Analytics</span>
     </div>
