@@ -271,6 +271,9 @@ footer{padding:60px 0 80px;color:var(--muted);font-size:12.5px}
 footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
 .tag-line{display:flex;gap:24px;flex-wrap:wrap;margin-top:14px}
 @media print{nav{display:none}body{background:#fff}}
+.proof .ev{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:11.5px;color:var(--muted);letter-spacing:.03em}
+.proof .ev a{color:var(--rust);text-decoration:none;border-bottom:1px solid var(--rust);margin-right:12px}
+.proof .ev a:hover{color:var(--ink);border-color:var(--ink)}
 .tg{display:inline-block;font-size:10.5px;letter-spacing:.06em;padding:1px 7px;border-radius:20px;margin-right:6px;vertical-align:middle;white-space:nowrap}
 .tg.ref{background:#eceff2;color:#5a6873;border:1px solid #d8dee4}
 .tg.asm{background:#fdf1e6;color:#9a5a22;border:1px solid #f2ddc2}
@@ -291,7 +294,7 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
     <a href="#mocks">4 张 mock</a>
     <a href="#plan">30 天计划</a>
     <a href="#opt">优化方案</a>
-    <a href="#proof">能力证明</a>
+    <a href="#proof">为什么能迁移</a>
   </div>
 </nav>
 
@@ -1348,10 +1351,12 @@ Subject: the lamp that moved four times (and came back)</div></dd></dl>
 <!-- 08 -->
 <section id="proof" style="border-bottom:none">
   <div class="wrap">
-    <div class="sec-no">08 — WHAT THIS PROVES</div>
-    <h2>这份 Case 想证明的三件事</h2>
+    <div class="sec-no">08 — WHAT TRANSFERS</div>
+    <h2>为什么这套判断可以用在别的品牌上</h2>
     <p class="sec-intro" style="margin-bottom:18px">
-      不是履历，是交付物本身：下面三件事我无法用「我有 X 年经验」来证明，所以把判断写进了这份 Case 里，欢迎逐条追问为什么这么做。
+      这份 Case 是围绕 Delta 一个品牌做的，但里面真正值钱的三件事不依赖这个品牌：
+      怎么按平台重写同一件事、怎么从竞品空白反推优先级、怎么把策略落成可执行排期。
+      这三条我拿不出「X 年经验」当凭据，所以每一步判断的依据都留在了前面的章节里。
     </p>
     <div class="proof">
       <div class="card">
@@ -1370,7 +1375,7 @@ Subject: the lamp that moved four times (and came back)</div></dd></dl>
         <h3 style="margin-top:12px">从空白反推支柱</h3>
         <p style="font-size:13.5px;color:var(--ink2)">
           竞品按「审美 / 移动 / 循环」三条轴选，证明交点为空；
-          由此推出第一个月的第一优先级不是涨粉而是<strong>抢定义权</strong>（C5），
+          由此推出第一个月的第一优先级不是涨粉而是<strong>抢定义权</strong>，
           并把仓库里那句 <i>because you're moving</i> 提升为一整个内容场景——
           搬家既是机制理由，也是唯一能对齐外部日历的内容节奏（毕业季 / 开学季 / 换约季）。
         </p>
