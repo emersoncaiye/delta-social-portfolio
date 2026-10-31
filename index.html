@@ -265,6 +265,50 @@ ul.tick li::before{content:"—";position:absolute;left:0;color:var(--rust)}
 .ptmeta h5{font-family:Georgia,serif;font-size:13px;color:var(--ink);margin-bottom:6px}
 .ptmeta .kw{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
 .ptmeta .kw span{font-size:10.5px;border:1px solid var(--line);padding:2px 8px;color:var(--ink2)}
+/* ig carousel mock */
+.igcwrap{width:100%;max-width:540px}
+.igc-top{display:flex;align-items:center;gap:9px;padding:10px 13px;background:#fff;border:1px solid var(--line2)}
+.igc-strip{display:flex;gap:11px;overflow-x:auto;padding:13px;background:#fff;border:1px solid var(--line2);border-top:none;border-bottom:none}
+.igc-cell{flex:none;width:126px}
+.igc-f{position:relative;aspect-ratio:1/1;border:1px solid var(--line2);display:flex;flex-direction:column;justify-content:flex-end;padding:11px;overflow:hidden;background:linear-gradient(170deg,#2f2a26,#54473c)}
+.igc-f .pg{position:absolute;top:8px;left:9px;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.6)}
+.igc-f .dot{position:absolute;left:11px;right:11px;bottom:52%;height:1px;background:rgba(255,255,255,.16)}
+.igc-f h6{font-family:Georgia,serif;font-size:13px;line-height:1.34;color:#fff;font-weight:400}
+.igc-f h6 em{font-style:italic;color:#ffd7a5}
+.igc-f p{font-size:9.5px;line-height:1.55;color:rgba(255,255,255,.72);margin-top:5px}
+.igc-f .tickq{margin-bottom:8px;font-size:10px;color:#9fd8ae;letter-spacing:.04em}
+.igc-f .glowx{position:absolute;left:50%;top:30%;width:96px;height:96px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,214,152,.85),rgba(255,190,110,.2) 45%,transparent 70%)}
+.igc-f.last{background:linear-gradient(170deg,#3a332e,#63513f)}
+.igc-lb{font-size:10px;color:var(--muted);text-align:center;margin-top:7px;letter-spacing:.04em}
+.igc-foot{display:flex;align-items:center;gap:14px;padding:10px 13px;background:#fff;border:1px solid var(--line2);font-size:11px;color:var(--muted)}
+.igc-foot .dots{display:flex;gap:5px}
+.igc-foot .dots i{width:5px;height:5px;border-radius:50%;background:var(--line)}
+.igc-foot .dots i.on{background:var(--rust)}
+.igc-foot b{color:var(--ink);font-weight:600}
+/* reddit + substack mock */
+.rdwrap{width:100%;max-width:500px;background:#fff;border:1px solid var(--line2);border-radius:5px}
+.rdtop{display:flex;align-items:center;gap:7px;padding:9px 14px;border-bottom:1px solid var(--line2);background:#f6f4ef;font-size:11px;color:var(--muted)}
+.rdtop .rdsub{font-weight:600;color:var(--ink);font-size:12px}
+.rdbody{display:grid;grid-template-columns:32px 1fr;gap:14px;padding:14px 16px}
+.rdvote{display:grid;justify-items:center;gap:3px;color:var(--muted);font-size:10.5px}
+.rdvote .up{font-size:13px;color:var(--rust)}
+.rdmeta{display:flex;gap:6px;font-size:11px;color:var(--muted)}
+.rdtitle{font-family:Georgia,serif;font-size:17px;line-height:1.32;margin:7px 0 10px}
+.rdtext{font-size:12.5px;line-height:1.75;color:var(--ink2)}
+.rdtext p{margin-bottom:9px}
+.rdwarn{margin:12px 0 0;padding:10px 12px;background:#fdf6ec;border-left:3px solid var(--rust);font-size:11.5px;line-height:1.6;color:var(--ink2)}
+.rdacts{margin-top:13px;padding-top:10px;border-top:1px dashed var(--line2);display:flex;gap:18px;font-size:11px;color:var(--muted)}
+.rdtag{margin-top:10px;font-size:10.5px;color:var(--muted);letter-spacing:.08em}
+.sswrap{width:100%;max-width:500px;background:#fff;border:1px solid var(--line2)}
+.ssmail{padding:12px 18px;background:#f6f4ef;border-bottom:1px solid var(--line2)}
+.ssmail b{font-family:Georgia,serif;font-size:15.5px;display:block;margin-bottom:4px}
+.ssmail div{font-size:11.5px;color:var(--muted)}
+.sskicker{margin:16px 18px 0;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--rust)}
+.sshero{margin:10px 18px 0;height:118px;background:linear-gradient(160deg,#efe7d9,#dcd0bd);display:flex;align-items:center;justify-content:center;font-size:11px;color:#8b8172}
+.sstitle{font-family:Georgia,serif;font-size:20px;line-height:1.3;margin:16px 18px 10px}
+.sstext{font-size:12.5px;line-height:1.8;color:var(--ink2);margin:0 18px}
+.sspull{margin:14px 18px;padding:12px 14px;border-left:3px solid var(--sage);background:#f4f7f4;font-family:Georgia,serif;font-size:13.5px;line-height:1.6}
+.ssfoot{margin-top:16px;border-top:1px dashed var(--line2);padding:12px 18px;font-size:11px;color:var(--muted);line-height:1.7}
 .proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .proof .card{border-top:2px solid var(--sage)}
 footer{padding:60px 0 80px;color:var(--muted);font-size:12.5px}
@@ -291,7 +335,7 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
     <a href="#comp">竞品拆解</a>
     <a href="#strategy">策略框架</a>
     <a href="#content">9 条内容</a>
-    <a href="#mocks">4 张 mock</a>
+    <a href="#mocks">Mock</a>
     <a href="#plan">30 天计划</a>
     <a href="#opt">优化方案</a>
     <a href="#proof">为什么能迁移</a>
@@ -333,7 +377,7 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
       <div><dt>Platforms</dt><dd>IG · TikTok · Pinterest · X · Threads · Shorts · Reddit · Substack</dd></div>
       <div><dt>项目性质</dt><dd>自有品牌 · 本人 develop（尚未上线，无真实账号数据）</dd></div>
       <div><dt>周期</dt><dd>0–30 天启动期</dd></div>
-      <div><dt>交付</dt><dd>9 条内容 / 4 张 mock / 30 天计划 / 优化方案</dd></div>
+      <div><dt>交付</dt><dd>9 条内容 / 7 张 mock / 30 天计划 / 优化方案</dd></div>
     </dl>
   </div>
 </header>
@@ -355,7 +399,7 @@ footer .serif{font-size:15px;color:var(--ink);margin-bottom:10px}
         <a href="#comp">竞品拆解</a>
         <a href="#strategy">内容策略</a>
         <a href="#content">9 条原生内容</a>
-        <a href="#mocks">4 张 mock</a>
+        <a href="#mocks">Mock</a>
         <a href="#plan">30 天发布节奏</a>
         <a href="#opt">指标 + A/B 框架</a>
       </div>
@@ -869,10 +913,11 @@ Subject: the lamp that moved four times (and came back)</div></dd></dl>
 <section id="mocks">
   <div class="wrap">
     <div class="sec-no">05 — MOCKUPS</div>
-    <h2>4 张视觉 mock</h2>
+    <h2>视觉 mock</h2>
     <p class="sec-intro">
-      同一件东西（一盏回流台灯 / 一次搬家），在三个平台长出三种完全不同的样子。
-      以下为<strong>版式 mock</strong>，用于说明构图、信息层级与钩子位置——画面为占位、数据为示意，不是成品设计。
+      同一件东西（一盏回流台灯 / 一次搬家），在不同平台会长成完全不同的样子。
+      以下七张<strong>版式 mock</strong>，用于说明构图、信息层级与钩子位置——画面为占位、数据为示意，不是成品设计。
+      其中四张（01 / 02 / 03 / 06）都来自<strong>同一批母素材</strong>（同一盏回流台灯、同一组搬家场景），可以横向对比「同一素材 → 不同钩子」具体怎么落地：一个是标准、一个是经历、一个是可被搜到的答案、一个是长文。
     </p>
 
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1052,12 +1097,160 @@ Subject: the lamp that moved four times (and came back)</div></dd></dl>
         </div>
       </div>
       <div class="mk-note"><b>版式判断</b>
-        这是<strong>30 天计划的 Day 1 首发</strong>，也是四张 mock 里唯一一张「不卖任何东西」的——因为第一个月的第一优先级是<strong>抢定义权</strong>：
+        这是<strong>30 天计划的 Day 1 首发</strong>，也是这批 mock 里最早该发的一张——因为第一个月的第一优先级是<strong>抢定义权</strong>：
         Delta 一旦被归进「二手店」或「租赁」两个已有抽屉，之后所有内容都在给别人做解释。<br>
         中间那张<strong>对照卡是整个 thread 的关键资产</strong>：它是唯一能被截图、被引用、被转发时不依赖上下文的部分，所以用橙色把 Delta 列标出——即使有人只读到这一张图，也能把差异带走。<br>
         第 4/5 条写清公益去向与季度公示，不是补充信息：这个圈层对漂绿极敏感，<strong>形容词只会招来质疑，金额 + 受助方 + 回执才产生信任</strong>。
       </div>
     </div>
+
+      <!-- MOCK 05 -->
+      <div class="mk" style="margin-top:22px">
+        <div class="mk-hd"><span class="mk-no">MOCK 05</span><span class="plat">Reddit · 经验帖</span><span class="ref">对应 C8</span></div>
+        <div class="mk-stage">
+          <div class="rdwrap">
+            <div class="rdtop"><span class="rdsub">r/ApartmentHacks</span><span>·</span><span>u/emersoncaiye</span><span style="margin-left:auto">Sort: Best</span></div>
+            <div class="rdbody">
+              <div class="rdvote"><span class="up">▲</span><b>1.4K</b><span>▼</span></div>
+              <div>
+                <div class="rdmeta"><span>u/emersoncaiye</span><span>· 7 hr. ago</span></div>
+                <div class="rdtitle">I've moved 5 times in 4 years — what I learned about furnishing a life that keeps moving</div>
+                <div class="rdtext">
+                  <p>Buy at a size that can travel. A lamp, a cup, a scarf. Not a bookcase.</p>
+                  <p>Stop buying "for now" things. They're the first to get thrown out, and they're the least enjoyable while you have them.</p>
+                  <p>Secondhand doesn't mean settling — but it does mean you need a filter. Mine is four questions: is it quiet, is it smartly priced, will it survive another owner, will I actually use it.</p>
+                  <p>The hardest part isn't buying. It's leaving. I've started only buying things I can send back.</p>
+                  <div class="rdwarn"><b>Disclosure</b> — I run a small curated secondhand project, which is why I think about this far too much. Not here to sell anything; happy to answer questions about the framework.</div>
+                </div>
+                <div class="rdacts"><span>312 comments</span><span>share</span><span>save</span></div>
+                <div class="rdtag">NO LINK · NO CTA · 不引流</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mk-note"><b>版式判断</b>
+          这张 mock 上没有 logo、没有产品图、没有链接——<strong>留白本身就是一个判断</strong>：Reddit 的排序会直接惩罚营销痕迹，upvote ratio 掉到 80% 以下就该换社区重写。<br>
+          disclosure 不藏在评论区而是放在正文末尾，因为这个社区反感的不是广告，而是<strong>伪装成经验的广告</strong>；主动写明身份反而换来讨论空间。<br>
+          「四道题」在这里的形态不是标准，而是<strong>「我用的筛选方法」</strong>——可以被反驳、可以被追问，所以它才活得下来，也才能被 Google 长期收录。
+        </div>
+      </div>
+
+      <!-- MOCK 06 -->
+      <div class="mk" style="margin-top:22px">
+        <div class="mk-hd"><span class="mk-no">MOCK 06</span><span class="plat">Substack · Newsletter</span><span class="ref">对应 C9 · Where It Went</span></div>
+        <div class="mk-stage">
+          <div class="sswrap">
+            <div class="ssmail">
+              <b>the lamp that moved four times (and came back)</b>
+              <div>Delta · Where It Went &nbsp;·&nbsp; Issue 07</div>
+            </div>
+            <div class="sskicker">WHERE IT WENT · OBJECT NO.007</div>
+            <div class="sshero">物件占位图 · 黄铜台灯</div>
+            <div class="sstitle">Object No.007: the lamp that moved four times</div>
+            <div class="sstext">
+              <p>It started at a flea market in March, went to a first apartment, then a different city, and came back to us last week.</p>
+              <p>What we did to it: re-wired, de-rusted, re-polished. What we kept: the dent on the base.</p>
+            </div>
+            <div class="sspull">Wear you can date is provenance. Wear you can't is damage.</div>
+            <div class="ssfoot">本季回流 N 件 · 捐赠 ¥X（动物救助 + 儿童阅读）· 回执链接<br>下周上新 3–5 件，订阅者提前 24 小时看</div>
+          </div>
+        </div>
+        <div class="mk-note"><b>版式判断</b>
+          唯一一张<strong>纵向叙事</strong>的 mock：标题不用钩子而用物件编号与时间（four moves），因为愿意读字的人不需要被钓。<br>
+          中间那句 pull quote 是全篇唯一的可截图单位——它顺带把「整备标准」（哪些痕迹该留）讲完了，比解释定义更快。<br>
+          页尾三行不能省：公益去向 + 金额 + 回执链接，是仓库里对用户的<strong>季度公示承诺</strong>，社媒贴不下，只能放在这里；「提前 24 小时」是唯一的订阅动机（孤品生意里，先看比打折有效）。
+        </div>
+      </div>
+
+      <!-- MOCK 07 -->
+      <div class="mk" style="margin-top:22px">
+        <div class="mk-hd"><span class="mk-no">MOCK 07</span><span class="plat">Instagram Carousel · 8 帧</span><span class="ref">对应 C2 · The Graceful Exit</span></div>
+        <div class="mk-stage">
+          <div class="igcwrap">
+            <div class="igc-top">
+              <span class="av" style="width:24px;height:24px;background:#171514;color:#fff">D</span>
+              <span style="font-size:11.5px;font-weight:600;color:var(--ink)">delta.objects</span>
+              <span style="font-size:10.5px;color:var(--muted);margin-left:auto">⋯</span>
+            </div>
+            <div class="igc-strip">
+              <div class="igc-cell">
+                <div class="igc-f"><span class="pg">1/8</span><div class="glowx"></div>
+                  <h6>Would it survive<br>your <em>move?</em></h6>
+                  <p>The moving box test</p>
+                </div>
+                <div class="igc-lb">封面 · 只给钩子</div>
+              </div>
+              <div class="igc-cell">
+                <div class="igc-f"><span class="pg">2/8</span><span class="dot"></span>
+                  <h6>If it doesn't fit the box,<br>it doesn't come with you.</h6>
+                  <p>规则一句话说完</p>
+                </div>
+                <div class="igc-lb">规则 · 建立标准</div>
+              </div>
+              <div class="igc-cell">
+                <div class="igc-f"><span class="pg">3/8</span><span class="dot"></span>
+                  <div class="tickq">Q1</div>
+                  <h6>Is it <em>quiet?</em></h6>
+                  <p>No logos. No noise.<br>It should disappear into a room.</p>
+                </div>
+                <div class="igc-lb">四道题 1/4</div>
+              </div>
+              <div class="igc-cell">
+                <div class="igc-f"><span class="pg">4/8</span><span class="dot"></span>
+                  <div class="tickq">Q2</div>
+                  <h6>Is it smartly priced?</h6>
+                  <p>$5–100.<br>Cheap enough to risk, good enough to keep.</p>
+                </div>
+                <div class="igc-lb">四道题 2/4</div>
+              </div>
+              <div class="igc-cell">
+                <div class="igc-f"><span class="pg">5/8</span><span class="dot"></span>
+                  <div class="tickq">Q3</div>
+                  <h6>Will it survive<br>another owner?</h6>
+                  <p>Solid, repairable, re-homeable.</p>
+                </div>
+                <div class="igc-lb">四道题 3/4</div>
+              </div>
+              <div class="igc-cell">
+                <div class="igc-f"><span class="pg">6/8</span><span class="dot"></span>
+                  <div class="tickq">Q4</div>
+                  <h6>Will I actually<br>use it?</h6>
+                  <p>Every week, or it's clutter with good taste.</p>
+                </div>
+                <div class="igc-lb">四道题 4/4</div>
+              </div>
+              <div class="igc-cell">
+                <div class="igc-f"><span class="pg">7/8</span><span class="dot"></span>
+                  <h6>When you're done,<br>send it back.</h6>
+                  <p>Cleaned · restaged · credit toward your next find</p>
+                </div>
+                <div class="igc-lb">机制 · Exit 的曝光位</div>
+              </div>
+              <div class="igc-cell">
+                <div class="igc-f last"><span class="pg">8/8</span>
+                  <h6>Save this<br>before your move.</h6>
+                  <p>@delta.objects</p>
+                </div>
+                <div class="igc-lb">末页 CTA · Save</div>
+              </div>
+            </div>
+            <div class="igc-foot">
+              <span><svg class="ico dark" style="width:15px;height:15px"><use href="#i-heart"/></svg> <b>1.8K</b></span>
+              <span><svg class="ico dark" style="width:15px;height:15px"><use href="#i-comment"/></svg> <b>74</b></span>
+              <span><svg class="ico dark" style="width:15px;height:15px"><use href="#i-share"/></svg></span>
+              <span class="dots" style="margin:0 auto"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <span><svg class="ico dark" style="width:15px;height:15px"><use href="#i-book"/></svg> <b>692</b></span>
+            </div>
+          </div>
+        </div>
+        <div class="mk-note"><b>版式判断</b>
+          这是唯一一张<strong>多帧</strong> mock，所以它回答的问题和其它六张都不同：不是"这一帧怎么钩住人"，而是<strong>"哪一页负责让人继续滑"</strong>。<br>
+          第 1 页只给钩子、不出现产品和价格；第 2 页用一句话把规则说完，让人知道后面四页值得看；<strong>中间四页一句一条</strong>——每页只讲一道题，靠"还差一条就集齐"的节奏把人推到第 6 页。<br>
+          第 7 页是整条 Carousel 里<strong>回流机制唯一的曝光位</strong>（也是 Graceful Exit 支柱的落点），不能省、也不能挪到 8 页以后——多数人滑不到那里。<br>
+          末页 CTA 写的是 <strong>Save</strong> 而不是 Link：这张 carousel 考核的是保存率（≥1.5%），保存行为本身会把它推给相似人群，比一次点击更值钱。<br>
+          八帧全部用同一批物品拍摄，一次拍摄窗口即可产出——符合前面「30 天 → 每周一个拍摄窗口」的约束。
+        </div>
+      </div>
 
   </div>
 </section>
