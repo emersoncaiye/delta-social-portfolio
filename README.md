@@ -10,8 +10,9 @@ An independent brand & social strategy case study for Delta, a curated circular 
 
 | 文件 | 用途 |
 |---|---|
-| `index.html` | **主站（编辑版，英文）** — 七段式结构，包含全部 9 条内容与 7 张 mock 的交互式画廊 |
+| `index.html` | **主站（编辑版，英文）** — 七段式结构，含 9 条内容的交互式画廊（C1 / C3 / C4 为成品概念视觉，其余为版式样张） |
 | `zh.html` | **中文版（编辑版）** — 与主站同构同设计，全部叙事中文化，9 条内容的英文成稿原文保留 |
+| `assets/` | 三张成品概念视觉（1122×1402、940×1672、1024×1536，JPEG，各约 300KB） |
 | `zh-archive.html` | 原始中文长文版（完整保留，未删改内容） |
 | `en.html` | 原始英文长文版（完整保留，含逐平台文案与判断） |
 
@@ -34,7 +35,7 @@ An independent brand & social strategy case study for Delta, a curated circular 
 
 - 编辑式排版：Georgia 展示级标题 + 系统无衬线正文，暖象牙底 + 炭黑字 + 鼠尾草绿强调色。
 - 证据分级贯穿全站：Observation / Strategic hypothesis / Proposed solution / Assumption to validate。
-- 无实测数据。所有 KPI 标注为行业基准或项目假设；mock 图片为 CSS 占位，价格与物件为示意。
+- 无实测数据。所有 KPI 标注为行业基准或项目假设；C1 / C3 / C4 使用成品概念视觉，其余样张的界面由 CSS 搭建，价格与物件为示意。
 - 无障碍：语义化结构、键盘可操作画廊与折叠面板、`prefers-reduced-motion` 支持、无横向溢出。
 
 ## 核心判断
@@ -48,7 +49,7 @@ An independent brand & social strategy case study for Delta, a curated circular 
 ## 免责声明
 
 Spec work，非客户项目。品牌依据来自公开仓库 [emersoncaiye/Delta](https://github.com/emersoncaiye/Delta) 的 philosophy / aesthetic / story / for_whom / circularity / charity 原文。
-竞品账号量级为公开可见估算，KPI 基线为同品类新号的行业经验值，实测后需重设。Mock 中的图片为 CSS 占位、数据为示意。
+竞品账号量级为公开可见估算，KPI 基线为同品类新号的行业经验值，实测后需重设。概念视觉为创意示意（非 Delta 真实库存、非已发布内容），样张中的界面由 CSS 搭建。
 
 品牌概念站当前使用「Objects in Motion / 好东西，不该停在原地」；本作品集沿用更早的「Good Things, Going Places.」与上市句「nothing good stays behind.」，作为历史项目文案保留，不做静默替换。
 

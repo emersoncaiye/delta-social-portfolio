@@ -268,7 +268,7 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .gal-hd .ti{display:block;font-family:Georgia,serif;font-size:16.5px;line-height:1.3}
 .gal-hd .fm{display:inline-block;margin:10px 6px 0 0;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:2px 8px;white-space:nowrap}
 .gal-hd .fm.pl{background:var(--dark);color:var(--cream);border-color:var(--dark)}
-.stage{flex:1;background:#efeadd;display:flex;justify-content:center;align-items:center;padding:26px;overflow-x:auto;min-height:200px}
+.stage{flex:1;background:#efeadd;display:flex;justify-content:center;align-items:flex-start;padding:26px;overflow-x:auto;min-height:200px}
 .gal-foot{display:flex;align-items:center;gap:10px;padding:13px 22px;border-top:1px solid var(--line2);font-size:11px;color:var(--muted)}
 .gal-foot .open{margin-left:auto;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-t);font-size:10px}
 /* preserved mock components */
@@ -404,6 +404,21 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .pin .img .ttl{position:absolute;left:0;right:0;bottom:0;padding:34px 10px 11px;font-family:Georgia,serif;font-size:10px;line-height:1.32;color:#fff;background:linear-gradient(180deg,rgba(40,32,24,0),rgba(40,32,24,.74))}
 .pin .img .dim{position:absolute;top:6px;right:6px;font-size:7.5px;letter-spacing:.1em;color:rgba(255,255,255,.85);background:rgba(0,0,0,.3);padding:1px 5px}
 .pin .pm{padding:6px 8px;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line2)}
+
+/* real concept visuals */
+.plate{position:relative;width:100%;margin:0 auto;background:#efece3;border:1px solid #e2dccd;box-shadow:0 24px 48px -38px rgba(30,28,25,.55)}
+.plate img{display:block;width:100%;height:auto}
+.plate.w1{max-width:436px}
+.gal-item[data-work="c6"] .stage{align-items:center}
+.plate.w2{max-width:392px}
+.plate.w3{max-width:352px}
+.pinblock{max-width:322px;margin:0 auto}
+.pinblock .plate-cap{max-width:none;margin-top:10px}
+.plate-cap{max-width:436px;margin:12px auto 0;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:10px}
+.pin .img>img{width:100%;height:100%;object-fit:cover;display:block}
+.pin .img.sp{background:none;border:1px dashed #d3ccbb;display:flex;align-items:center;justify-content:center}
+.pin .img.sp span{display:block;padding:0 10px;font-size:8.5px;line-height:1.7;letter-spacing:.12em;text-transform:uppercase;color:#a9a190;text-align:center}
+@media(max-width:640px){.plate.w1,.plate.w2{max-width:100%}.plate.w3{max-width:78%}}
 .pin .pm b{color:var(--ink2);letter-spacing:.06em;text-transform:none;font-weight:500}
 
 /* type specimen — Threads / text-first piece */
@@ -520,6 +535,9 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
 .modal dd{font-size:14px;color:var(--ink2)}
 .modal .m-note{margin-top:20px;font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px}
 .modal .m-note b{color:var(--ink2)}
+.modal .mfig{margin:0 0 24px;border:1px solid var(--line);background:#efece3;max-width:322px}
+.modal .mfig img{display:block;width:100%;height:auto}
+
 </style>
 </head>
 <body id="top">
@@ -966,9 +984,10 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       </p>
     </div>
     <div class="note rv" style="margin-bottom:34px">
-      <span class="tg asm">Draft status</span> Nothing here has been published. These are concept mockups, not screenshots:
-      there is no campaign history, no audience, and <b>no engagement data</b> — so none is shown.
-      Photographs are represented by CSS set-dressing; item names and prices are demonstration values.
+      <span class="tg asm">Draft status</span> Nothing here has been published — no campaign history, no audience, and
+      <b>no engagement data</b>, which is why none is shown. C1, C3 and C4 are finished concept visuals;
+      the other six are layout specimens whose interface chrome is built in CSS. The objects are art-directed
+      examples, not Delta inventory, and the prices are demonstration values.
     </div>
 
     <div class="gal">
@@ -1013,40 +1032,48 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <div class="gal-hd"><span class="no">C1</span><span class="ti">Four questions, one lamp</span><span class="fm pl">IG Reels</span><span class="fm">30s</span></div>
         <div class="stage">
           <div class="spec">
-            <div class="spec-bar"><span class="fmt">IG Reels · 30s · 9:16</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
-            <div class="phone">
-              <div class="screen">
-                <div class="room"></div>
-                <div class="glow"></div>
-                <div class="shade"></div><div class="stem"></div><div class="base"></div>
-                <div class="ui-top">0:03 / 0:30</div>
-                <div class="hook">
-                  <div class="hk1">Every object here has to pass <em>four questions.</em></div>
-                  <ul class="qlist">
-                    <li><svg class="ico xs"><use href="#i-check"/></svg>Is it quiet?</li>
-                    <li><svg class="ico xs"><use href="#i-check"/></svg>Is it smart?</li>
-                    <li><svg class="ico xs"><use href="#i-check"/></svg>Is it worth circulating?</li>
-                    <li><svg class="ico xs"><use href="#i-check"/></svg>Is it usable?</li>
-                  </ul>
-                </div>
-                <div class="ui-bottom">
-                  <div class="prof"><span class="av">D</span><span class="hdl">delta.objects</span><span class="flw">Follow</span></div>
-                  <div class="cap">Object No.007 · brass lamp · $68</div>
-                </div>
-                <div class="acts">
-                  <div class="a"><svg class="ico"><use href="#i-heart"/></svg></div>
-                  <div class="a"><svg class="ico"><use href="#i-comment"/></svg></div>
-                  <div class="a"><svg class="ico"><use href="#i-book"/></svg></div>
-                </div>
-              </div>
+            <div class="spec-bar"><span class="fmt">IG Reels · 30s · cover 4:5</span><span class="rule"></span><span class="flag">Concept visual</span></div>
+            <div class="plate w1">
+              <img src="assets/c1-four-questions.jpg" width="1122" height="1402" loading="lazy" decoding="async"
+                   alt="Concept visual: an olive serif headline reading Four Questions for a Lighter, More Flexible Home over a linen table with a brass lamp, a wool scarf and a speckled cup in late afternoon light.">
             </div>
-            <div class="spec-note">
-              <b>Art direction</b><span>One light source, one object, no music. Type sits in the lower third so the frame survives being used as a cover.</span>
-              <b>Cover logic</b><span>The four ticks are the thumbnail: the promise of a checklist is legible at 120px, before any caption is read.</span>
+            <div class="plate-cap"><span>C1 · cover frame</span><span>1122 × 1402 · 4:5</span></div>
+<div class="spec-note">
+              <b>Art direction</b><span>One room, one light source, three objects at the same weight as the type — the lamp, the cup and the scarf are the argument, so none of them is styled as product.</span>
+              <b>Cover logic</b><span>Tested at thumbnail size: the olive italic holds the promise, the photograph holds the mood. No logo, no price, no handle inside the frame.</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Specimen 01 — Reels cover<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Concept visual 01 — Reels cover<span class="open">Open piece →</span></div>
+      </div>
+
+      <!-- C4 -->
+      <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c4" aria-haspopup="dialog">
+        <div class="gal-hd"><span class="no">C4</span><span class="ti">First Apartment Essentials Under $100</span><span class="fm pl">Pinterest</span><span class="fm">Board</span></div>
+        <div class="stage">
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">Pinterest · cover pin · 2:3</span><span class="rule"></span><span class="flag">Concept visual</span></div>
+            <div class="boardhead"><b>Board</b><span>“first apartment essentials under $100” — the search, not the slogan</span></div>
+            <div class="pinblock">
+              <div class="plate">
+                <img src="assets/c4-collected-home.jpg" width="1024" height="1536" loading="lazy" decoding="async"
+                     alt="Concept visual: a Pinterest cover pin titled A Collected Home, a grid of second-hand objects — brass lamp, wool throw, ceramics, candle holder, glass bottle — closing with the line Good Things, Going Places.">
+              </div>
+              <div class="plate-cap"><span>Cover pin · 2:3</span><span>1024 × 1536</span></div>
+            </div>
+            <div class="ptmeta">
+              <h5>Board copy — the cover is tonal, the pins underneath are not</h5>
+              <b>Board</b> — first apartment essentials under $100. <b>Cover pin</b> — A Collected Home, secondhand pieces for spaces in motion.<br>
+              <b>Pins</b> — warm brass lighting · small-space ceramics · wool throws under $100.
+              <div class="kw"><span>first apartment</span><span>apartment essentials</span><span>warm lighting</span><span>small space</span><span>under $100</span></div>
+            </div>
+            <div class="spec-note">
+              <b>Art direction</b><span>Board names carry the query, the cover carries the mood, the pins carry the keywords. One collage, five categories, a strict two-column grid — the cover still reads at 236px, the width of a Pinterest column.</span>
+              <b>Trade-off</b><span>This is the one place the brand gives up tone for search rank: type stays plain, keywords lead, and none of the words are ours.</span>
+            </div>
+          </div>
+        </div>
+        <div class="gal-foot">Concept visual 03 — board cover<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C3 -->
@@ -1054,40 +1081,19 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <div class="gal-hd"><span class="no">C3</span><span class="ti">I moved 4 times in 3 years. Here's what I stopped buying.</span><span class="fm pl">TikTok</span><span class="fm">20s</span></div>
         <div class="stage">
           <div class="spec">
-            <div class="spec-bar"><span class="fmt">TikTok · 20s · storyboard</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
-            <div class="board">
-              <div class="bf">
-                <div class="pane">
-                  <span class="tc">0–2s</span>
-                  <div style="position:absolute;left:14px;bottom:64px;width:62px;height:44px;border-radius:5px;background:#3a2f28;border:1px solid rgba(255,255,255,.16)"></div>
-                  <div class="ln">4 moves.<br>3 years.<br><em>One rule.</em></div>
-                </div>
-                <div class="shot"><b>Shot 01</b>Empty room, one suitcase. Handheld, no music; the three lines land one at a time.</div>
-              </div>
-              <div class="bf">
-                <div class="pane">
-                  <span class="tc">6–10s</span>
-                  <div style="position:absolute;left:16px;bottom:70px;width:78px;height:54px;border-radius:6px;background:#4a3d33;border:1px solid rgba(255,255,255,.14)"></div>
-                  <div class="ln">I stopped buying things I'd feel <em>guilty</em> leaving.</div>
-                </div>
-                <div class="shot"><b>Shot 02</b>Hands set the box down. Cut on the word “guilty” — the only hard cut in the piece.</div>
-              </div>
-              <div class="bf">
-                <div class="pane">
-                  <span class="tc">14–20s</span>
-                  <div class="halo"></div>
-                  <div class="ln">Only things I can <em>send back.</em></div>
-                </div>
-                <div class="shot"><b>Shot 03</b>The lamp switches on. Final line is the only product mention; no logo, no link.</div>
-              </div>
+            <div class="spec-bar"><span class="fmt">TikTok · 20s · 9 frames</span><span class="rule"></span><span class="flag">Concept visual</span></div>
+            <div class="plate w2">
+              <img src="assets/c3-storyboard.jpg" width="940" height="1672" loading="lazy" decoding="async"
+                   alt="Nine-panel storyboard with timecodes: leaving, packing a chair, packing ceramics, the brass lamp, the wool scarf, transit, the new room, the closing line, and the DELTA end card.">
             </div>
-            <div class="spec-note">
-              <b>Art direction</b><span>First person, one location, three set-ups. Captions are hard-coded for silent viewing and each frame works as a still.</span>
-              <b>Production</b><span>One 20-minute set-up inside the weekly shoot: the same lamp and box reused from C1 and C2.</span>
+            <div class="plate-cap"><span>C3 · nine frames, 0:00–0:20</span><span>940 × 1672 · 9:16</span></div>
+<div class="spec-note">
+              <b>Art direction</b><span>First person, one flat, nine set-ups. Warm afternoon light throughout; captions are hard-coded for silent viewing, so every panel has to work as a still.</span>
+              <b>Production</b><span>One 90-minute session inside the weekly shoot. The only new prop is the moving box — chair, scarf, lamp and mugs carry over from C1 and C4.</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Specimen 02 — 20s storyboard<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Concept visual 02 — nine-frame storyboard<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C2 -->
@@ -1114,58 +1120,6 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
           </div>
         </div>
         <div class="gal-foot">Specimen 07 — carousel contact sheet<span class="open">Open piece →</span></div>
-      </div>
-
-      <!-- C4 -->
-      <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c4" aria-haspopup="dialog">
-        <div class="gal-hd"><span class="no">C4</span><span class="ti">First Apartment Essentials Under $100</span><span class="fm pl">Pinterest</span><span class="fm">Idea + product pins</span></div>
-        <div class="stage">
-          <div class="spec">
-            <div class="spec-bar"><span class="fmt">Pinterest · 1 board · 3 pins</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
-            <div class="boardhead"><b>First apartment</b><span>board · searched as “first apartment essentials under $100”</span></div>
-            <div class="pinladder">
-              <div class="pin p1">
-                <div class="img">
-                  <div class="halo"></div>
-                  <span class="dim">1000×1500</span>
-                  <div class="ttl">First Apartment<br>Essentials Under $100</div>
-                </div>
-                <div class="pm"><b>Cover pin</b> · eight objects, one frame</div>
-              </div>
-              <div class="pin p2">
-                <div class="img">
-                  <div class="halo" style="width:74px;height:74px;top:34%"></div>
-                  <span class="dim">1000×1500</span>
-                  <div class="ttl">Warm light,<br>small room</div>
-                </div>
-                <div class="pm"><b>Idea pin</b> · six frames</div>
-              </div>
-              <div class="pin p3">
-                <div class="img">
-                  <div class="halo" style="width:62px;height:62px;top:44%"></div>
-                  <span class="dim">1000×1000</span>
-                  <div style="position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);width:40px">
-                    <div style="width:34px;height:14px;background:#1e1c19;clip-path:polygon(18% 0,82% 0,100% 100%,0 100%);margin:0 auto"></div>
-                    <div style="width:3px;height:30px;background:#2a2724;margin:0 auto"></div>
-                    <div style="width:22px;height:4px;background:#2a2724;border-radius:2px;margin:0 auto"></div>
-                  </div>
-                </div>
-                <div class="pm"><b>Product pin</b> · No.007</div>
-              </div>
-            </div>
-            <div class="ptmeta">
-              <h5>Pin copy — written as the search, not as the brand</h5>
-              First Apartment Essentials Under $100 — small space, warm, mostly secondhand.<br>
-              A brass lamp. A wool scarf. Two cups. One small bag. Everything here can move with you — and everything here can be sent back when it's time.
-              <div class="kw"><span>first apartment</span><span>apartment essentials</span><span>small space</span><span>secondhand home</span><span>under $100</span></div>
-            </div>
-            <div class="spec-note">
-              <b>Art direction</b><span>Vertical 2:3 as the default, square only for single-object product pins. Titles sit inside the image so the pin still reads when it is repinned without a description.</span>
-              <b>Trade-off</b><span>This is the one place the brand gives up tone for search rank — the typography is deliberately plain and keyword-led.</span>
-            </div>
-          </div>
-        </div>
-        <div class="gal-foot">Specimen 03 — board and pin set<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C8 -->
@@ -1566,7 +1520,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
   var WORK = {
     c1:{no:"C1 · Pillar 01 — The Four Questions",title:"Four questions, one lamp",
       meta:["Instagram Reels · 30s","The Four Questions","CTA: Save","Specimen 01"],
-      body:"<dl><div><dt>Hook 0–3s</dt><dd>The four questions type on screen; the first three tick, and the fourth tick is the moment the lamp lights up. \u201cEvery object here has to pass four questions.\u201d</dd></div><div><dt>Structure</dt><dd>3s — the four questions thrown out → 8s — Quiet (no logo, no shouting) → 14s — Smart ($68: not cheap, fairly priced) → 20s — Worth circulating (brass gets better, not worse) → 25s — Usable (you\u2019ll turn it on every night) → end card.</dd></div><div><dt>Visual treatment</dt><dd>Handheld micro-shake, natural light, no soundtrack; captions hardcoded (85% of viewing is muted); cover shows the four questions and one lit lamp.</dd></div><div><dt>Intended audience</dt><dd>The ICP scanning for curated, defensible taste — people who want a standard they can use, not an adjective to believe.</dd></div><div><dt>Strategic objective</dt><dd>Establish the standard publicly and make it a repeatable series format, not a one-off creative.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Full caption</span>Every object in Delta has to pass four questions.\n\n1. Is it quiet? — no logo, no shouting.\n2. Is it smart? — $68. Not cheap. Fairly priced.\n3. Is it worth circulating? — brass. It gets better, not worse.\n4. Is it usable? — you\u2019ll turn it on every night.\n\nThis one passed. Most don\u2019t.\n\nObject No.007. Save this if you have a corner that needs it.</div>",
+      body:"<div class=\"mfig\"><img src=\"assets/c1-four-questions.jpg\" alt=\"Concept visual — Reels cover for Four Questions\" decoding=\"async\"></div><dl><div><dt>Hook 0–3s</dt><dd>The four questions type on screen; the first three tick, and the fourth tick is the moment the lamp lights up. \u201cEvery object here has to pass four questions.\u201d</dd></div><div><dt>Structure</dt><dd>3s — the four questions thrown out → 8s — Quiet (no logo, no shouting) → 14s — Smart ($68: not cheap, fairly priced) → 20s — Worth circulating (brass gets better, not worse) → 25s — Usable (you\u2019ll turn it on every night) → end card.</dd></div><div><dt>Visual treatment</dt><dd>Handheld micro-shake, natural light, no soundtrack; captions hardcoded (85% of viewing is muted); the cover is a title poster — the four questions in olive italic over one lit lamp, a cup and a scarf.</dd></div><div><dt>Intended audience</dt><dd>The ICP scanning for curated, defensible taste — people who want a standard they can use, not an adjective to believe.</dd></div><div><dt>Strategic objective</dt><dd>Establish the standard publicly and make it a repeatable series format, not a one-off creative.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Full caption</span>Every object in Delta has to pass four questions.\n\n1. Is it quiet? — no logo, no shouting.\n2. Is it smart? — $68. Not cheap. Fairly priced.\n3. Is it worth circulating? — brass. It gets better, not worse.\n4. Is it usable? — you\u2019ll turn it on every night.\n\nThis one passed. Most don\u2019t.\n\nObject No.007. Save this if you have a corner that needs it.</div>",
       note:"<b>Judgment.</b> Turning the internal selection standard into a public column is something none of the three competitors currently offers: Depop leans on algorithms (no standard to show), Feather on buyers (standard not public), Worn Wear only on durability. More importantly, the four questions are a format, not a one-time idea — endlessly reusable, and naturally aligned with the no-gatekeeping position (the standard is given away; anyone can use it). The CTA is Save, not like, because saves carry the highest weight in Reels and this content\u2019s natural behaviour is to be kept."},
 
     c2:{no:"C2 · Pillar 03 — The Graceful Exit",title:"The moving box test",
@@ -1576,12 +1530,12 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
 
     c3:{no:"C3 · Pillar 02 — Moving Life",title:"I moved 4 times in 3 years. Here\u2019s what I stopped buying.",
       meta:["TikTok · 20s","Moving Life","CTA: comment chain — no link, no brand name","Specimen 02"],
-      body:"<dl><div><dt>Structure</dt><dd>0–2s — empty room, one suitcase, caption \u201c4 moves. 3 years. One rule.\u201d → 2–6s — \u201cI stopped buying big furniture\u201d → 6–10s — \u201cI stopped buying for-now things; they\u2019re the first to go\u201d → 10–14s — \u201cI stopped buying things I\u2019d feel guilty leaving behind\u201d → 14–20s — picks up a lamp: \u201cnow I only buy things I can send back\u201d → end card.</dd></div><div><dt>Constraints kept</dt><dd>No brand name, no price, no link in the video. The first 20 seconds contain nothing being sold; the brand appears only on the profile and in comments.</dd></div><div><dt>Intended audience</dt><dd>Deliberately filtered: the opening lines push bargain hunters and rental users away, leaving exactly the ICP.</dd></div><div><dt>Strategic objective</dt><dd>Audience filtering through resonance — the real job is not raw reach but selecting the right viewers.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">End card</span>nothing good stays behind.\n#movingtips #apartmenthacks #slowliving #secondhandhome</div>",
+      body:"<div class=\"mfig\"><img src=\"assets/c3-storyboard.jpg\" alt=\"Concept visual — nine-frame storyboard\" decoding=\"async\"></div><dl><div><dt>Structure</dt><dd>0–2s — leaving, \u201cAnother move?\u201d → 2–4s — the chair wrapped in paper → 4–6s — ceramics boxed → 6–8s — the brass lamp → 8–10s — the wool scarf → 10–12s — the box carried through the street → 12–14s — the new room, lamp lit → 14–17s — \u201cThe things that move with us make a temporary home feel like home.\u201d → 17–20s — brand end card.</dd></div><div><dt>Constraints kept</dt><dd>No brand name, no price, no link in the video. The first 20 seconds contain nothing being sold; the brand appears only on the profile and in comments.</dd></div><div><dt>Intended audience</dt><dd>Deliberately filtered: the opening lines push bargain hunters and rental users away, leaving exactly the ICP.</dd></div><div><dt>Strategic objective</dt><dd>Audience filtering through resonance — the real job is not raw reach but selecting the right viewers.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">End card</span>DELTA\n\nGood Things, Going Places.\n#movingtips #apartmenthacks #slowliving #secondhandhome</div>",
       note:"<b>Judgment.</b> TikTok\u2019s moving / apartment pool is large and almost entirely \u201cmoving essentials\u201d recommendations. This runs the other way — what I stopped buying — which is contrarian, familiar, and sells nothing. Its real job isn\u2019t reach, it\u2019s <b>audience filtering</b>: the first three lines push bargain hunters and renters away and leave exactly the \u201ccan move, won\u2019t settle\u201d audience. The closing line is the brand proposition in spoken form and can become a long-running series title."},
 
     c4:{no:"C4 · Pillar 02 — Moving Life",title:"First Apartment Essentials Under $100",
-      meta:["Pinterest · 1 Idea Pin + 6 product pins","Moving Life","CTA: outbound click","Specimen 03"],
-      body:"<dl><div><dt>Format</dt><dd>One Idea Pin (8 objects in sequence) + 6 product pins, distributed across three boards: First Apartment · Small Space Warmth · Secondhand Home.</dd></div><div><dt>Title logic</dt><dd>No brand words, no poetry — only what users actually search. This is the one place in the whole campaign where brand tone is deliberately dropped.</dd></div><div><dt>Intended audience</dt><dd>High-intent searchers planning a first apartment or a small-space refresh — demand that already exists.</dd></div><div><dt>Strategic objective</dt><dd>Long-tail search traffic that keeps compounding after the campaign month ends.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Pin copy</span>First Apartment Essentials Under $100 — small space, warm, mostly secondhand.\n\nA brass lamp. A wool scarf. Two cups. One small bag.\nEverything here can move with you, and everything here can be sent back when it\u2019s time.\n\n#firstapartment #apartmentessentials #smallspace #secondhandhome</div>",
+      meta:["Pinterest · board cover + 6 pins","Moving Life","CTA: outbound click","Specimen 03"],
+      body:"<div class=\"mfig\"><img src=\"assets/c4-collected-home.jpg\" alt=\"Concept visual — Pinterest board cover\" decoding=\"async\"></div><dl><div><dt>Format</dt><dd>One tonal board cover plus six keyword-titled pins, spread across three boards: First Apartment · Small Space Warmth · Secondhand Home. The cover is the only asset in the campaign allowed to sound like the brand.</dd></div><div><dt>Title logic</dt><dd>Board names and pin titles are written as searches — “first apartment essentials under $100”, “warm brass lamp”. No poetry in the title field; the image carries the mood instead.</dd></div><div><dt>Intended audience</dt><dd>High-intent searchers planning a first apartment or a small-space refresh — demand that already exists.</dd></div><div><dt>Strategic objective</dt><dd>Long-tail search traffic that keeps compounding after the campaign month ends.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Board copy</span>Board: First Apartment Essentials Under $100\n\nCover pin: A Collected Home — secondhand pieces for spaces in motion.\n\nPins: warm brass lamp · small-space ceramics · wool throw, all under $100.\nEverything here can move with you, and everything here can be sent back when it is time.\n\n#firstapartment #apartmentessentials #smallspace #secondhandhome</div>",
       note:"<b>Judgment.</b> \u201cFirst apartment\u201d is a top Pinterest search term, and this kind of Pin lives for months — the same image would be buried by the algorithm on IG within days. Feather\u2019s scene content suggests this traffic pool is real; Delta\u2019s smart per-item pricing converts it more naturally than a subscription. The metric that matters here is outbound CTR, not likes."},
 
     c5:{no:"C5 · Definition — Day 1 launch post",title:"We\u2019re not a rental company.",

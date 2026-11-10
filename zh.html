@@ -21,8 +21,8 @@
 html{scroll-behavior:smooth}
 body{
   background:var(--paper); color:var(--ink);
-  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue","Segoe UI",Arial,sans-serif;
-  font-size:15px; line-height:1.85; -webkit-font-smoothing:antialiased;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI",Arial,sans-serif;
+  font-size:15px; line-height:1.75; -webkit-font-smoothing:antialiased;
 }
 .serif{font-family:Georgia,"Times New Roman",serif}
 .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
@@ -35,17 +35,17 @@ nav .brand{font-family:Georgia,serif;font-size:15px;letter-spacing:.04em;color:v
 nav .brand i{font-style:normal;color:var(--sage)}
 nav .links{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none}
 nav .links::-webkit-scrollbar{display:none}
-nav .links a{color:var(--muted);text-decoration:none;font-size:12px;letter-spacing:.06em;white-space:nowrap;padding:20px 0 18px;border-bottom:2px solid transparent;transition:color .25s,border-color .25s}
+nav .links a{color:var(--muted);text-decoration:none;font-size:12px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;padding:20px 0 18px;border-bottom:2px solid transparent;transition:color .25s,border-color .25s}
 nav .links a:hover{color:var(--ink)}
 nav .links a.on{color:var(--ink);border-bottom-color:var(--sage)}
-nav .lang{font-size:11.5px;letter-spacing:.06em;color:var(--ink2);text-decoration:none;border:1px solid var(--line);padding:4px 11px;white-space:nowrap;transition:border-color .25s}
+nav .lang{font-size:11.5px;letter-spacing:.14em;color:var(--ink2);text-decoration:none;border:1px solid var(--line);padding:4px 11px;white-space:nowrap;transition:border-color .25s}
 nav .lang:hover{border-color:var(--sage);color:var(--sage)}
 @media(max-width:900px){
   nav .bar{flex-wrap:wrap;height:auto;gap:12px;padding-top:11px}
   nav .brand{font-size:14px}
   nav .lang{padding:3px 9px;font-size:11px}
   nav .links{order:3;width:100%;gap:18px;padding-bottom:9px;mask-image:linear-gradient(90deg,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 92%,transparent)}
-  nav .links a{font-size:10.5px;letter-spacing:.05em;padding:4px 0 6px;border-bottom-width:1px}
+  nav .links a{font-size:10.5px;letter-spacing:.1em;padding:4px 0 6px;border-bottom-width:1px}
 }
 
 /* reveal */
@@ -58,45 +58,45 @@ nav .lang:hover{border-color:var(--sage);color:var(--sage)}
 }
 
 /* type */
-.kicker{font-size:11px;letter-spacing:.16em;color:var(--sage);display:flex;align-items:center;gap:14px}
+.kicker{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--sage);display:flex;align-items:center;gap:14px}
 .kicker::after{content:"";height:1px;width:44px;background:var(--sage);opacity:.5}
 .kicker .no{font-family:Georgia,serif;font-size:12px;letter-spacing:.18em}
-h2{font-family:Georgia,"Songti SC","STSong",serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.24;margin:16px 0 14px;letter-spacing:-.01em}
+h2{font-family:Georgia,serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.18;margin:16px 0 14px;letter-spacing:-.01em}
 h2 em{font-style:italic;color:var(--sage-t)}
-h3{font-family:Georgia,"Songti SC","STSong",serif;font-weight:600;font-size:19px;margin-bottom:10px}
-h4{font-family:Georgia,"Songti SC","STSong",serif;font-weight:600}
-.lede{color:var(--ink2);max-width:720px;font-size:15.5px;line-height:1.9}
+h3{font-family:Georgia,serif;font-weight:600;font-size:19px;margin-bottom:10px}
+h4{font-family:Georgia,serif;font-weight:600}
+.lede{color:var(--ink2);max-width:720px;font-size:16px;line-height:1.85}
 .sec{padding:96px 0;border-top:1px solid var(--line)}
 .sec-head{margin-bottom:44px}
-.sec-head .lede{margin-top:4px}
-.note{font-size:12px;color:var(--muted);line-height:1.75}
+.sec-head .lede{margin-top:4px;max-width:660px}
+.note{font-size:12px;color:var(--muted);line-height:1.7}
 .small{font-size:13px;color:var(--ink2)}
 b{color:var(--ink)}
 
 /* evidence tags */
-.tg{display:inline-block;font-size:10px;letter-spacing:.1em;padding:2px 8px;margin-right:6px;vertical-align:middle;white-space:nowrap;border:1px solid}
+.tg{display:inline-block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;margin-right:6px;vertical-align:middle;white-space:nowrap;border:1px solid}
 .tg.obs{background:#eef0ea;color:#3f5343;border-color:#cfdbd1}
 .tg.hyp{background:#f5efe4;color:#8a6a1f;border-color:#e6d9bc}
 .tg.sol{background:#e9eef2;color:#3d5666;border-color:#d0dfe8}
 .tg.asm{background:#f6ede7;color:#9a5a22;border-color:#ecd9c6}
 .legend{display:flex;flex-wrap:wrap;gap:10px 18px;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);padding:12px 0;margin:30px 0;font-size:11.5px;color:var(--muted);align-items:center}
-.legend .lb{letter-spacing:.08em}
+.legend .lb{letter-spacing:.16em;text-transform:uppercase}
 
 /* hero */
 header.hero{padding:0}
 .hero-grid{display:grid;grid-template-columns:1.35fr 1fr;min-height:88vh}
 .hero-l{display:flex;flex-direction:column;justify-content:center;padding-top:96px;padding-bottom:96px}
-.hero-tag{font-size:11px;letter-spacing:.18em;color:var(--muted);margin-bottom:26px}
+.hero-tag{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
 .hero-tag span{color:var(--sage)}
-h1{font-family:Georgia,"Songti SC",serif;font-weight:600;font-size:clamp(52px,8vw,108px);line-height:.98;letter-spacing:-.02em}
+h1{font-family:Georgia,serif;font-weight:600;font-size:clamp(52px,8vw,108px);line-height:.98;letter-spacing:-.02em}
 h1 .t2{display:block;font-style:italic;font-weight:400;font-size:.44em;line-height:1.2;color:var(--sage-t);margin-top:18px;letter-spacing:0}
 .hero-sub{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px 0;align-items:center;font-size:13px;color:var(--ink2)}
 .hero-sub .row{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;width:100%}
-.hero-sub .who{font-family:Georgia,"Songti SC",serif;font-size:15px;color:var(--ink)}
+.hero-sub .who{font-family:Georgia,serif;font-size:15px;color:var(--ink)}
 .hero-sub .sep{color:var(--line);margin:0 10px}
-.hero-sub .caps{letter-spacing:.08em;font-size:11.5px;color:var(--muted)}
+.hero-sub .caps{letter-spacing:.16em;text-transform:uppercase;font-size:10.5px;color:var(--muted)}
 .hero-cta{margin-top:44px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.btn{display:inline-block;text-decoration:none;font-size:12px;letter-spacing:.16em;padding:12px 22px;border:1px solid var(--ink);color:var(--ink);transition:background .3s,color .3s}
+.btn{display:inline-block;text-decoration:none;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:12px 22px;border:1px solid var(--ink);color:var(--ink);transition:background .3s,color .3s}
 .btn:hover{background:var(--ink);color:var(--paper)}
 .btn.ghost{border-color:var(--line);color:var(--ink2)}
 .btn.ghost:hover{background:transparent;border-color:var(--ink);color:var(--ink)}
@@ -106,9 +106,9 @@ h1 .t2{display:block;font-style:italic;font-weight:400;font-size:.44em;line-heig
 .lamp-art .shade{position:absolute;left:50%;top:21%;width:110px;height:44px;transform:translateX(-50%);background:#1e1c19;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%)}
 .lamp-art .stem{position:absolute;left:50%;top:29%;height:23.5%;width:3px;transform:translateX(-50%);background:#2a2724}
 .lamp-art .base{position:absolute;left:50%;top:52.5%;width:62px;height:7px;transform:translateX(-50%);background:#2a2724;border-radius:3px}
-.lamp-art .floor{position:absolute;left:50%;top:53%;bottom:0;width:100%;transform:translateX(-50%);background:radial-gradient(ellipse 52% 42% at 50% 0,rgba(42,36,30,.16),rgba(42,36,30,0) 72%)}
+.lamp-art .floor{position:absolute;left:50%;top:53%;width:240px;height:30px;transform:translate(-50%,-46%);background:radial-gradient(ellipse at center,rgba(42,36,30,.17),rgba(42,36,30,.05) 46%,rgba(42,36,30,0) 72%)}
 .lamp-art::after{content:"";position:absolute;left:50%;top:53%;width:280px;height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(42,36,30,.22),transparent)}
-.lamp-art .cap{position:absolute;left:0;right:0;bottom:26px;text-align:center;font-size:10.5px;letter-spacing:.1em;color:var(--muted)}
+.lamp-art .cap{position:absolute;left:0;right:0;bottom:26px;text-align:center;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
 .lamp-art .cap b{color:var(--ink2);font-weight:500}
 .hero-meta{position:absolute;top:22px;left:26px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
 @media(max-width:900px){
@@ -120,7 +120,7 @@ h1 .t2{display:block;font-style:italic;font-weight:400;font-size:.44em;line-heig
 
 /* challenge */
 .qmark{font-family:Georgia,serif;font-size:clamp(40px,6vw,84px);line-height:1;color:var(--sage);opacity:.9}
-.bigq{font-family:Georgia,"Songti SC","STSong",serif;font-weight:400;font-size:clamp(23px,3.2vw,36px);line-height:1.5;max-width:900px;letter-spacing:-.005em}
+.bigq{font-family:Georgia,serif;font-weight:400;font-size:clamp(24px,3.4vw,38px);line-height:1.42;max-width:900px;letter-spacing:-.005em}
 .bigq em{font-style:italic;color:var(--sage-t)}
 .ch-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:52px}
 @media(max-width:860px){.ch-grid{grid-template-columns:1fr}}
@@ -128,7 +128,7 @@ h1 .t2{display:block;font-style:italic;font-weight:400;font-size:.44em;line-heig
 .ch-card .n{font-family:Georgia,serif;font-size:12px;color:var(--sage);letter-spacing:.14em;margin-bottom:10px}
 .ch-card p{font-size:14px;color:var(--ink2)}
 details{border:1px solid var(--line);background:var(--panel);margin-top:14px}
-details summary{cursor:pointer;padding:15px 22px;font-size:12.5px;letter-spacing:.1em;color:var(--ink2);list-style:none;display:flex;align-items:center;gap:10px;user-select:none}
+details summary{cursor:pointer;padding:15px 22px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);list-style:none;display:flex;align-items:center;gap:10px;user-select:none}
 details summary::-webkit-details-marker{display:none}
 details summary::before{content:"+";font-family:Georgia,serif;font-size:16px;color:var(--sage);width:16px}
 details[open] summary::before{content:"–"}
@@ -142,15 +142,15 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 /* thinking */
 .icp-block{background:var(--dark);color:var(--cream);padding:52px 54px;margin:44px 0 26px}
 @media(max-width:640px){.icp-block{padding:36px 26px}}
-.icp-block .lbl{font-size:10.5px;letter-spacing:.16em;color:rgba(240,233,219,.55);margin-bottom:18px}
-.icp-block .line{font-family:Georgia,"Songti SC",serif;font-size:clamp(24px,3.4vw,36px);line-height:1.45;color:#fdfbf5}
+.icp-block .lbl{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:rgba(240,233,219,.55);margin-bottom:18px}
+.icp-block .line{font-family:Georgia,serif;font-size:clamp(24px,3.4vw,36px);line-height:1.4;color:#fdfbf5}
 .icp-block .line em{font-style:italic;color:#e6c69a}
-.icp-block .sub{font-size:14px;color:var(--cream2);line-height:1.9;max-width:760px;margin-top:14px}
+.icp-block .sub{font-size:14px;color:var(--cream2);line-height:1.85;max-width:760px;margin-top:14px}
 .excl{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:26px}
 @media(max-width:860px){.excl{grid-template-columns:1fr}}
 .excl .x{background:var(--panel);padding:22px 24px}
-.excl .x .no{display:inline-block;font-size:10px;letter-spacing:.14em;border:1px solid rgba(164,79,42,.4);color:var(--rust);padding:2px 8px;margin-bottom:10px}
-.excl .x h5{font-family:Georgia,"Songti SC",serif;font-size:15px;margin-bottom:6px;font-weight:600}
+.excl .x .no{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(164,79,42,.4);color:var(--rust);padding:2px 8px;margin-bottom:10px}
+.excl .x h5{font-family:Georgia,serif;font-size:15px;margin-bottom:6px;font-weight:600}
 .excl .x p{font-size:13px;color:var(--ink2)}
 .excl .x p b{color:var(--sage-t)}
 
@@ -159,15 +159,15 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 @media(max-width:920px){.map-wrap{grid-template-columns:1fr}}
 .pmap{position:relative;border:1px solid var(--line);background:var(--panel);aspect-ratio:16/12;width:100%}
 @media(max-width:640px){.pmap{aspect-ratio:4/3.6}.pmap .pt .ds{max-width:84px;font-size:9px}.pmap .pt .nm{font-size:12.5px}}
-.pmap .ax-lbl{position:absolute;font-size:9.5px;letter-spacing:.14em;color:var(--muted)}
+.pmap .ax-lbl{position:absolute;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .pmap .ax-x1{bottom:9px;left:16px}.pmap .ax-x2{bottom:9px;right:16px}
 .pmap .ax-y1{top:11px;left:16px}.pmap .ax-y2{bottom:30px;left:16px}
 .pmap .cross-v{position:absolute;left:50%;top:11%;bottom:11%;width:1px;background:var(--line)}
 .pmap .cross-h{position:absolute;top:46%;left:7%;right:7%;height:1px;background:var(--line)}
 .pmap .pt{position:absolute;transform:translate(-50%,-50%);text-align:center}
 .pmap .pt .dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--ink2);background:var(--panel);margin:0 auto 6px}
-.pmap .pt .nm{font-family:Georgia,"Songti SC",serif;font-size:13.5px}
-.pmap .pt .ds{font-size:9.5px;color:var(--muted);letter-spacing:.02em;max-width:112px;line-height:1.45;margin:0 auto}
+.pmap .pt .nm{font-family:Georgia,serif;font-size:13.5px}
+.pmap .pt .ds{font-size:9.5px;color:var(--muted);letter-spacing:.04em;max-width:112px;line-height:1.45;margin:0 auto}
 .pmap .pt.delta .dot{background:var(--sage);border-color:var(--sage)}
 .pmap .pt.delta .nm{color:var(--sage-t)}
 .pmap .pt.delta .ds{color:var(--sage-t)}
@@ -181,11 +181,11 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 @media(max-width:760px){.comp-row{grid-template-columns:1fr}}
 .comp-row .axis{background:var(--dark);color:var(--cream);padding:22px 20px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
 .comp-row .axis .nm{font-family:Georgia,serif;font-size:19px;color:#fdfbf5}
-.comp-row .axis .ax{font-size:10px;letter-spacing:.18em;color:#e6c69a}
-.comp-row .axis .axl{font-size:11px;color:var(--cream2);line-height:1.7}
+.comp-row .axis .ax{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#e6c69a}
+.comp-row .axis .axl{font-size:11px;color:var(--cream2);line-height:1.6}
 .comp-row .comp-b{padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:760px){.comp-row .comp-b{grid-template-columns:1fr}}
-.comp-row .cell .lb{font-size:10px;letter-spacing:.16em;color:var(--muted);margin-bottom:6px}
+.comp-row .cell .lb{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .comp-row .cell p{font-size:13.5px;color:var(--ink2)}
 
 /* positioning cards */
@@ -193,14 +193,14 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 @media(max-width:860px){.pos-grid{grid-template-columns:1fr}}
 .pos-card{background:var(--panel);border:1px solid var(--line);padding:28px 30px}
 .pos-card.dark{background:var(--dark);color:var(--cream);border-color:var(--dark)}
-.pos-card .lb{font-size:10.5px;letter-spacing:.2em;color:var(--sage);margin-bottom:14px}
+.pos-card .lb{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px}
 .pos-card.dark .lb{color:#e6c69a}
-.pos-card .big{font-family:Georgia,"Songti SC",serif;font-size:clamp(19px,2.2vw,24px);line-height:1.55;color:#fdfbf5}
+.pos-card .big{font-family:Georgia,serif;font-size:clamp(19px,2.2vw,24px);line-height:1.45;color:#fdfbf5}
 .pos-card .big em{font-style:italic;color:#e6c69a}
 .mech{list-style:none}
 .mech li{padding-left:22px;position:relative;font-size:14px;color:var(--ink2);margin-bottom:12px}
-.mech li::before{content:"";position:absolute;left:0;top:11px;width:10px;height:1.5px;background:var(--sage)}
-.fq{font-family:Georgia,"Songti SC",serif;font-size:16px;line-height:2.1}
+.mech li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:1.5px;background:var(--sage)}
+.fq{font-family:Georgia,serif;font-size:16px;line-height:2.05}
 .fq .qn{color:var(--sage);font-size:12px;letter-spacing:.14em}
 
 /* platform roles */
@@ -208,44 +208,52 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .plat{display:grid;grid-template-columns:170px 1.4fr 1fr;gap:18px;padding:18px 6px;border-bottom:1px solid var(--line2);align-items:baseline}
 @media(max-width:820px){.plat{grid-template-columns:1fr;gap:6px;padding:18px 2px}}
 .plat .pn{font-family:Georgia,serif;font-size:16px}
-.plat .pn .pf{display:block;font-size:10.5px;letter-spacing:.1em;color:var(--muted);margin-top:3px}
+.plat .pn .pf{display:block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
 .plat .job{font-size:14px;color:var(--ink)}
 .plat .job i{font-style:normal;color:var(--muted);font-size:12.5px;display:block;margin-top:3px}
 .plat .tone{font-size:12.5px;color:var(--ink2)}
 .plat.flag{background:rgba(93,113,96,.06);border-left:2px solid var(--sage);padding-left:14px}
 
+/* scope groups */
+.plat-group{display:flex;align-items:center;gap:10px;margin:24px 0 2px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.plat-group::after{content:"";flex:1;height:1px;background:var(--line)}
+.plat-group .sc{font-size:8.5px;letter-spacing:.16em;padding:2px 8px;border:1px solid var(--line);color:var(--ink2)}
+.plat-group .sc.core{background:var(--dark);color:var(--cream);border-color:var(--dark)}
+.plat-list>.plat-group:first-child{margin-top:10px}
+
 /* creative pillars */
 .pillar{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:var(--panel);margin-bottom:26px}
 @media(max-width:860px){.pillar{grid-template-columns:1fr}}
-.pillar .txt{padding:34px 38px}
+.pillar .txt{padding:38px 42px}
 .pillar .viz{border-left:1px solid var(--line);background:var(--paper);display:flex;align-items:center;justify-content:center;padding:34px;min-height:300px;position:relative}
 @media(max-width:860px){.pillar .viz{border-left:none;border-top:1px solid var(--line);min-height:240px}}
 .pillar .pno{font-family:Georgia,serif;font-size:12px;color:var(--sage);letter-spacing:.2em;margin-bottom:12px}
 .pillar h4{font-size:23px;margin-bottom:16px}
 .pillar dl{display:grid;gap:0;margin-top:6px}
-.pillar dl>div{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:9px 0;border-top:1px dotted var(--line)}
-.pillar dt{font-size:10.5px;letter-spacing:.14em;color:var(--muted);padding-top:3px}
-.pillar dd{font-size:13.5px;color:var(--ink2)}
+.pillar dl>div{display:grid;grid-template-columns:104px 1fr;gap:16px;padding:12px 0;border-top:1px dotted var(--line)}
+.pillar dt{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.pillar dd{font-size:13.8px;line-height:1.7;color:var(--ink2)}
+.pillar dd .tg{display:block;width:fit-content;margin:0 0 6px}
 .pillar dd b{color:var(--ink)}
 .viz-frame{background:#fffdf8;border:1px solid var(--line);padding:28px 30px;box-shadow:0 8px 22px rgba(29,27,23,.05);max-width:340px}
-.viz-q{font-family:Georgia,"Songti SC",serif;font-size:17px;line-height:2.1}
+.viz-q{font-family:Georgia,serif;font-size:17px;line-height:2}
 .viz-q .qn{color:var(--sage);font-size:11px;letter-spacing:.14em}
-.viz-tt{font-family:Georgia,"Songti SC",serif;font-size:24px;line-height:1.45;color:var(--ink);max-width:240px}
+.viz-tt{font-family:Georgia,serif;font-size:24px;line-height:1.35;color:var(--ink);max-width:240px}
 .viz-tt u{text-decoration:none;border-bottom:2px solid rgba(93,113,96,.5)}
-.viz-cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:9.5px;letter-spacing:.08em;color:var(--muted)}
-.viz-pull{font-family:Georgia,"Songti SC",serif;font-size:19px;line-height:1.7;max-width:300px;color:var(--ink);border-left:2px solid var(--sage);padding-left:18px}
-.viz-pull small{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--muted);margin-top:14px}
+.viz-cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.viz-pull{font-family:Georgia,serif;font-size:19px;line-height:1.6;max-width:300px;color:var(--ink);border-left:2px solid var(--sage);padding-left:18px}
+.viz-pull small{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:14px}
 
 /* voice */
 .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:44px 0 16px}
 @media(max-width:860px){.voice-grid{grid-template-columns:1fr}}
 .voice-grid .v{background:var(--panel);padding:24px 26px}
 .voice-grid .v .no{font-family:Georgia,serif;font-size:12px;color:var(--rust);letter-spacing:.16em;margin-bottom:8px}
-.voice-grid .v h5{font-family:Georgia,"Songti SC",serif;font-size:16px;margin-bottom:8px;font-weight:600}
+.voice-grid .v h5{font-family:Georgia,serif;font-size:16px;margin-bottom:8px;font-weight:600}
 .voice-grid .v p{font-size:13px;color:var(--ink2)}
 .vd{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:26px}
 .vd div{background:var(--panel);padding:18px 20px;font-size:13px;color:var(--ink2)}
-.vd .lb{display:block;font-size:10px;letter-spacing:.16em;color:var(--muted);margin-bottom:6px}
+.vd .lb{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 
 /* work gallery */
 .sec.work{background:var(--panel)}
@@ -255,19 +263,14 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .gal-item:focus-visible{outline:2px solid var(--sage);outline-offset:2px}
 .g-s4{grid-column:span 4}.g-s5{grid-column:span 5}.g-s7{grid-column:span 7}.g-s8{grid-column:span 8}.g-s12{grid-column:span 12}
 @media(max-width:960px){.g-s4,.g-s5,.g-s7,.g-s8{grid-column:span 12}}
-.gal-hd{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:16px 22px;border-bottom:1px solid var(--line2)}
-.gal-hd .no{font-family:Georgia,serif;font-size:12.5px;color:var(--sage);letter-spacing:.1em}
-.gal-hd .ti{font-family:Georgia,serif;font-size:16.5px;flex:1;min-width:200px}
-.gal-hd .fm{font-size:10px;letter-spacing:.12em;color:var(--muted);border:1px solid var(--line);padding:2px 8px;white-space:nowrap}
+.gal-hd{padding:16px 22px 15px;border-bottom:1px solid var(--line2)}
+.gal-hd .no{display:block;font-family:Georgia,serif;font-size:11px;color:var(--sage);letter-spacing:.16em;margin-bottom:5px}
+.gal-hd .ti{display:block;font-family:Georgia,serif;font-size:16.5px;line-height:1.3}
+.gal-hd .fm{display:inline-block;margin:10px 6px 0 0;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:2px 8px;white-space:nowrap}
 .gal-hd .fm.pl{background:var(--dark);color:var(--cream);border-color:var(--dark)}
-.stage{flex:1;background:#efeadd;display:flex;justify-content:center;align-items:center;padding:26px;overflow-x:auto;min-height:200px}
-.stage > .placeholder{align-self:stretch;justify-content:center}
+.stage{flex:1;background:#efeadd;display:flex;justify-content:center;align-items:flex-start;padding:26px;overflow-x:auto;min-height:200px}
 .gal-foot{display:flex;align-items:center;gap:10px;padding:13px 22px;border-top:1px solid var(--line2);font-size:11px;color:var(--muted)}
-.gal-foot .open{margin-left:auto;letter-spacing:.06em;color:var(--sage-t);font-size:10px}
-.placeholder{border:1.5px dashed var(--line);background:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(93,113,96,.04) 12px,rgba(93,113,96,.04) 24px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:40px 24px;text-align:center;width:100%;min-height:220px}
-.placeholder .glyph{font-family:Georgia,serif;font-size:28px;color:var(--sage);opacity:.75}
-.placeholder p{font-size:12px;color:var(--muted);max-width:340px;line-height:1.7}
-.placeholder b{color:var(--ink2);font-weight:500;letter-spacing:.1em;font-size:10.5px}
+.gal-foot .open{margin-left:auto;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-t);font-size:10px}
 /* preserved mock components */
 .phone{width:264px;aspect-ratio:9/17;border:8px solid #171514;border-radius:34px;overflow:hidden;position:relative;background:#000;box-shadow:0 14px 30px rgba(0,0,0,.18);flex:none}
 .screen{position:absolute;inset:0;overflow:hidden}
@@ -278,10 +281,7 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .shade{position:absolute;left:50%;top:22%;width:68px;height:28px;transform:translateX(-50%);background:#1e1e1c;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%)}
 .stem{position:absolute;left:50%;top:30%;width:3px;height:90px;transform:translateX(-50%);background:#2a2724}
 .base{position:absolute;left:50%;top:53%;width:40px;height:6px;transform:translateX(-50%);background:#2a2724;border-radius:3px}
-.case{position:absolute;left:18px;bottom:120px;width:92px;height:62px;border-radius:9px;background:#3a2f28;border:1px solid rgba(255,255,255,.14)}
 .ui-top{position:absolute;top:13px;left:15px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9)}
-.tabs{position:absolute;top:14px;left:0;right:0;display:flex;justify-content:center;gap:16px;font-size:10.5px;color:rgba(255,255,255,.55)}
-.tabs span.on{color:#fff;font-weight:600;border-bottom:2px solid #fff;padding-bottom:3px}
 .hook{position:absolute;left:0;right:52px;bottom:114px;padding:0 15px}
 .hk1{font-family:Georgia,serif;font-size:13.5px;line-height:1.35;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.55)}
 .hk1 em{font-style:italic;color:#ffd7a5}
@@ -298,25 +298,17 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .flw{border:1px solid #fff;border-radius:3px;font-size:9px;padding:2px 7px;color:#fff}
 .cap{margin-top:7px;font-size:9px;color:rgba(255,255,255,.85);line-height:1.5}
 .cap i{font-style:normal;color:rgba(255,255,255,.55)}
-.chips{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
-.chips span{font-size:9px;color:rgba(255,255,255,.85)}
 .acts{position:absolute;right:7px;bottom:22px;display:grid;gap:13px;justify-items:center}
 .a{display:grid;justify-items:center;gap:3px}
 .a b{font-size:9px;color:#fff;font-weight:600}
-.prog{position:absolute;left:0;right:0;bottom:4px;height:2px;background:rgba(255,255,255,.22)}
-.prog i{display:block;height:100%;width:62%;background:#fff}
 .ico{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .ico.xs{width:12px;height:12px;stroke:#9fd8ae}
 .ico.dark{stroke:var(--ink2);width:15px;height:15px}
 
 .xwrap{max-width:560px;width:100%;background:#15202b;border:1px solid #22303c;border-radius:14px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,.15)}
-.xbar{display:flex;align-items:center;gap:16px;padding:10px 16px;border-bottom:1px solid #22303c}
-.xbar .lg{font-size:14px;color:#e7e9ea;font-weight:600}
-.xbar .tb{margin-left:auto;display:flex;gap:14px;font-size:11.5px;color:#71767b}
-.xbar .tb span.on{color:#e7e9ea;font-weight:600;border-bottom:2px solid #1d9bf0;padding-bottom:3px}
 .xthread{display:grid;grid-template-columns:36px 1fr;gap:11px;padding:14px 16px 6px}
 .xav{width:36px;height:36px;border-radius:50%;background:#f3f0e9;color:#15202b;font-family:Georgia,serif;display:flex;align-items:center;justify-content:center;font-size:15px}
-.xline{justify-self:center;width:2px;height:100%;background:#31414f;margin-top:6px;border-radius:2px}
+.xline{justify-self:center;width:1px;height:100%;background:linear-gradient(#31414f,rgba(49,65,79,0));margin-top:8px}
 .xmeta{display:flex;align-items:center;gap:6px;font-size:12px;flex-wrap:wrap}
 .xmeta b{color:#e7e9ea}
 .xmeta span{color:#71767b}
@@ -331,43 +323,21 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .xcmp div.hr{border-top:none;background:#1d2b36;color:#71767b;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
 .xcmp div.hr.dl{color:#e0a888}
 .xcmp div.dl{color:#f4e3d4}
-.xacts{display:flex;gap:18px;padding:2px 0 14px;color:#71767b;font-size:11px;align-items:center;flex-wrap:wrap}
-.xacts span{display:flex;align-items:center;gap:6px}
 .ico.x{width:14px;height:14px;stroke:#71767b}
-
-.ptwrap{width:100%;max-width:560px}
-.ptsearch{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:8px 16px;margin-bottom:16px;font-size:12px;color:var(--ink2)}
-.ptgrid{columns:3;column-gap:12px}
-.ptile{border:1px solid var(--line2);border-radius:13px;overflow:hidden;background:#efeadf;margin-bottom:12px;break-inside:avoid;position:relative}
-.ptile.other{opacity:.5}
-.ptile.mine{border:2px solid var(--rust);box-shadow:0 8px 20px rgba(0,0,0,.1)}
-.ph{position:relative;background:linear-gradient(160deg,#e9e2d6,#d9d0c1)}
-.ph.mine{background:linear-gradient(180deg,#f0e7d9 0%,#e3d4c0 55%,#d2c3ac 55%,#c5b49c 100%);height:220px}
-.mini{position:absolute}
-.mini.lamp{left:50%;top:32%;width:88px;height:88px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,214,152,.95),rgba(255,190,110,.22) 46%,transparent 70%)}
-.ph.mine::after{content:"";position:absolute;left:12%;right:12%;bottom:39%;height:1px;background:rgba(90,70,50,.22)}
-.mini.cup{left:20%;bottom:41%;width:20px;height:26px;background:#f8f3e8;border:1px solid rgba(90,70,50,.12);border-radius:2px 2px 5px 5px;box-shadow:0 2px 5px rgba(0,0,0,.06)}
-.mini.vase{right:22%;bottom:41%;width:16px;height:34px;background:#cbbda6;border-radius:7px 7px 3px 3px}
-.ptile .plabel{padding:8px 10px;font-size:10px;color:var(--ink2);line-height:1.5}
-.ptitle{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 11px;font-family:Georgia,serif;font-size:12px;line-height:1.35;color:#fff;background:linear-gradient(180deg,rgba(40,32,24,0),rgba(40,32,24,.72));text-shadow:0 1px 6px rgba(0,0,0,.45)}
-.badge{position:absolute;top:9px;left:9px;background:var(--rust);color:#fff;font-size:9px;letter-spacing:.1em;padding:3px 7px;border-radius:3px}
 .ptmeta{margin-top:14px;border:1px solid var(--line2);background:#fff;padding:13px 15px;font-size:12px;color:var(--ink2);line-height:1.7}
-.ptmeta h5{font-family:Georgia,"Songti SC",serif;font-size:12.5px;color:var(--ink);margin-bottom:5px;font-weight:600}
+.ptmeta h5{font-family:Georgia,serif;font-size:12.5px;color:var(--ink);margin-bottom:5px;font-weight:600}
 .ptmeta .kw{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
 .ptmeta .kw span{font-size:10px;border:1px solid var(--line);padding:2px 7px;color:var(--ink2)}
 
 .rdwrap{width:100%;max-width:460px;background:#fff;border:1px solid var(--line2);border-radius:5px}
 .rdtop{display:flex;align-items:center;gap:7px;padding:8px 13px;border-bottom:1px solid var(--line2);background:#f6f4ef;font-size:10.5px;color:var(--muted)}
 .rdtop .rdsub{font-weight:600;color:var(--ink);font-size:11.5px}
-.rdbody{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:13px 14px}
-.rdvote{display:grid;justify-items:center;gap:3px;color:var(--muted);font-size:10px}
-.rdvote .up{font-size:12px;color:var(--rust)}
+.rdbody{display:grid;grid-template-columns:1fr;gap:12px;padding:13px 14px}
 .rdmeta{display:flex;gap:6px;font-size:10.5px;color:var(--muted)}
 .rdtitle{font-family:Georgia,serif;font-size:15px;line-height:1.32;margin:6px 0 9px}
 .rdtext{font-size:11.5px;line-height:1.7;color:var(--ink2)}
 .rdtext p{margin-bottom:8px}
 .rdwarn{margin:10px 0 0;padding:9px 11px;background:#fdf6ec;border-left:3px solid var(--rust);font-size:10.5px;line-height:1.6;color:var(--ink2)}
-.rdacts{margin-top:11px;padding-top:9px;border-top:1px dashed var(--line2);display:flex;gap:16px;font-size:10.5px;color:var(--muted)}
 .rdtag{margin-top:9px;font-size:10px;color:var(--muted);letter-spacing:.08em}
 
 .sswrap{width:100%;max-width:460px;background:#fff;border:1px solid var(--line2)}
@@ -375,50 +345,127 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .ssmail b{font-family:Georgia,serif;font-size:14px;display:block;margin-bottom:3px}
 .ssmail div{font-size:10.5px;color:var(--muted)}
 .sskicker{margin:14px 16px 0;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--rust)}
-.sshero{margin:9px 16px 0;height:100px;background:linear-gradient(160deg,#efe7d9,#dcd0bd);display:flex;align-items:center;justify-content:center;font-size:10px;color:#8b8172;letter-spacing:.14em}
+.sshero{margin:9px 16px 0;height:100px;background:linear-gradient(160deg,#efe7d9,#dcd0bd);display:flex;align-items:center;justify-content:center;font-size:10px;color:#8b8172;letter-spacing:.14em;text-transform:uppercase}
 .sstitle{font-family:Georgia,serif;font-size:17.5px;line-height:1.3;margin:14px 16px 9px}
 .sstext{font-size:11.5px;line-height:1.75;color:var(--ink2);margin:0 16px}
 .sspull{margin:12px 16px;padding:11px 13px;border-left:3px solid var(--sage);background:#f4f7f4;font-family:Georgia,serif;font-size:12.5px;line-height:1.6}
 .ssfoot{margin-top:14px;border-top:1px dashed var(--line2);padding:11px 16px;font-size:10.5px;color:var(--muted);line-height:1.7}
 
 .igcwrap{width:100%;max-width:640px}
-.igc-top{display:flex;align-items:center;gap:9px;padding:9px 12px;background:#fff;border:1px solid var(--line2)}
-.igc-strip{display:flex;gap:10px;overflow-x:auto;padding:12px;background:#fff;border:1px solid var(--line2);border-top:none;border-bottom:none}
-.igc-cell{flex:none;width:118px}
-.igc-f{position:relative;aspect-ratio:1/1;border:1px solid var(--line2);display:flex;flex-direction:column;justify-content:flex-end;padding:10px;overflow:hidden;background:linear-gradient(170deg,#2f2a26,#54473c)}
-.igc-f .pg{position:absolute;top:7px;left:8px;font-size:8.5px;letter-spacing:.14em;color:rgba(255,255,255,.6)}
-.igc-f .dot{position:absolute;left:10px;right:10px;bottom:50%;height:1px;background:rgba(255,255,255,.16)}
-.igc-f h6{font-family:Georgia,serif;font-size:11.5px;line-height:1.34;color:#fff;font-weight:400}
-.igc-f h6 em{font-style:italic;color:#ffd7a5}
-.igc-f p{font-size:9px;line-height:1.5;color:rgba(255,255,255,.72);margin-top:5px}
-.igc-f .tickq{margin-bottom:7px;font-size:9.5px;color:#9fd8ae;letter-spacing:.04em}
-.igc-f .glowx{position:absolute;left:50%;top:30%;width:86px;height:86px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,214,152,.85),rgba(255,190,110,.2) 45%,transparent 70%)}
-.igc-f.last{background:linear-gradient(170deg,#3a332e,#63513f)}
-.igc-lb{font-size:9.5px;color:var(--muted);margin-top:6px;letter-spacing:.02em}
-.igc-foot{display:flex;align-items:center;gap:13px;padding:9px 12px;background:#fff;border:1px solid var(--line2);font-size:10.5px;color:var(--muted)}
-.igc-foot .dots{display:flex;gap:5px;margin:0 auto}
-.igc-foot .dots i{width:5px;height:5px;border-radius:50%;background:var(--line)}
-.igc-foot .dots i.on{background:var(--rust)}
-.igc-foot b{color:var(--ink);font-weight:600}
+
+/* ============ round 2: specimen plates ============ */
+.stage{background:#ece5d7;padding:30px}
+.spec{width:100%;display:flex;flex-direction:column;gap:12px}
+.spec-bar{display:flex;align-items:center;gap:9px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);flex-wrap:wrap}
+.spec-bar .rule{flex:1;min-width:16px;height:1px;background:rgba(29,27,23,.14)}
+.spec-bar .flag{color:var(--rust);border:1px solid rgba(164,79,42,.3);padding:2px 7px;letter-spacing:.14em;white-space:nowrap}
+.spec-bar .fmt{color:var(--ink2);letter-spacing:.16em}
+.spec-note{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:10.5px;line-height:1.65;color:var(--ink2);border-top:1px solid rgba(29,27,23,.12);padding-top:10px}
+.spec-note b{font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:2px;white-space:nowrap}
+@media(max-width:560px){.spec-note{grid-template-columns:1fr;gap:2px 0}.spec-note b{margin-top:6px}}
+
+/* contact sheet — IG carousel */
+.sheet{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(29,27,23,.16);border:1px solid rgba(29,27,23,.16);box-shadow:0 12px 28px rgba(29,27,23,.1)}
+.cf{position:relative;aspect-ratio:4/5;background:linear-gradient(168deg,#2c2723,#463a31 64%,#514437);padding:11px 10px 34px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.cf.end{background:linear-gradient(168deg,#3a332d,#64503d)}
+.cf .n{position:absolute;top:8px;left:9px;font-size:8px;letter-spacing:.16em;color:rgba(255,255,255,.5)}
+.cf .tick{position:absolute;top:8px;right:9px;font-size:8px;letter-spacing:.1em;color:#a9c8ae}
+.cf .h{font-family:Georgia,serif;font-size:11px;line-height:1.38;color:#fdfaf3}
+.cf .h em{font-style:italic;color:#f0c99a}
+.cf .s{font-size:8px;line-height:1.5;color:rgba(255,255,255,.62);margin-top:5px}
+.cf .halo{position:absolute;left:50%;top:33%;width:104px;height:104px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,211,150,.9),rgba(255,190,110,.16) 46%,transparent 70%)}
+.cf .strip{position:absolute;left:0;right:0;bottom:0;height:16px;background:rgba(0,0,0,.22);display:flex;align-items:center;padding:0 9px;font-size:7.5px;letter-spacing:.14em;color:rgba(255,255,255,.55)}
+.sheet-seq{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.sheet-seq i{font-style:normal;color:rgba(29,27,23,.3)}
+.sheet-seq span{color:var(--ink2)}
+
+/* storyboard — TikTok */
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.bf{display:flex;flex-direction:column;gap:7px}
+.bf .pane{position:relative;aspect-ratio:9/16;background:linear-gradient(170deg,#2a2521,#4b3e34);border:1px solid rgba(29,27,23,.18);overflow:hidden;box-shadow:0 8px 20px rgba(29,27,23,.1)}
+.bf .pane .tc{position:absolute;top:7px;left:7px;font-size:7.5px;letter-spacing:.12em;color:rgba(255,255,255,.6);background:rgba(0,0,0,.32);padding:2px 5px}
+.bf .pane .ln{position:absolute;left:8px;right:8px;bottom:9px;font-family:Georgia,serif;font-size:10px;line-height:1.36;color:#fdfaf3;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.bf .pane .ln em{font-style:normal;color:#f0c99a}
+.bf .pane .halo{position:absolute;left:50%;top:38%;width:96px;height:96px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,211,150,.85),rgba(255,190,110,.12) 48%,transparent 70%)}
+.bf .shot{font-size:9px;line-height:1.55;color:var(--ink2)}
+.bf .shot b{display:block;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+@media(max-width:420px){.board{gap:8px}.bf .pane .ln{font-size:9px}}
+
+/* pin ladder — Pinterest */
+.boardhead{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid rgba(29,27,23,.12);padding-bottom:8px}
+.boardhead b{font-family:Georgia,serif;font-size:13px;letter-spacing:0;text-transform:none;color:var(--ink);white-space:nowrap}
+.pinladder{display:grid;grid-template-columns:1.4fr .95fr .95fr;gap:9px;align-items:end;margin-top:12px}
+.pin{position:relative;border:1px solid rgba(29,27,23,.16);background:#fffdf8;box-shadow:0 8px 18px rgba(29,27,23,.08);overflow:hidden}
+.pin .img{position:relative;background:linear-gradient(180deg,#f3ead9,#e4d5bf 60%,#d5c4ab)}
+.pin.p1 .img{aspect-ratio:2/3}
+.pin.p2 .img{aspect-ratio:3/4}
+.pin.p3 .img{aspect-ratio:1/1}
+.pin .img .halo{position:absolute;left:50%;top:36%;width:120px;height:120px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,214,152,.95),rgba(255,190,110,.18) 46%,transparent 72%)}
+.pin .img .ttl{position:absolute;left:0;right:0;bottom:0;padding:34px 10px 11px;font-family:Georgia,serif;font-size:10px;line-height:1.32;color:#fff;background:linear-gradient(180deg,rgba(40,32,24,0),rgba(40,32,24,.74))}
+.pin .img .dim{position:absolute;top:6px;right:6px;font-size:7.5px;letter-spacing:.1em;color:rgba(255,255,255,.85);background:rgba(0,0,0,.3);padding:1px 5px}
+.pin .pm{padding:6px 8px;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line2)}
+
+/* real concept visuals */
+.plate{position:relative;width:100%;margin:0 auto;background:#efece3;border:1px solid #e2dccd;box-shadow:0 24px 48px -38px rgba(30,28,25,.55)}
+.plate img{display:block;width:100%;height:auto}
+.plate.w1{max-width:436px}
+.gal-item[data-work="c6"] .stage{align-items:center}
+.plate.w2{max-width:392px}
+.plate.w3{max-width:352px}
+.pinblock{max-width:322px;margin:0 auto}
+.pinblock .plate-cap{max-width:none;margin-top:10px}
+.plate-cap{max-width:436px;margin:12px auto 0;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:10px}
+.pin .img>img{width:100%;height:100%;object-fit:cover;display:block}
+.pin .img.sp{background:none;border:1px dashed #d3ccbb;display:flex;align-items:center;justify-content:center}
+.pin .img.sp span{display:block;padding:0 10px;font-size:8.5px;line-height:1.7;letter-spacing:.12em;text-transform:uppercase;color:#a9a190;text-align:center}
+@media(max-width:640px){.plate.w1,.plate.w2{max-width:100%}.plate.w3{max-width:78%}}
+.pin .pm b{color:var(--ink2);letter-spacing:.06em;text-transform:none;font-weight:500}
+
+/* type specimen — Threads / text-first piece */
+.quote{position:relative;background:#fffdf8;border:1px solid rgba(29,27,23,.16);padding:34px 30px 30px;box-shadow:0 10px 24px rgba(29,27,23,.07)}
+.quote .qmark{font-family:Georgia,serif;font-size:44px;line-height:.6;color:var(--sage);opacity:.6}
+.quote p{font-family:Georgia,serif;font-size:15px;line-height:1.72;color:var(--ink);margin-top:8px}
+.quote .sig{margin-top:16px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line2);padding-top:10px}
+
+/* motion beat strip — Shorts */
+.beats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(29,27,23,.16);border:1px solid rgba(29,27,23,.16)}
+.beat{position:relative;background:linear-gradient(170deg,#2b2622,#4a3d33);padding:12px 10px 14px;min-height:118px;display:flex;flex-direction:column;justify-content:space-between}
+.beat .w{font-family:Georgia,serif;font-size:13px;color:#fdfaf3}
+.beat .t{font-size:8px;letter-spacing:.14em;color:rgba(255,255,255,.5)}
+.beat .why{font-size:8.5px;line-height:1.5;color:rgba(255,255,255,.62);margin-top:8px}
+@media(max-width:560px){.beats{grid-template-columns:repeat(2,1fr)}}
+
+/* specimen responsive: keep the sheet/board metaphor, scroll instead of shrink */
+@media(max-width:640px){
+  .stage{padding:20px}
+  .sheet{display:flex;overflow-x:auto;gap:2px}
+  .cf{flex:none;width:134px}
+  .board{display:flex;overflow-x:auto;gap:10px;padding-bottom:2px}
+  .bf{flex:none;width:146px}
+  .pinladder{grid-template-columns:1fr 1fr;align-items:start}
+  .pin.p1{grid-column:span 1}
+  .spec-note{font-size:10px}
+  .spec-bar{font-size:8.5px}
+}
 
 /* rollout */
 .week-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
-.wtab{font-family:Georgia,"Songti SC",serif;font-size:13.5px;background:var(--panel);border:1px solid var(--line);color:var(--ink2);padding:10px 18px;cursor:pointer;transition:all .25s;text-align:left}
-.wtab .st{display:block;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:9.5px;letter-spacing:.1em;color:var(--muted);margin-top:2px}
+.wtab{font-family:Georgia,serif;font-size:13.5px;background:var(--panel);border:1px solid var(--line);color:var(--ink2);padding:10px 18px;cursor:pointer;transition:all .25s;text-align:left}
+.wtab .st{display:block;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:2px}
 .wtab.on{background:var(--dark);color:var(--cream);border-color:var(--dark)}
 .wtab.on .st{color:#e6c69a}
 .week-panel{display:none;border:1px solid var(--line);background:var(--panel)}
 .week-panel.on{display:block}
 .wk-hd{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;padding:18px 24px;border-bottom:1px solid var(--line);background:var(--paper)}
 .wk-hd .w{font-family:Georgia,serif;font-size:14px;color:var(--sage-t);letter-spacing:.08em}
-.wk-hd .th{font-family:Georgia,"Songti SC",serif;font-size:19px}
-.wk-hd .goal{margin-left:auto;font-size:11px;color:var(--muted);letter-spacing:.04em}
+.wk-hd .th{font-family:Georgia,serif;font-size:19px}
+.wk-hd .goal{margin-left:auto;font-size:11px;color:var(--muted);letter-spacing:.06em}
 .days{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line)}
 @media(max-width:1000px){.days{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:620px){.days{grid-template-columns:repeat(2,1fr)}}
 .day{background:var(--panel);padding:13px 13px 15px;min-height:112px}
 .day .d{font-family:Georgia,serif;font-size:11px;color:var(--muted);margin-bottom:7px}
-.day .pl{font-size:9.5px;letter-spacing:.08em;padding:2px 6px;display:inline-block;margin-bottom:7px;border:1px solid var(--line);color:var(--ink2)}
+.day .pl{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;display:inline-block;margin-bottom:7px;border:1px solid var(--line);color:var(--ink2)}
 .day .pl.tw{color:#4b5563;border-color:#dcdfe4;background:#f4f5f7}
 .day .pl.ig{color:#8a3f6d;border-color:#e3cddb;background:#faf3f8}
 .day .pl.tt{color:#1d1d1d;border-color:#d5d5d5;background:#f5f5f5}
@@ -427,11 +474,23 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .day .pl.yt{color:#a8322a;border-color:#ecd4d2;background:#fbf3f2}
 .day .pl.nl{color:var(--sage-t);border-color:#d3dbd4;background:#f3f6f4}
 .day .pl.rd{color:#c4622d;border-color:#ecd8c6;background:#fbf5ee}
-.day .t{font-size:12px;line-height:1.6;color:var(--ink2)}
+.day .pl.sh{color:#3f5343;border-color:#c8d4ca;background:#e9efe9;font-weight:600}
+.day .pl.st{color:#8a3f6d;border-color:#e3cddb;background:#faf3f8}
+.day .pl.opt{color:var(--muted);border-color:var(--line);border-style:dashed;background:#f8f5ed}
+.day.shoot{background:#f3f5f0}
+.day .t{font-size:12px;line-height:1.55;color:var(--ink2)}
+
+/* constraint facts */
+.facts{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:34px 0 40px}
+.facts div{background:var(--panel);padding:15px 16px}
+.facts b{display:block;font-family:Georgia,serif;font-size:20px;font-weight:600;line-height:1.15;color:var(--ink)}
+.facts span{display:block;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:5px;line-height:1.5}
+@media(max-width:900px){.facts{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.facts{grid-template-columns:repeat(2,1fr)}}
 
 .kpi-table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--panel)}
 .kpi-table th,.kpi-table td{border:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top}
-.kpi-table th{background:var(--paper);font-size:10.5px;letter-spacing:.1em;color:var(--ink2);font-weight:600}
+.kpi-table th{background:var(--paper);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);font-weight:600}
 .tbl-wrap{overflow-x:auto;border:1px solid var(--line)}
 .kpi-tags{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 18px;font-size:11.5px;color:var(--muted)}
 details.kpi{margin-top:16px}
@@ -452,7 +511,7 @@ footer .ft-tag em{font-style:italic;color:var(--sage-t)}
 footer .cols{display:flex;gap:40px;flex-wrap:wrap;justify-content:space-between;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:26px}
 footer .cols a{color:var(--ink2);text-decoration:none;border-bottom:1px solid var(--line)}
 footer .cols a:hover{color:var(--sage-t);border-color:var(--sage-t)}
-footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.85;max-width:820px}
+footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8;max-width:820px}
 
 /* modal */
 .modal{position:fixed;inset:0;z-index:100;display:none}
@@ -463,20 +522,45 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
 .modal .close{position:sticky;top:0;float:right;margin:-10px -6px 0 0;background:var(--paper);border:1px solid var(--line);width:34px;height:34px;font-size:17px;cursor:pointer;color:var(--ink2);line-height:1}
 .modal .close:hover{color:var(--ink);border-color:var(--ink)}
 .modal .m-no{font-family:Georgia,serif;font-size:12px;color:var(--sage);letter-spacing:.16em;margin-bottom:8px}
-.modal h4{font-size:clamp(20px,3vw,27px);line-height:1.3;margin-bottom:14px}
+.modal h4{font-size:clamp(20px,3vw,27px);line-height:1.25;margin-bottom:14px}
 .modal .m-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.modal .m-meta span{font-size:10.5px;letter-spacing:.08em;border:1px solid var(--line);padding:3px 10px;color:var(--ink2);background:var(--panel)}
+.modal .m-meta span{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:3px 10px;color:var(--ink2);background:var(--panel)}
 .modal .m-meta span.pl{background:var(--dark);color:var(--cream);border-color:var(--dark)}
 .modal .copy{font-family:Georgia,"Times New Roman",serif;font-size:14.5px;line-height:1.8;color:var(--ink);background:var(--panel);border:1px solid var(--line2);border-left:3px solid var(--sage);padding:16px 20px;white-space:pre-wrap;margin:14px 0}
-.modal .copy.zh{font-family:inherit;font-size:13.5px;color:var(--ink2)}
-.modal .copy .cap-lb{display:block;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:10px;letter-spacing:.18em;color:var(--muted);margin-bottom:10px}
+.modal .copy .cap-lb{display:block;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
 .modal dl{margin:8px 0 4px}
 .modal dl>div{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:11px 0;border-top:1px dotted var(--line)}
 @media(max-width:560px){.modal dl>div{grid-template-columns:1fr;gap:4px}}
-.modal dt{font-size:10.5px;letter-spacing:.12em;color:var(--muted);padding-top:3px}
+.modal dt{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:3px}
 .modal dd{font-size:14px;color:var(--ink2)}
-.modal .m-note{margin-top:20px;font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px;line-height:1.8}
+.modal .m-note{margin-top:20px;font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px}
 .modal .m-note b{color:var(--ink2)}
+.modal .mfig{margin:0 0 24px;border:1px solid var(--line);background:#efece3;max-width:322px}
+.modal .mfig img{display:block;width:100%;height:auto}
+
+
+/* 中文版排版覆写：中文字距收紧 */
+.hero-tag{letter-spacing:.18em}
+.kicker{letter-spacing:.16em}
+.hero-sub .caps{letter-spacing:.08em}
+.lamp-art .cap{letter-spacing:.1em}
+nav .links a{letter-spacing:.06em}
+nav .lang{letter-spacing:.06em}
+.icp-block .lbl{letter-spacing:.16em}
+.legend .lb{letter-spacing:.08em}
+.viz-cap{letter-spacing:.08em}
+.gal-foot .open{letter-spacing:.06em}
+@media(max-width:900px){nav .links a{letter-spacing:.05em}}
+details summary{letter-spacing:.04em}
+.plat-group{letter-spacing:.1em}
+.spec-bar{letter-spacing:.1em}
+.spec-bar .fmt{letter-spacing:.1em}
+.gal-hd .fm{letter-spacing:.05em}
+.facts span{letter-spacing:.08em}
+.sheet-seq{letter-spacing:.08em}
+.day .pl{letter-spacing:.03em}
+.week-panel .wk-hd .goal{letter-spacing:0}
+
 </style>
 </head>
 <body id="top">
@@ -508,7 +592,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
 <header class="hero" id="overview">
   <div class="hero-grid">
     <div class="wrap hero-l">
-      <div class="hero-tag rv">案例 01 · 独立项目 <span>·</span> 非客户委托</div>
+      <div class="hero-tag rv">案例 01 · 独立项目 <span>·</span> 未上线，无 campaign 数据</div>
       <h1 class="rv">DELTA
         <span class="t2">Good Things, Going&nbsp;Places.</span>
       </h1>
@@ -533,7 +617,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <div class="glow"></div>
         <div class="shade"></div><div class="stem"></div><div class="base"></div>
         <div class="floor"></div>
-        <div class="cap"><b>Object No.007</b> — 黄铜台灯 · 被寄回 · 被整备 · 去了新家</div>
+        <div class="cap"><b>Object No.007</b> — 黄铜台灯 · 本案贯穿使用的示例物件</div>
       </div>
     </div>
   </div>
@@ -665,7 +749,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       </div>
       <div class="map-side">
         <h3>交点是空的</h3>
-        <p>三个竞品各占一条 Delta 需要的轴。没有人同时做到
+        <p>从公开信息看，三个竞品各占一条 Delta 需要的轴，但没有人同时做到
         <b>一个人的标准</b>与<b>拥有且可退出</b>。内容策略就从这个交点开始——
         四个内容支柱是从这张空位推出来的，不是从 moodboard。</p>
         <div class="take">
@@ -695,7 +779,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <span class="axl">为搬家人群设计的家具租赁；社媒体量中等（公开估算）</span>
       </div>
       <div class="comp-b">
-        <div class="cell"><div class="lb">做得好的</div><p>证明「有人愿意为不拥有而付费」；搬家与首间公寓场景执行精准；Pinterest / SEO 铺得很稳。</p></div>
+        <div class="cell"><div class="lb">做得好的</div><p>提供了「有人愿意为不拥有而付费」的证据；搬家与首间公寓场景执行精准；Pinterest / SEO 铺得很稳。</p></div>
         <div class="cell"><div class="lb">留下的空白</div><p>拥有权从未发生——没有可以爱的东西，也没有可以传下去的东西。退出是合同到期，不是选择。</p></div>
       </div>
     </div>
@@ -726,7 +810,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         </table>
       </div>
     </details>
-    <div class="note rv" style="margin-top:12px">竞品粉丝量与更新频率为公开估算，用于判断量级与内容投入——这里重要的是市场形状，不是精确数字。</div>
+    <div class="note rv" style="margin-top:12px">仅为桌面研究：公开资料，无访谈、无一手数据。竞品粉丝量与更新频率为估算，用于判断量级；下面三条读法都是<b>待验证的假设</b>，不是结论。</div>
 
     <div class="pos-grid rv">
       <div class="pos-card dark">
@@ -761,23 +845,30 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       <div class="pos-card">
         <div class="lb">平台选择逻辑</div>
         <p class="small">每个平台的检验标准相同：<b>它能不能在决策链路里独立完成一件事？</b>
-        不能，就不给它位置。被发现交给 Pinterest，被定义交给 X，被相信交给 Substack。</p>
+        不能，就不给它位置。首月由三个平台承担——Instagram 建立相信、TikTok 试触达、Pinterest 做搜索。</p>
         <p class="small" style="margin-top:10px">有两个决定刻意反品牌直觉：
         <b>Pinterest 放弃调性换搜索排名</b>；<b>Reddit 放弃 CTA 换社区信任</b>。
-        两者的考核指标都不是点赞。</p>
+        后者属于后期实验——它需要先有值得讲的历史。</p>
       </div>
     </div>
 
-    <h3 class="rv" style="margin-top:48px">平台角色</h3>
+    <h3 class="rv" style="margin-top:48px">平台地图——三个平台承担首月</h3>
+    <p class="small rv" style="max-width:760px;margin-bottom:6px">八个平台加一个兼职的人，是一个会安静失败的计划。首月只有三个平台拿到位置；
+    其余五个保留为有名字的实验，并写明启动条件，而不是提前许下的承诺。</p>
     <div class="plat-list rv">
-      <div class="plat"><div class="pn">Instagram<span class="pf">展厅 · 每周 5+</span></div><div class="job">品牌展厅与转化枢纽——Reels 3、Carousel 1、Stories 每日<i>指标：保存率、主页点击</i></div><div class="tone">克制、具体、句子短。</div></div>
-      <div class="plat"><div class="pn">TikTok<span class="pf">触达 · 每周 4</span></div><div class="job">破圈与共鸣——15–30s 竖版<i>指标：3 秒留存、完播率</i></div><div class="tone">第一人称、有转折、字幕前置。</div></div>
-      <div class="plat flag"><div class="pn">Pinterest<span class="pf">搜索 · 每周 5</span></div><div class="job">长尾搜索流量——商品与 Idea Pin<i>指标：出站点击、收藏</i></div><div class="tone"><b>放弃调性，关键词优先。</b></div></div>
-      <div class="plat"><div class="pn">X<span class="pf">定义 · 每周 3</span></div><div class="job">品类定义与数据——单条与 Thread<i>指标：引用、外部点击</i></div><div class="tone">锋利、有数字、反直觉。</div></div>
-      <div class="plat"><div class="pn">Threads<span class="pf">测试 · 每周 3</span></div><div class="job">社群与低成本故事测试——短文本 + 图<i>指标：回复数</i></div><div class="tone">一个人在说话，不是品牌。</div></div>
-      <div class="plat"><div class="pn">Shorts<span class="pf">复用 · 每周 2</span></div><div class="job">机制可视化 + 订阅——无对白整备 / 修复<i>指标：订阅转化</i></div><div class="tone">零语言、ASMR。</div></div>
-      <div class="plat flag"><div class="pn">Reddit<span class="pf">信任 · 每周 0.5</span></div><div class="job">高意图长尾 + 信任——长经验帖<i>指标：upvote 比、搜索收录</i></div><div class="tone"><b>纯经验；必须披露身份。</b></div></div>
-      <div class="plat"><div class="pn">Substack<span class="pf">深度 · 每周 0.5</span></div><div class="job">深度内容与合规载体——600–900 字<i>指标：打开率、回复</i></div><div class="tone">文学性、透明、可核验。</div></div>
+      <div class="plat-group"><span class="sc core">核心</span>首月——全部生产时间投入这里</div>
+      <div class="plat flag"><div class="pn">Instagram<span class="pf">展厅 · 每周 4</span></div><div class="job">建立相信、承载链接的地方——Reels 2、Carousel 1、Stories 3<i>指标：保存、主页点击</i></div><div class="tone">克制、具体、句子短。</div></div>
+      <div class="plat"><div class="pn">TikTok<span class="pf">触达 · 每周 3</span></div><div class="job">唯一诚实的钩子测试场——15–30 秒竖版<i>指标：3 秒留存、完播</i></div><div class="tone">第一人称、有转折、字幕前置。</div></div>
+      <div class="plat"><div class="pn">Pinterest<span class="pf">搜索 · 每周 4</span></div><div class="job">比信息流活得久的搜索流量——1 个 Idea Pin + 3 枚商品 Pin<i>指标：出站点击</i></div><div class="tone"><b>放弃调性，关键词优先。</b></div></div>
+
+      <div class="plat-group"><span class="sc">实验</span>只有核心三平台稳住节奏才启动</div>
+      <div class="plat"><div class="pn">Threads<span class="pf">试验台 · 每周 2</span></div><div class="job">在开拍之前试故事形态，成本最低的地方<i>指标：回复数</i></div><div class="tone">一个人在说话，不是品牌。</div></div>
+      <div class="plat"><div class="pn">X<span class="pf">定义 · 每周 1–2</span></div><div class="job">有东西要定义时才用——串列与数据卡<i>指标：引用、外部点击</i></div><div class="tone">锋利、有数字、反直觉。</div></div>
+
+      <div class="plat-group"><span class="sc">后期</span>在首批二十件物品流转之后</div>
+      <div class="plat"><div class="pn">Shorts<span class="pf">复用 · 不定期</span></div><div class="job">机制可视化——需要一件真实回流的物品才能拍<i>指标：订阅转化</i></div><div class="tone">零语言、ASMR。</div></div>
+      <div class="plat flag"><div class="pn">Reddit<span class="pf">信任 · 不定期</span></div><div class="job">高意图长尾 + 信任——长经验帖<i>指标：upvote 比、搜索收录</i></div><div class="tone"><b>纯经验；必须披露身份。</b></div></div>
+      <div class="plat"><div class="pn">Substack<span class="pf">深度 · 每月</span></div><div class="job">深度内容与合规载体——600–900 字<i>指标：打开率、回复</i></div><div class="tone">文学性、透明、可核验。</div></div>
     </div>
     <details class="rv">
       <summary>为什么 Pinterest 和 Reddit 刻意破例</summary>
@@ -786,7 +877,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         「secondhand home」——不是「Delta」。标题必须写成用户会搜的话，而不是品牌想说的话。
         Pin 有 3–6 个月的半衰期：这里是唯一能持续产生站外流量的资产。</p>
         <p><b>Reddit</b> 拥有全组最极端的语气规则：任何营销腔都会被踩到负分，未披露的推广同时威胁账号与声誉。
-        这条内容放弃 CTA、主动披露身份。回报是 Google 对高意图长尾词的收录权重——比这里任何社媒触达都值钱。</p>
+        这条内容放弃 CTA、主动披露身份。回报是 Reddit 在高意图查询上通常排名很好——这类内容往往比本组社媒贴活得更久。</p>
       </div>
     </details>
   </div>
@@ -807,8 +898,8 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <div class="pno">PILLAR 01 · 产出 35%</div>
         <h4>The Four Questions</h4>
         <dl>
-          <div><dt>目标</dt><dd>把内部选品标准公开——这是竞品在结构上抄不走的东西。</dd></div>
-          <div><dt>洞察</dt><dd><span class="tg obs">观察</span> Depop 靠算法（没有可展示的标准），Feather 靠买手（标准不公开），Worn Wear 只讲耐用。没有人公开一个可核对的品味框架。</dd></div>
+          <div><dt>目标</dt><dd>把内部选品标准公开——这是竞品在结构上最难跟进的东西。</dd></div>
+          <div><dt>洞察</dt><dd><span class="tg obs">观察</span> Depop 靠算法（没有可展示的标准），Feather 靠买手（标准不公开），Worn Wear 只讲耐用。三者都没有公开一个可核对的框架。</dd></div>
           <div><dt>方法</dt><dd>让一件物品在镜头前通过（或没通过）四道题，每周一期——可复用的栏目，不是一次性创意。</dd></div>
           <div><dt>指标</dt><dd>主指标：保存数。保存意味着「我会用这套框架」，正是这个支柱为之设计的行为。</dd></div>
         </dl>
@@ -836,7 +927,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <h4>Moving Life</h4>
         <dl>
           <div><dt>目标</dt><dd>把品牌的创立理由——<i>because you're moving</i>——变成 campaign 的内容场景。</dd></div>
-          <div><dt>洞察</dt><dd><span class="tg obs">观察</span> 搬家高频、可预测、可对齐日历（毕业季、开学季、租约更替）。没有竞品把它当作情绪时刻。</dd></div>
+          <div><dt>洞察</dt><dd><span class="tg obs">观察</span> 搬家高频、可预测、可对齐日历（毕业季、开学季、租约更替）。三者都没有把它当作情绪时刻。</dd></div>
           <div><dt>方法</dt><dd>到期的租约、太小的公寓、带得走的东西——用第一人称讲，什么也不卖。</dd></div>
           <div><dt>指标</dt><dd>主指标：完播率、评论深度。</dd></div>
         </dl>
@@ -849,7 +940,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <h4>The Graceful Exit</h4>
         <dl>
           <div><dt>目标</dt><dd>让「寄回」感觉像参与了一件好事——不是退款，也不是失败。</dd></div>
-          <div><dt>洞察</dt><dd><span class="tg obs">观察</span> 品牌文档原文：<i>“Returning something shouldn't feel like I made a mistake. It should feel like I participated in something good.”</i> 这组竞品里没有人占据这个情绪位置。</dd></div>
+          <div><dt>洞察</dt><dd><span class="tg obs">观察</span> 品牌文档原文：<i>“Returning something shouldn't feel like I made a mistake. It should feel like I participated in something good.”</i> 三者都没有占据这个情绪位置。</dd></div>
           <div><dt>方法</dt><dd>寄回的人——包裹、字条、整备、下一个家。</dd></div>
           <div><dt>指标</dt><dd>主指标：回流发起数、Story 互动。</dd></div>
         </dl>
@@ -903,232 +994,239 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       <div class="kicker"><span class="no">04</span> 作品</div>
       <h2>同一盏灯。同一次搬家。<br><em>九条不一样的帖子。</em></h2>
       <p class="lede">
-        九条平台原生内容与七张版式 mock，来自同一批母素材。每个平台变的是钩子、时长、人称——以及到底有没有 CTA。
-        点开任意一条，查看完整文案与背后的判断。
+        九条平台原生内容，来自同一批母素材。每个平台变的是钩子、时长、人称——以及到底有没有 CTA。
+        点开任意一条，查看文案与背后的判断。
       </p>
     </div>
-    <div class="note rv" style="margin-bottom:30px">
-      <span class="tg asm">说明</span> Mock 均为版式研究，不是成品设计：画面为 CSS 占位、数字为示意。
-      文案中的具体物品与价格（如 $68）是演示定价语言的占位，正式发布前替换为真实物品。
+    <div class="note rv" style="margin-bottom:34px">
+      <span class="tg asm">草稿状态</span> 这里没有任何内容被发布过——没有 campaign 历史、没有受众，也<b>没有互动数据</b>，
+      所以一处也不展示。C1、C3、C4 是已完成的概念视觉；其余六件是版式样张，界面外观由 CSS 搭建。
+      其中的物件为创意示意，不是 Delta 的真实库存，价格为示意值。
     </div>
 
     <div class="gal">
 
       <!-- C5 -->
       <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c5" aria-haspopup="dialog">
-        <div class="gal-hd"><span class="no">C5</span><span class="ti">We're not a rental company.</span><span class="fm pl">X Thread</span><span class="fm">定义 · Day 1 首发</span></div>
+        <div class="gal-hd"><span class="no">C5</span><span class="ti">We're not a rental company.</span><span class="fm pl">X Thread</span><span class="fm">定义 · Day 1</span></div>
         <div class="stage">
-          <div class="xwrap">
-            <div class="xbar"><span class="lg">&#119961;</span><div class="tb"><span class="on">For you</span><span>Following</span></div></div>
-            <div class="xthread">
-              <div style="display:grid;justify-items:center"><span class="xav">D</span><span class="xline"></span></div>
-              <div>
-                <div class="xmeta"><b>Delta</b><span>@delta.objects · 9:14 AM</span></div>
-                <div class="xpost"><span class="xnum">1/5</span>People keep asking if Delta is a rental company. It isn't.<br><br>Here's the difference — and why it matters.</div>
-                <div class="xpost"><span class="xnum">2/5</span><em>Rental:</em> you never own it. You pay monthly. You give it back because a contract says so.</div>
-                <div class="xcard">
-                  <h6>Why this matters</h6>
-                  <div class="xcmp">
-                    <div class="hr">Rental</div><div class="hr dl">Delta</div>
-                    <div>Monthly fee</div><div class="dl">You buy it</div>
-                    <div>You never own it</div><div class="dl">You own it</div>
-                    <div>Returned when the contract ends</div><div class="dl">Returned when <em>you</em> are done</div>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">X · 串列 · 5 条</span><span class="rule"></span><span class="flag">概念稿 · 未发布</span></div>
+            <div class="xwrap">
+              <div class="xthread">
+                <div style="display:grid;justify-items:center"><span class="xav">D</span><span class="xline"></span></div>
+                <div>
+                  <div class="xmeta"><b>Delta</b><span>@delta.objects · 草稿</span></div>
+                  <div class="xpost"><span class="xnum">1/5</span>People keep asking if Delta is a rental company. It isn't.<br><br>Here's the difference — and why it matters.</div>
+                  <div class="xpost"><span class="xnum">2/5</span><em>Rental:</em> you never own it. You pay monthly. You give it back because a contract says so.</div>
+                  <div class="xcard">
+                    <h6>Why this matters</h6>
+                    <div class="xcmp">
+                      <div class="hr">Rental</div><div class="hr dl">Delta</div>
+                      <div>Monthly fee</div><div class="dl">You buy it</div>
+                      <div>You never own it</div><div class="dl">You own it</div>
+                      <div>Returned when the contract ends</div><div class="dl">Returned when <em>you</em> are done</div>
+                    </div>
                   </div>
+                  <div class="xpost"><span class="xnum">5/5</span>Ownership, with an exit.<br><br>Beautiful things should circulate. That's all.</div>
                 </div>
-                <div class="xpost"><span class="xnum">5/5</span>Ownership, with an exit.<br><br>Beautiful things should circulate. That's all.</div>
-                <div class="xacts"><span>84</span><span>216</span><span>1.2K</span><span>307</span><span>24.8K</span></div>
               </div>
+            </div>
+            <div class="spec-note">
+              <b>艺术指导</b><span>正文用系统无衬线，Georgia 只出现在对照卡里——让唯一会被截图传播的元素读起来像证据，而不是一条帖子。</span>
+              <b>草稿状态</b><span>第 3–4 条承担定价与捐赠事实；对照卡按「脱离上下文仍能读懂」来设计。</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 04 — X Thread 版式<span class="open">打开详情 →</span></div>
+        <div class="gal-foot">样张 04 — 串列版式<span class="open">打开详情 →</span></div>
       </div>
 
       <!-- C1 -->
       <div role="button" tabindex="0" class="gal-item g-s5 rv" data-work="c1" aria-haspopup="dialog">
-        <div class="gal-hd"><span class="no">C1</span><span class="ti">Four questions, one lamp</span><span class="fm pl">IG Reels</span><span class="fm">30s</span></div>
+        <div class="gal-hd"><span class="no">C1</span><span class="ti">Four questions, one lamp</span><span class="fm pl">IG Reels</span><span class="fm">30 秒</span></div>
         <div class="stage">
-          <div class="phone">
-            <div class="screen">
-              <div class="room"></div>
-              <div class="glow"></div>
-              <div class="shade"></div><div class="stem"></div><div class="base"></div>
-              <div class="ui-top">Reels</div>
-              <div class="hook">
-                <div class="hk1">Every object here has to pass <em>four questions.</em></div>
-                <ul class="qlist">
-                  <li><svg class="ico xs"><use href="#i-check"/></svg>Is it quiet?</li>
-                  <li><svg class="ico xs"><use href="#i-check"/></svg>Is it smart?</li>
-                  <li><svg class="ico xs"><use href="#i-check"/></svg>Is it worth circulating?</li>
-                  <li><svg class="ico xs"><use href="#i-check"/></svg>Is it usable?</li>
-                </ul>
-              </div>
-              <div class="ui-bottom">
-                <div class="prof"><span class="av">D</span><span class="hdl">delta.objects</span><span class="flw">Follow</span></div>
-                <div class="cap">Object No.007 · brass lamp, $68</div>
-              </div>
-              <div class="acts">
-                <div class="a"><svg class="ico"><use href="#i-heart"/></svg><b>2.4K</b></div>
-                <div class="a"><svg class="ico"><use href="#i-comment"/></svg><b>118</b></div>
-                <div class="a"><svg class="ico"><use href="#i-book"/></svg><b>891</b></div>
-              </div>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">IG Reels · 30 秒 · 4:5 封面</span><span class="rule"></span><span class="flag">概念视觉</span></div>
+            <div class="plate w1">
+              <img src="assets/c1-four-questions.jpg" width="1122" height="1402" loading="lazy" decoding="async"
+                   alt="概念视觉：橄榄色衬线标题「Four Questions for a Lighter, More Flexible Home」压在亚麻桌布上，黄铜台灯、羊毛围巾与斑点陶杯处于同一束午后光线里。">
+            </div>
+            <div class="plate-cap"><span>C1 · 封面帧</span><span>1122 × 1402 · 4:5</span></div>
+<div class="spec-note">
+              <b>艺术指导</b><span>一间房、一个光源，三件物件与文字同权重——灯、杯子、围巾本身就是论点，所以谁都不做产品摆拍。</span>
+              <b>封面逻辑</b><span>按缩略图尺寸验收：橄榄色斜体给承诺，照片给氛围。框内不放 logo、不放价格、不放账号。</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 01 — Reels 封面<span class="open">打开详情 →</span></div>
-      </div>
-
-      <!-- C3 -->
-      <div role="button" tabindex="0" class="gal-item g-s5 rv" data-work="c3" aria-haspopup="dialog">
-        <div class="gal-hd"><span class="no">C3</span><span class="ti">I moved 4 times in 3 years. Here's what I stopped buying.</span><span class="fm pl">TikTok</span><span class="fm">20s</span></div>
-        <div class="stage">
-          <div class="phone">
-            <div class="screen">
-              <div class="room b"></div>
-              <div class="glow sm"></div>
-              <div class="case"></div>
-              <div class="tabs"><span>Following</span><span class="on">For You</span></div>
-              <div class="tt">4 moves.<br>3 years.<br><u>One rule.</u></div>
-              <div class="tt2">I stopped buying things I'd feel guilty leaving behind.</div>
-              <div class="ui-bottom">
-                <div class="prof"><span class="av">D</span><span class="hdl">@delta.objects</span></div>
-                <div class="cap">I moved 4 times in 3 years. Here's what I stopped buying.</div>
-                <div class="chips"><span>#movingtips</span><span>#apartmenthacks</span><span>#secondhandhome</span></div>
-              </div>
-              <div class="acts">
-                <div class="a"><span class="av sp">D</span></div>
-                <div class="a"><svg class="ico"><use href="#i-heart"/></svg><b>18.2K</b></div>
-                <div class="a"><svg class="ico"><use href="#i-comment"/></svg><b>942</b></div>
-                <div class="a"><svg class="ico"><use href="#i-book"/></svg><b>3.1K</b></div>
-              </div>
-              <div class="prog"><i></i></div>
-            </div>
-          </div>
-        </div>
-        <div class="gal-foot">Mock 02 — TikTok 帧<span class="open">打开详情 →</span></div>
-      </div>
-      <!-- C2 -->
-      <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c2" aria-haspopup="dialog">
-        <div class="gal-hd"><span class="no">C2</span><span class="ti">The moving box test</span><span class="fm pl">IG Carousel</span><span class="fm">8 帧</span></div>
-        <div class="stage">
-          <div class="igcwrap">
-            <div class="igc-top">
-              <span class="av" style="width:22px;height:22px;background:#171514;color:#fff">D</span>
-              <span style="font-size:11px;font-weight:600;color:var(--ink)">delta.objects</span>
-              <span style="font-size:10px;color:var(--muted);margin-left:auto">⋯</span>
-            </div>
-            <div class="igc-strip">
-              <div class="igc-cell"><div class="igc-f"><span class="pg">1/8</span><div class="glowx"></div><h6>Would it survive<br>your <em>move?</em></h6><p>The moving box test</p></div><div class="igc-lb">封面 · 只给钩子</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">2/8</span><span class="dot"></span><h6>If it doesn't fit the box,<br>it doesn't come with you.</h6><p>规则一句话说完</p></div><div class="igc-lb">规则</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">3/8</span><span class="dot"></span><div class="tickq">Q1</div><h6>Is it <em>quiet?</em></h6><p>No logos. No noise.</p></div><div class="igc-lb">四道题 1/4</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">4/8</span><span class="dot"></span><div class="tickq">Q2</div><h6>Is it smartly priced?</h6><p>Enough to risk, good enough to keep.</p></div><div class="igc-lb">四道题 2/4</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">5/8</span><span class="dot"></span><div class="tickq">Q3</div><h6>Will it survive<br>another owner?</h6><p>Solid, repairable, re-homeable.</p></div><div class="igc-lb">四道题 3/4</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">6/8</span><span class="dot"></span><div class="tickq">Q4</div><h6>Will I actually<br>use it?</h6><p>Every week, or it's clutter with good taste.</p></div><div class="igc-lb">四道题 4/4</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">7/8</span><span class="dot"></span><h6>When you're done,<br>send it back.</h6><p>Cleaned · restaged · credit</p></div><div class="igc-lb">机制</div></div>
-              <div class="igc-cell"><div class="igc-f last"><span class="pg">8/8</span><h6>Save this<br>before your move.</h6><p>@delta.objects</p></div><div class="igc-lb">CTA · Save</div></div>
-            </div>
-            <div class="igc-foot">
-              <span><svg class="ico dark"><use href="#i-heart"/></svg> <b>1.8K</b></span>
-              <span><svg class="ico dark"><use href="#i-comment"/></svg> <b>74</b></span>
-              <span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-              <span><svg class="ico dark"><use href="#i-book"/></svg> <b>692</b></span>
-            </div>
-          </div>
-        </div>
-        <div class="gal-foot">Mock 07 — Carousel · 8 帧<span class="open">打开详情 →</span></div>
+        <div class="gal-foot">概念视觉 01 — Reels 封面<span class="open">打开详情 →</span></div>
       </div>
 
       <!-- C4 -->
       <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c4" aria-haspopup="dialog">
-        <div class="gal-hd"><span class="no">C4</span><span class="ti">First Apartment Essentials Under $100</span><span class="fm pl">Pinterest</span><span class="fm">Idea + 商品 Pin</span></div>
+        <div class="gal-hd"><span class="no">C4</span><span class="ti">First Apartment Essentials Under $100</span><span class="fm pl">Pinterest</span><span class="fm">Board</span></div>
         <div class="stage">
-          <div class="ptwrap">
-            <div class="ptsearch"><svg class="ico dark" style="width:14px;height:14px"><use href="#i-srch"/></svg><span>first apartment essentials under $100</span></div>
-            <div class="ptgrid">
-              <div class="ptile other"><div class="ph" style="height:150px"></div><div class="plabel">apartment must haves</div></div>
-              <div class="ptile mine"><div class="ph mine"><span class="mini lamp"></span><span class="mini cup"></span><span class="mini vase"></span></div><span class="badge">DELTA</span><div class="ptitle">First Apartment Essentials Under $100</div></div>
-              <div class="ptile other"><div class="ph" style="height:180px"></div><div class="plabel">small space ideas</div></div>
-              <div class="ptile other"><div class="ph" style="height:190px"></div><div class="plabel">studio apartment decor</div></div>
-              <div class="ptile other"><div class="ph" style="height:140px"></div><div class="plabel">secondhand home finds</div></div>
-              <div class="ptile other"><div class="ph" style="height:170px"></div><div class="plabel">budget apartment makeover</div></div>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">Pinterest · 封面 Pin · 2:3</span><span class="rule"></span><span class="flag">概念视觉</span></div>
+            <div class="boardhead"><b>板块</b><span>“first apartment essentials under $100”——搜的是这句话，不是 slogan</span></div>
+            <div class="pinblock">
+              <div class="plate">
+                <img src="assets/c4-collected-home.jpg" width="1024" height="1536" loading="lazy" decoding="async"
+                     alt="概念视觉：Pinterest 封面 Pin，标题 A Collected Home，方格拼贴黄铜台灯、羊毛毯、陶器、烛台与玻璃瓶，收尾一句 Good Things, Going Places.">
+              </div>
+              <div class="plate-cap"><span>封面 Pin · 2:3</span><span>1024 × 1536</span></div>
             </div>
             <div class="ptmeta">
-              <h5>Pin 标题 / 描述——按用户会搜的话写，无品牌词</h5>
-              First Apartment Essentials Under $100 — small space, warm, mostly secondhand.<br>
-              A brass lamp. A wool scarf. Two cups. One small bag. Everything here can move with you — and everything here can be sent back when it's time.
-              <div class="kw"><span>first apartment</span><span>apartment essentials</span><span>small space</span><span>secondhand home</span><span>under $100</span></div>
+              <h5>板块文案——封面负责调性，下面的 Pin 负责关键词</h5>
+              <b>板块</b> — first apartment essentials under $100。<b>封面 Pin</b> — A Collected Home：secondhand pieces for spaces in motion。<br>
+              <b>Pin 标题</b> — warm brass lighting · small-space ceramics · wool throws under $100。
+              <div class="kw"><span>first apartment</span><span>apartment essentials</span><span>warm lighting</span><span>small space</span><span>under $100</span></div>
+            </div>
+            <div class="spec-note">
+              <b>艺术指导</b><span>板块名背搜索词，封面背氛围，Pin 背关键词。一版拼贴、五个类目、严格两栏网格——封面在 236px 的列宽下依然成立。</span>
+              <b>取舍</b><span>这是全案唯一主动放弃调性的地方：文字朴素、关键词先行，而且这些词没有一句是我们自己的。</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 03 — Pinterest 搜索结果<span class="open">打开详情 →</span></div>
+        <div class="gal-foot">概念视觉 03 — 板块封面<span class="open">打开详情 →</span></div>
+      </div>
+
+      <!-- C3 -->
+      <div role="button" tabindex="0" class="gal-item g-s5 rv" data-work="c3" aria-haspopup="dialog">
+        <div class="gal-hd"><span class="no">C3</span><span class="ti">I moved 4 times in 3 years. Here's what I stopped buying.</span><span class="fm pl">TikTok</span><span class="fm">20 秒</span></div>
+        <div class="stage">
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">TikTok · 20 秒 · 9 格</span><span class="rule"></span><span class="flag">概念视觉</span></div>
+            <div class="plate w2">
+              <img src="assets/c3-storyboard.jpg" width="940" height="1672" loading="lazy" decoding="async"
+                   alt="九格分镜，带时间码：离开、打包椅子、打包陶器、黄铜台灯、羊毛围巾、路上、新房间、收尾字幕、DELTA 片尾。">
+            </div>
+            <div class="plate-cap"><span>C3 · 九格 · 0:00–0:20</span><span>940 × 1672 · 9:16</span></div>
+<div class="spec-note">
+              <b>艺术指导</b><span>第一人称、一个家、九个机位。全程下午的暖光；字幕硬编码以适配静音观看，每一格都必须单独成立。</span>
+              <b>制作</b><span>在每周拍摄里占 90 分钟。唯一新增道具是纸箱——椅子、围巾、台灯、杯子沿用 C1 与 C4。</span>
+            </div>
+          </div>
+        </div>
+        <div class="gal-foot">概念视觉 02 — 九格分镜<span class="open">打开详情 →</span></div>
+      </div>
+
+      <!-- C2 -->
+      <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c2" aria-haspopup="dialog">
+        <div class="gal-hd"><span class="no">C2</span><span class="ti">The moving box test</span><span class="fm pl">IG Carousel</span><span class="fm">8 帧</span></div>
+        <div class="stage">
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">IG Carousel · 8 帧 · 4:5</span><span class="rule"></span><span class="flag">概念稿 · 未发布</span></div>
+            <div class="sheet">
+              <div class="cf"><span class="n">01</span><div class="halo"></div><div class="h">Would it survive<br>your <em>move?</em></div><div class="s">The moving box test</div><div class="strip">封面</div></div>
+              <div class="cf"><span class="n">02</span><div class="h">If it doesn't fit the box, it doesn't come with you.</div><div class="s">规则，一句话说完</div><div class="strip">规则</div></div>
+              <div class="cf"><span class="n">03</span><span class="tick">Q1</span><div class="h">Is it <em>quiet?</em></div><div class="s">No logos. No noise.</div><div class="strip">四道题 1/4</div></div>
+              <div class="cf"><span class="n">04</span><span class="tick">Q2</span><div class="h">Is it smartly priced?</div><div class="s">Enough to risk, good enough to keep.</div><div class="strip">四道题 2/4</div></div>
+              <div class="cf"><span class="n">05</span><span class="tick">Q3</span><div class="h">Will it survive another owner?</div><div class="s">Solid, repairable, re-homeable.</div><div class="strip">四道题 3/4</div></div>
+              <div class="cf"><span class="n">06</span><span class="tick">Q4</span><div class="h">Will I actually use it?</div><div class="s">Every week, or it's clutter with good taste.</div><div class="strip">四道题 4/4</div></div>
+              <div class="cf"><span class="n">07</span><div class="h">When you're done, send it back.</div><div class="s">清洁 · 整备 · 抵扣</div><div class="strip">出口</div></div>
+              <div class="cf end"><span class="n">08</span><div class="h">Save this before your move.</div><div class="s">@delta.objects</div><div class="strip">CTA · 保存</div></div>
+            </div>
+            <div class="sheet-seq"><span>序列</span><i>—</i> 钩子 <i>→</i> 规则 <i>→</i> 四道题 <i>→</i> 出口 <i>→</i> 保存</div>
+            <div class="spec-note">
+              <b>艺术指导</b><span>一种底色、一个光源、文字压在下半部。第 1 帧单独可作缩略图；3–6 帧成组，四个勾在滑动中保持对齐。</span>
+              <b>为什么是八帧</b><span>最后一帧是全篇唯一的请求——所以 save CTA 是一帧，而不是一行说明。</span>
+            </div>
+          </div>
+        </div>
+        <div class="gal-foot">样张 07 — Carousel 联系表<span class="open">打开详情 →</span></div>
       </div>
 
       <!-- C8 -->
       <div role="button" tabindex="0" class="gal-item g-s5 rv" data-work="c8" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C8</span><span class="ti">What I learned furnishing a life that keeps moving</span><span class="fm pl">Reddit</span><span class="fm">经验长帖</span></div>
         <div class="stage">
-          <div class="rdwrap">
-            <div class="rdtop"><span class="rdsub">r/ApartmentHacks</span><span>·</span><span>u/emersoncaiye</span><span style="margin-left:auto">Sort: Best</span></div>
-            <div class="rdbody">
-              <div class="rdvote"><span class="up">▲</span><b>1.4K</b><span>▼</span></div>
-              <div>
-                <div class="rdmeta"><span>u/emersoncaiye</span><span>· 7 hr. ago</span></div>
-                <div class="rdtitle">I've moved 5 times in 4 years — what I learned about furnishing a life that keeps moving</div>
-                <div class="rdtext">
-                  <p>Buy at a size that can travel. A lamp, a cup, a scarf. Not a bookcase.</p>
-                  <p>Stop buying "for now" things. They're the first to get thrown out, and the least enjoyable while you have them.</p>
-                  <p>Secondhand doesn't mean settling — but it does mean you need a filter. Mine is four questions: is it quiet, is it smartly priced, will it survive another owner, will I actually use it.</p>
-                  <div class="rdwarn"><b>Disclosure</b> — I run a small curated secondhand project, which is why I think about this far too much. Not here to sell anything; happy to answer questions about the framework.</div>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">Reddit · 长帖 · 草稿</span><span class="rule"></span><span class="flag">概念稿 · 未发布</span></div>
+            <div class="rdwrap">
+              <div class="rdtop"><span class="rdsub">r/ApartmentHacks</span><span>·</span><span>拟发布</span><span style="margin-left:auto">无链接</span></div>
+              <div class="rdbody">
+                <div>
+                  <div class="rdmeta"><span>u/emersoncaiye</span><span>· 作者账号</span></div>
+                  <div class="rdtitle">I've moved 5 times in 4 years — what I learned about furnishing a life that keeps moving</div>
+                  <div class="rdtext">
+                    <p>Buy at a size that can travel. A lamp, a cup, a scarf. Not a bookcase.</p>
+                    <p>Stop buying "for now" things. They're the first to get thrown out, and the least enjoyable while you have them.</p>
+                    <p>Secondhand doesn't mean settling — but it does mean you need a filter. Mine is four questions: is it quiet, is it smartly priced, will it survive another owner, will I actually use it.</p>
+                    <div class="rdwarn"><b>Disclosure</b> — I run a small curated secondhand project, which is why I think about this far too much. Not here to sell anything; happy to answer questions about the framework.</div>
+                  </div>
+                  <div class="rdtag">NO LINK · NO CTA · 每个社区单独改写</div>
                 </div>
-                <div class="rdacts"><span>312 comments</span><span>share</span><span>save</span></div>
-                <div class="rdtag">NO LINK · NO CTA · 不引流</div>
               </div>
+            </div>
+            <div class="spec-note">
+              <b>艺术指导</b><span>刻意朴素：沿用 Reddit 自己的字体，无卡片、无品牌标记。这种笨拙本身就是设计——它必须像是人打出来的。</span>
+              <b>约束</b><span>每个 subreddit 单独改写，绝不照搬；任何链接的代价都高于收益。</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 05 — Reddit 帖<span class="open">打开详情 →</span></div>
+        <div class="gal-foot">样张 05 — 长帖版式<span class="open">打开详情 →</span></div>
       </div>
+
       <!-- C9 -->
       <div role="button" tabindex="0" class="gal-item g-s5 rv" data-work="c9" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C9</span><span class="ti">Object No.007: the lamp that moved four times</span><span class="fm pl">Substack</span><span class="fm">600–900 字</span></div>
         <div class="stage">
-          <div class="sswrap">
-            <div class="ssmail"><b>the lamp that moved four times (and came back)</b><div>Delta · Where It Went · Issue 07</div></div>
-            <div class="sskicker">Where It Went · Object No.007</div>
-            <div class="sshero">物件占位图 · 黄铜台灯</div>
-            <div class="sstitle">Object No.007: the lamp that moved four times</div>
-            <div class="sstext"><p>It started at a flea market in March, went to a first apartment, then a different city, and came back to us last week.</p><p>What we did to it: re-wired, de-rusted, re-polished. What we kept: the dent on the base.</p></div>
-            <div class="sspull">Wear you can date is provenance. Wear you can't is damage.</div>
-            <div class="ssfoot">本季回流 N 件 · 捐赠 ¥X（动物救助 + 儿童阅读）· 回执链接<br>下周上新 3–5 件，订阅者提前 24 小时看</div>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">Substack · 600–900 字</span><span class="rule"></span><span class="flag">样刊</span></div>
+            <div class="sswrap">
+              <div class="ssmail"><b>the lamp that moved four times (and came back)</b><div>Delta · Where It Went · Issue 01（样刊）</div></div>
+              <div class="sskicker">Where It Went · Object No.007</div>
+              <div class="sshero">物件占位图 · 黄铜台灯</div>
+              <div class="sstitle">Object No.007: the lamp that moved four times</div>
+              <div class="sstext"><p>It started at a flea market in March, went to a first apartment, then a different city, and came back to us last week.</p><p>What we did to it: re-wired, de-rusted, re-polished. What we kept: the dent on the base.</p></div>
+              <div class="sspull">Wear you can date is provenance. Wear you can't is damage.</div>
+              <div class="ssfoot">本季回流 N 件 · 捐赠 ¥X（动物救助 + 儿童阅读）· 回执链接<br>下周上新 3–5 件，订阅者提前 24 小时看</div>
+            </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 06 — Newsletter 版式<span class="open">打开详情 →</span></div>
+        <div class="gal-foot">样张 06 — 邮件版式<span class="open">打开详情 →</span></div>
       </div>
 
       <!-- C6 -->
       <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c6" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C6</span><span class="ti">she returned the lamp — she's moving to Lisbon</span><span class="fm pl">Threads</span><span class="fm">故事测试</span></div>
         <div class="stage">
-          <div class="placeholder">
-            <div class="glyph" aria-hidden="true">No. —</div>
-            <b>占位</b>
-            <p>这条内容没有制作版式 mock——它是文本优先的故事测试。完整文案与其「低成本筛选」的角色见详情视图。</p>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">Threads · 文本优先 · 2 条</span><span class="rule"></span><span class="flag">概念稿 · 未发布</span></div>
+            <div class="quote">
+              <div class="qmark" aria-hidden="true">&ldquo;</div>
+              <p>someone returned a lamp because she’s moving to Lisbon.<br>
+              she wrote: <i>“it did its job for two winters. send it somewhere warm.”</i></p>
+              <div class="sig">示例字条 · 草稿文案 · 无链接、无话题标签</div>
+            </div>
+            <div class="spec-note">
+              <b>艺术指导</b><span>无模板、无边框——字条只用排版呈现，因为字条本身就是资产。真实字条出现后，照片一比一替换这张卡。</span>
+              <b>在计划中的角色</b><span>系统里最便宜的测试：在给任何故事配拍摄之前，先看哪种形态能换来回复。</span>
+            </div>
           </div>
         </div>
-        <div class="gal-foot">无 mockup — 文本优先<span class="open">打开详情 →</span></div>
+        <div class="gal-foot">样张 08 — 文本样张<span class="open">打开详情 →</span></div>
       </div>
 
       <!-- C7 -->
       <div role="button" tabindex="0" class="gal-item g-s12 rv" data-work="c7" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C7</span><span class="ti">Restaging a returned lamp (no music)</span><span class="fm pl">YouTube Shorts</span><span class="fm">ASMR · 无声</span></div>
         <div class="stage">
-          <div class="placeholder">
-            <div class="glyph" aria-hidden="true">returned → cleaned → restaged → next home</div>
-            <b>占位</b>
-            <p>这条内容没有制作版式 mock——形态是 ASMR 画面上的四词字幕序列。分镜与判断见详情视图。</p>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">YouTube Shorts · 55 秒 · 四段</span><span class="rule"></span><span class="flag">概念稿 · 未发布</span></div>
+            <div class="beats">
+              <div class="beat"><span class="t">0:00</span><span class="w">回流</span><div class="why">包裹还没拆封，只有环境声。</div></div>
+              <div class="beat"><span class="t">0:12</span><span class="w">清洁</span><div class="why">擦拭、黄铜抛光，无配乐。</div></div>
+              <div class="beat"><span class="t">0:28</span><span class="w">整备</span><div class="why">新搁板、更暖的灯泡、一个大全景。</div></div>
+              <div class="beat"><span class="t">0:44</span><span class="w">新家</span><div class="why">在任何字幕点明它之前切黑。</div></div>
+            </div>
+            <div class="spec-note">
+              <b>艺术指导</b><span>无旁白、无配乐、无语言。四个词承载全片，因此可以不改一字地跨平台重剪。</span>
+              <b>现实核对</b><span>需要一件真实回流的物品才能拍。在第一件真实回流出现之前，这只能停留在分镜阶段。</span>
+            </div>
           </div>
         </div>
-        <div class="gal-foot">无 mockup — 动态内容<span class="open">打开详情 →</span></div>
+        <div class="gal-foot">样张 09 — 四段动效条<span class="open">打开详情 →</span></div>
       </div>
 
     </div>
@@ -1139,68 +1237,75 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
   <div class="wrap">
     <div class="sec-head rv">
       <div class="kicker"><span class="no">05</span> 排期</div>
-      <h2>三十天，按生产成本排序<br><em>——而不是按平台面子。</em></h2>
+      <h2>三十天，按一个人的<br><em>兼职容量来排。</em></h2>
       <p class="lede">
-        最便宜的形态先上，它们的结果决定谁拿到贵的拍摄。每周一个主题、一件工作。
-        约 68 条发布来自 12 个母素材——每次拍摄都围绕「能拆成几条」来设计。
+        每周一次拍摄、约六小时工时、零媒体预算。十二个母素材变成约三十四条发布，只有三个平台在范围内。
+        每周只做一件事：抢下定义、公开标准、让出口被看见，然后开始证明流转。
       </p>
     </div>
 
+    <div class="facts rv" aria-label="生产约束">
+      <div><b>1</b><span>人 · 兼职</span></div>
+      <div><b>1</b><span>次拍摄 / 周</span></div>
+      <div><b>~6h</b><span>周总工时</span></div>
+      <div><b>3</b><span>个在范围内平台</span></div>
+      <div><b>12</b><span>个母素材</span></div>
+      <div><b>~34</b><span>条 30 天发布</span></div>
+    </div>
+
     <div class="week-tabs rv" role="tablist" aria-label="排期周次">
-      <button class="wtab on" data-week="w1" role="tab" aria-selected="true" aria-controls="w1">第 1 周 · Day 1–7<span class="st">认知 — 定义</span></button>
-      <button class="wtab" data-week="w2" role="tab" aria-selected="false" aria-controls="w2">第 2 周 · Day 8–14<span class="st">互动 — 标准</span></button>
-      <button class="wtab" data-week="w3" role="tab" aria-selected="false" aria-controls="w3">第 3 周 · Day 15–21<span class="st">考虑 — 出口</span></button>
-      <button class="wtab" data-week="w4" role="tab" aria-selected="false" aria-controls="w4">第 4 周 · Day 22–30<span class="st">测试与优化 — 证据</span></button>
+      <button class="wtab on" data-week="w1" role="tab" aria-selected="true" aria-controls="w1">第 1 周 · Day 1–7<span class="st">定义 — 5 条，1 次拍摄</span></button>
+      <button class="wtab" data-week="w2" role="tab" aria-selected="false" aria-controls="w2">第 2 周 · Day 8–14<span class="st">标准 — 6 条，1 次拍摄</span></button>
+      <button class="wtab" data-week="w3" role="tab" aria-selected="false" aria-controls="w3">第 3 周 · Day 15–21<span class="st">出口 — 6 条，1 次拍摄</span></button>
+      <button class="wtab" data-week="w4" role="tab" aria-selected="false" aria-controls="w4">第 4 周 · Day 22–30<span class="st">证据 — 5 条，1 次拍摄</span></button>
     </div>
 
     <div class="week-panel on rv" id="w1" role="tabpanel">
-      <div class="wk-hd"><span class="w">WEEK 1</span><span class="th">抢下定义——Delta 是什么？</span><span class="goal">主 KPI：主页访问 · 关注</span></div>
+      <div class="wk-hd"><span class="w">WEEK 1</span><span class="th">抢下定义——Delta 是什么？</span><span class="goal">工时：拍摄 3h · 剪辑 1.5h · 发布 1.5h</span></div>
       <div class="days">
-        <div class="day"><div class="d">D1</div><span class="pl tw">X</span><div class="t">C5「我们不是租赁公司」——定义权首发</div></div>
-        <div class="day"><div class="d">D2</div><span class="pl ig">IG Reels</span><div class="t">C1 四道题：一盏台灯</div></div>
-        <div class="day"><div class="d">D3</div><span class="pl tt">TikTok</span><div class="t">15s「not a secondhand store」</div></div>
-        <div class="day"><div class="d">D4</div><span class="pl pt">Pinterest</span><div class="t">建 3 个 Board，铺首批 6 个 Pin</div></div>
-        <div class="day"><div class="d">D5</div><span class="pl th">Threads</span><div class="t">品牌口语版 + 提问「你搬过几次家」</div></div>
-        <div class="day"><div class="d">D6</div><span class="pl ig">IG Carousel</span><div class="t">「Why Delta」：河三角洲的比喻</div></div>
-        <div class="day"><div class="d">D7</div><span class="pl nl">Substack</span><div class="t">创刊号：Objects for a moving life</div></div>
+        <div class="day"><div class="d">D1</div><span class="pl ig">IG Reels</span><div class="t">C1 四道题：一盏台灯——锚点内容</div></div>
+        <div class="day"><div class="d">D2</div><span class="pl tt">TikTok</span><div class="t">同一批素材、换钩子：“not a secondhand store”</div></div>
+        <div class="day shoot"><div class="d">D3</div><span class="pl sh">拍摄</span><div class="t">Session 01——台灯两个空间，4 张静帧 + 2 段竖版</div></div>
+        <div class="day"><div class="d">D4</div><span class="pl pt">Pinterest</span><div class="t">建 Board + 从 Session 01 切 4 枚 Pin</div></div>
+        <div class="day"><div class="d">D5</div><span class="pl ig">IG Carousel</span><div class="t">“Why Delta”——5 帧，纯静帧</div></div>
+        <div class="day"><div class="d">D6</div><span class="pl st">Stories</span><div class="t">3 帧：物件、标准、出口</div></div>
+        <div class="day"><div class="d">D7</div><span class="pl opt">可选</span><div class="t">Threads：一条纯文字，无链接——第一次回复测试</div></div>
       </div>
     </div>
     <div class="week-panel" id="w2" role="tabpanel">
-      <div class="wk-hd"><span class="w">WEEK 2</span><span class="th">立下标准——The Four Questions</span><span class="goal">主 KPI：完播率 · 保存率</span></div>
+      <div class="wk-hd"><span class="w">WEEK 2</span><span class="th">公开标准——The Four Questions</span><span class="goal">工时：拍摄 3h · 剪辑 2h · 发布 1h</span></div>
       <div class="days">
-        <div class="day"><div class="d">D8</div><span class="pl ig">IG Reels</span><div class="t">第二件过四关：一条能穿十年的羊毛围巾</div></div>
-        <div class="day"><div class="d">D9</div><span class="pl tt">TikTok</span><div class="t">「quiet things only」：为什么我们没有大 logo</div></div>
-        <div class="day"><div class="d">D10</div><span class="pl pt">Pinterest</span><div class="t">C4 First Apartment Essentials Under $100</div></div>
-        <div class="day"><div class="d">D11</div><span class="pl yt">Shorts</span><div class="t">C7 整备回流台灯 Part 1</div></div>
-        <div class="day"><div class="d">D12</div><span class="pl th">Threads</span><div class="t">C6 测试 3 条物件故事，赢家升级</div></div>
-        <div class="day"><div class="d">D13</div><span class="pl ig">IG Carousel</span><div class="t">四道题框架海报（长期置顶）</div></div>
-        <div class="day"><div class="d">D14</div><span class="pl rd">Reddit</span><div class="t">C8 r/ApartmentHacks 经验帖（首投）</div></div>
+        <div class="day shoot"><div class="d">D8</div><span class="pl sh">拍摄</span><div class="t">Session 02——第二件物品（围巾）+ 台灯细节，3 段</div></div>
+        <div class="day"><div class="d">D9</div><span class="pl ig">IG Reels</span><div class="t">一条围巾过四关</div></div>
+        <div class="day"><div class="d">D10</div><span class="pl tt">TikTok</span><div class="t">“quiet things only”——为什么没有大 logo</div></div>
+        <div class="day"><div class="d">D11</div><span class="pl pt">Pinterest</span><div class="t">C4 First Apartment Essentials Under $100——1 个 Idea + 3 枚商品 Pin</div></div>
+        <div class="day"><div class="d">D12</div><span class="pl ig">IG Carousel</span><div class="t">C2 搬家纸箱测试——8 帧</div></div>
+        <div class="day"><div class="d">D13</div><span class="pl st">Stories</span><div class="t">投票：“如果一个月内搬家，你会留下什么？”</div></div>
+        <div class="day"><div class="d">D14</div><span class="pl opt">可选</span><div class="t">X：C5 定义串列——只有在有时间回评论时才发</div></div>
       </div>
     </div>
     <div class="week-panel" id="w3" role="tabpanel">
-      <div class="wk-hd"><span class="w">WEEK 3</span><span class="th">让出口被看见——The Graceful Exit</span><span class="goal">主 KPI：回流发起数 · 评论深度</span></div>
+      <div class="wk-hd"><span class="w">WEEK 3</span><span class="th">让出口被看见——The Graceful Exit</span><span class="goal">工时：拍摄 3h · 剪辑 1.5h · 发布 1.5h</span></div>
       <div class="days">
-        <div class="day"><div class="d">D15</div><span class="pl ig">IG Reels</span><div class="t">回流包裹开箱（授权 UGC）</div></div>
-        <div class="day"><div class="d">D16</div><span class="pl ig">IG Stories</span><div class="t">搬家季提醒序列</div></div>
-        <div class="day"><div class="d">D17</div><span class="pl tt">TikTok</span><div class="t">C3 搬了 4 次——我不再买什么</div></div>
-        <div class="day"><div class="d">D18</div><span class="pl tw">X</span><div class="t">数据卡：平均持有天数 / 回流率</div></div>
-        <div class="day"><div class="d">D19</div><span class="pl ig">IG Carousel</span><div class="t">C2 搬家纸箱测试</div></div>
-        <div class="day"><div class="d">D20</div><span class="pl yt">Shorts</span><div class="t">Part 2：没过四关的那件</div></div>
-        <div class="day"><div class="d">D21</div><span class="pl pt">Pinterest</span><div class="t">「搬家时，东西怎么办」</div></div>
+        <div class="day shoot"><div class="d">D15</div><span class="pl sh">拍摄</span><div class="t">Session 03——回流式静物、打包过程、1 段素材</div></div>
+        <div class="day"><div class="d">D16</div><span class="pl tt">TikTok</span><div class="t">C3 搬了 4 次——我不再买什么</div></div>
+        <div class="day"><div class="d">D17</div><span class="pl ig">IG Reels</span><div class="t">纸箱测试——TikTok 的缩减版</div></div>
+        <div class="day"><div class="d">D18</div><span class="pl pt">Pinterest</span><div class="t">“搬家时，东西怎么办”——4 枚 Pin</div></div>
+        <div class="day"><div class="d">D19</div><span class="pl st">Stories</span><div class="t">搬家季倒计时，3 帧</div></div>
+        <div class="day"><div class="d">D20</div><span class="pl ig">IG Carousel</span><div class="t">四道题框架，做成长期置顶</div></div>
+        <div class="day"><div class="d">D21</div><span class="pl opt">可选</span><div class="t">Threads：C6 故事测试——随包裹寄回的那张字条</div></div>
       </div>
     </div>
     <div class="week-panel" id="w4" role="tabpanel">
-      <div class="wk-hd"><span class="w">WEEK 4</span><span class="th">证明流转——Where It Went</span><span class="goal">主 KPI：公示点击 · 转化 · 订阅</span></div>
+      <div class="wk-hd"><span class="w">WEEK 4</span><span class="th">开始证明流转——Where It Went</span><span class="goal">工时：拍摄 2h · 剪辑 2h · 发布 2h</span></div>
       <div class="days">
-        <div class="day"><div class="d">D22</div><span class="pl tw">X</span><div class="t">季度数据 Thread + 捐赠金额</div></div>
-        <div class="day"><div class="d">D23</div><span class="pl nl">Substack</span><div class="t">C9 台灯的四个住处 + 公益公示</div></div>
-        <div class="day"><div class="d">D24</div><span class="pl ig">IG Reels</span><div class="t">捐赠去了哪里——探访救助站 30s</div></div>
-        <div class="day"><div class="d">D25</div><span class="pl tt">TikTok</span><div class="t">拼接：寄回 → 整备 → 新家</div></div>
-        <div class="day"><div class="d">D26</div><span class="pl pt">Pinterest</span><div class="t">季度批量 10 Pin</div></div>
-        <div class="day"><div class="d">D27</div><span class="pl ig">IG Carousel</span><div class="t">本季 10 件物品的下一站</div></div>
-        <div class="day"><div class="d">D28</div><span class="pl rd">Reddit</span><div class="t">r/expats 二次投放 + 评论区答疑</div></div>
-        <div class="day"><div class="d">D29</div><span class="pl ig">IG Stories</span><div class="t">上新预告——订阅者提前 24h</div></div>
-        <div class="day"><div class="d">D30</div><span class="pl nl">Internal</span><div class="t">复盘 + 下月选题</div></div>
+        <div class="day shoot"><div class="d">D22</div><span class="pl sh">拍摄</span><div class="t">Session 04——第一批物品寄出，地址遮挡</div></div>
+        <div class="day"><div class="d">D23</div><span class="pl ig">IG Reels</span><div class="t">“这一件去了哪里”——首次发件，暂不做捐赠承诺</div></div>
+        <div class="day"><div class="d">D24</div><span class="pl tt">TikTok</span><div class="t">打包 BTS，15 秒——全月剪辑最少的一条</div></div>
+        <div class="day"><div class="d">D25</div><span class="pl pt">Pinterest</span><div class="t">季节性批次：四场拍摄共出 6 枚 Pin</div></div>
+        <div class="day"><div class="d">D26</div><span class="pl st">Stories</span><div class="t">Q&amp;A：用十帧讲清回流机制</div></div>
+        <div class="day"><div class="d">D27</div><span class="pl ig">IG Reels</span><div class="t">当月最佳内容，换上胜出的钩子重剪</div></div>
+        <div class="day"><div class="d">D28–30</div><span class="pl nl">内部</span><div class="t">复盘、砍掉什么、下月选题——不发布</div></div>
       </div>
     </div>
 
@@ -1210,10 +1315,11 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <table class="kpi-table">
           <thead><tr><th>层级</th><th>内容</th><th>为什么这样定</th><th>数字的来源</th></tr></thead>
           <tbody>
-            <tr><td><b>Objective</b></td><td>30 天内让目标受众明白 Delta <b>既不是二手店也不是租赁</b>，并触发首次购买与首次回流。</td><td>品类不存在 → 先解决认知再谈转化；回流是只有这个品牌能给出的验证点</td><td>—</td></tr>
-            <tr><td><b>KR1 · 理解</b></td><td>≥30% 的评论在不问「这是不是租赁」的情况下描述机制；X thread 被外部引用 ≥10 次</td><td>可直接观测「定义权是否被抢到」，不需要后台数据</td><td><span class="tg asm">项目假设</span></td></tr>
-            <tr><td><b>KR2 · 触达</b></td><td>Reels / TikTok 非粉丝触达 ≥60%；Pinterest 出站 CTR ≥1%</td><td>区分真实破圈与反复触达同一小群人</td><td><span class="tg asm">行业基准</span></td></tr>
-            <tr><td><b>KR3 · 转化</b></td><td>bio 链接 CTR ≥2%；Newsletter +300 订阅；<b>回流发起数 / 售出量 ≥15%</b></td><td>前两项是常规电商数字；最后一项检验机制本身是否成立</td><td><span class="tg asm">基准</span> + <span class="tg asm">假设</span></td></tr>
+            <tr><td><b>Objective</b></td><td>30 天内让冷启动受众能把 Delta 描述成<b>「拥有，且有一个出口」</b>，并让第一批物品真正到手。</td><td>品类不存在，认知必须先于转化；回流是第 90 天的问题，不是第 30 天的</td><td>—</td></tr>
+            <tr><td><b>KR1 · 理解</b></td><td>≥30% 的评论能描述机制，而不再问「这是不是租赁」</td><td>不需要后台数据就能观测：定义要么立住了，要么没有</td><td><span class="tg asm">项目假设</span></td></tr>
+            <tr><td><b>KR2 · 触达</b></td><td>TikTok 3 秒留存 ≥65%；Pinterest 出站 CTR ≥1%</td><td>区分真实破圈与反复触达同一小群人</td><td><span class="tg asm">行业基准</span></td></tr>
+            <tr><td><b>KR3 · 转化</b></td><td>bio 链接 CTR ≥2%；订阅 ≥60；首批订单 ≥5</td><td>绝对值故意定得很小——这是一人启动，不是规模化测试</td><td><span class="tg asm">基准</span> + <span class="tg asm">假设</span></td></tr>
+            <tr><td><b>KR4 · 第 90 天</b></td><td>回流发起数 / 售出量 ≥15%</td><td>刻意放在 30 天窗口之外：最短持有档是 7 天，默认是 30–90 天</td><td><span class="tg asm">假设</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1228,13 +1334,13 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       <table class="kpi-table">
         <thead><tr><th>层级</th><th>指标</th><th>提案目标</th><th>为什么是它</th></tr></thead>
         <tbody>
-          <tr><td>触达</td><td>TikTok 3 秒留存 / Reels 非粉触达</td><td><span class="tg asm">基准</span> ≥70% / ≥60%</td><td>区分真实触达与反复触达老粉</td></tr>
+          <tr><td>触达</td><td>TikTok 3 秒留存 / Reels 非粉触达</td><td><span class="tg asm">基准</span> ≥65% / ≥60%</td><td>区分真实触达与反复触达老粉</td></tr>
           <tr><td>互动</td><td>Reels 保存率</td><td><span class="tg asm">基准</span> ≥1.5%</td><td>选品 / 搬家类内容最强的意向信号，权重高于点赞</td></tr>
           <tr><td>理解</td><td>Carousel 翻至末页率</td><td><span class="tg asm">基准</span> ≥40%</td><td>等价于「机制被理解」的比例</td></tr>
           <tr><td>理解</td><td>评论中问寄回 / 搬家的占比</td><td><span class="tg asm">假设</span> ≥15%</td><td>说明出口支柱被看见，而不是被滑过</td></tr>
-          <tr><td>信任</td><td>Reddit upvote 比</td><td><span class="tg asm">假设</span> ≥85%</td><td>低于此值说明语气仍像营销</td></tr>
+          <tr><td>信任</td><td>Reddit upvote 比（后期）</td><td><span class="tg asm">假设</span> ≥85%</td><td>低于此值说明语气仍像营销</td></tr>
           <tr><td>转化</td><td>Pinterest 出站 CTR / bio CTR</td><td><span class="tg asm">基准</span> ≥1% / ≥2%</td><td>唯一能干净归因的流量</td></tr>
-          <tr><td>回流</td><td>回流发起数 / 售出量</td><td><span class="tg asm">假设</span> ≥15%</td><td>无公开基准；机制成立的唯一证明</td></tr>
+          <tr><td>留存</td><td>回流发起数 / 售出量 <i>（第 90 天）</i></td><td><span class="tg asm">假设</span> ≥15%</td><td>无公开基准；机制成立的唯一证明</td></tr>
         </tbody>
       </table>
     </div>
@@ -1245,7 +1351,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <table class="kpi-table">
           <thead><tr><th>观测信号</th><th>阈值</th><th>预写动作</th></tr></thead>
           <tbody>
-            <tr><td>3 秒留存低</td><td>&lt;65%</td><td>重做钩子：结论放进第 1 帧画面，不做铺垫</td></tr>
+            <tr><td>3 秒留存低</td><td>&lt;60%</td><td>重做钩子：结论放进第 1 帧画面，不做铺垫</td></tr>
             <tr><td>完播高、主页访问低</td><td>完播 ≥45% 且点击 &lt;1%</td><td>内容被当成娱乐消费 → 改第一人称，结尾留具体物件悬念</td></tr>
             <tr><td>保存高、点赞低</td><td>保存 ≥1.5% 且点赞 &lt;1%</td><td><b>说明策略在生效</b>——工具型内容的正常表现；加做清单类续集</td></tr>
             <tr><td>评论区还在问「这是不是租赁」</td><td>&gt;20% 的评论</td><td>把对照卡做成每条内容固定的结尾卡；定义内容提前重发一轮</td></tr>
@@ -1258,15 +1364,17 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
     </details>
 
     <details class="rv kpi">
-      <summary>投入分级与落后时的削减顺序</summary>
+      <summary>每周工时，以及落后时的削减顺序</summary>
       <div class="dbody">
-        <p>8 个平台、约 68 条发布，对一名兼职执行者相当激进。它能立住，是因为
-        <b>每周的拍摄窗口只给 TikTok 和 IG</b>，其余大部分发布是改写而非新拍摄。</p>
+        <p>计划是从每周六小时倒推出来的，因为那是一个人兼职的真实上限。
+        一次拍摄、三个素材，其余全部是对已有素材的改写。</p>
         <ul>
-          <li><b>绝不能砍：</b>TikTok 和 IG——它们是唯一的新素材来源。</li>
-          <li><b>先砍：</b>Substack 停更 → Threads / X 降到每周 3 条 → Shorts 停 → Pinterest 停新建 Board → Reddit 停新投放。</li>
-          <li><b>复用链：</b>Threads 试故事 → TikTok 试钩子 → 赢家升级 Reels → 再切 Shorts → Pinterest 改写成搜索形态 → Reddit 改写成经验帖 → Substack 收深度。</li>
-          <li><b>日历对齐：</b>毕业季（5–6 月）、开学季（8–9 月）、年末换约（12–1 月）——这些窗口把出口类内容临时提到 50%。</li>
+          <li><b>一周的样子：</b>拍摄 3h · 剪辑 1.5h · 文案与发布 1.5h。每月四次拍摄、十二个素材、约 34 条发布。</li>
+          <li><b>绝不能砍：</b>拍摄。没有它，下周就没有东西可发，计划就不再是计划。</li>
+          <li><b>按这个顺序砍：</b>可选的 Threads / X → Pinterest 商品 Pin（保留 Idea Pin）→ 第二条 IG Reel → Stories。</li>
+          <li><b>复用链，只走核心三平台：</b>TikTok 试钩子 → 赢家升级为 IG Reel → 静帧变成 Carousel 与 Pinterest Pin。</li>
+          <li><b>日历对齐：</b>毕业季（5–6 月）、开学季（8–9 月）、年末换约（12–1 月）——这些窗口把出口类内容临时提到一半产出。</li>
+          <li><b>停止规则：</b>若连续两周超出两小时，降到每周两条，而不是延期或凑数发布。</li>
         </ul>
       </div>
     </details>
@@ -1295,14 +1403,14 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       <div class="refl rv">
         <div class="n">02</div>
         <h4>为什么优先级胜过覆盖面</h4>
-        <p>资源有限时，平台广度是陷阱。给每个平台一件它能独立完成的工作，
-        并愿意在 Pinterest 放弃调性、在 Reddit 放弃 CTA——比无处不在更重要。
-        削减顺序在上线前就写死，因为高压之下做的决定是更差的决定。</p>
+        <p>这份计划的第一版列了八个平台，它会安静地失败。把八个都写成研究、只承诺三个，
+        并把其余平台的放弃顺序提前写死，才让它变得可执行。
+        一个你能辩护的范围，比一个你只能描述出来的覆盖面更值钱。</p>
       </div>
       <div class="refl rv">
         <div class="n">03</div>
         <h4>创意选择回答商业问题</h4>
-        <p>这里每个审美决定都能追回一个商业决定：四道题系列存在，是因为可辩护的标准是品牌唯一抄不走的资产；
+        <p>这里每个审美决定都能追回一个商业决定：四道题系列存在，是因为可辩护的标准是竞品最难跟进的那件事；
         Save CTA 存在，是因为保存比点赞更能预测购买意图行为。创意方向就是穿了另一件衣服的策略。</p>
       </div>
       <div class="refl rv">
@@ -1310,7 +1418,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <h4>上线前我会先测什么</h4>
         <p>先测定义主张：仅凭那张对照卡，冷启动受众能否复述 Delta 是什么。
         再测回流机制：「寄回」读起来是功能还是摩擦——在任何一件库存押上它之前。
-        八项单变量 A/B 测试已经为此写好。</p>
+        针对这两件事的测试清单已经写好——先测定义卡，再测回流机制。</p>
       </div>
       <div class="refl wide rv">
         <div class="n">05</div>
@@ -1417,47 +1525,47 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
   /* ---------- 作品详情数据 ---------- */
   var WORK = {
     c1:{no:"C1 · 支柱 01 — The Four Questions（四道题）",title:"Four questions, one lamp",
-      meta:["Instagram Reels · 30s","四道题","CTA：保存","Mock 01"],
-      body:"<dl><div><dt>钩子 0–3s</dt><dd>画面上依次打出四个问题，前三个打勾、第四个打勾的瞬间台灯亮起。\u201cEvery object here has to pass four questions.\u201d</dd></div><div><dt>结构</dt><dd>3s 四问抛出 → 8s Quiet（无 logo、不抢戏）→ 14s Smart（$68，不是便宜是价实）→ 20s Worth circulating（黄铜越用越好）→ 25s Usable（你每晚都会开它）→ 结尾帧。</dd></div><div><dt>视觉处理</dt><dd>手持微晃、自然光、无配乐；字幕硬编码（85% 静音观看）；封面用「四个问题 + 一盏亮着的灯」。</dd></div><div><dt>受众</dt><dd>正在寻找「有标准、可验证的品味」的 ICP——他们要的是能拿来用的标准，不是要相信的形容词。</dd></div><div><dt>策略目标</dt><dd>把标准公开化，并做成可复用的栏目格式，而不是一次性创意。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">完整文案 · 原文</span>Every object in Delta has to pass four questions.\n\n1. Is it quiet? — no logo, no shouting.\n2. Is it smart? — $68. Not cheap. Fairly priced.\n3. Is it worth circulating? — brass. It gets better, not worse.\n4. Is it usable? — you\u2019ll turn it on every night.\n\nThis one passed. Most don\u2019t.\n\nObject No.007. Save this if you have a corner that needs it.</div>",
+      meta:["Instagram Reels · 30s","四道题","CTA：保存","样张 01"],
+      body:"<div class=\"mfig\"><img src=\"assets/c1-four-questions.jpg\" alt=\"Concept visual — Reels cover for Four Questions\" decoding=\"async\"></div><dl><div><dt>钩子 0–3s</dt><dd>画面上依次打出四个问题，前三个打勾、第四个打勾的瞬间台灯亮起。\u201cEvery object here has to pass four questions.\u201d</dd></div><div><dt>结构</dt><dd>3s 四问抛出 → 8s Quiet（无 logo、不抢戏）→ 14s Smart（$68，不是便宜是价实）→ 20s Worth circulating（黄铜越用越好）→ 25s Usable（你每晚都会开它）→ 结尾帧。</dd></div><div><dt>视觉处理</dt><dd>手持微晃、自然光、无配乐；字幕硬编码（85% 静音观看）；封面是一张标题海报——四道题用橄榄色斜体压在亮着的灯、杯子与围巾之上。</dd></div><div><dt>受众</dt><dd>正在寻找「有标准、可验证的品味」的 ICP——他们要的是能拿来用的标准，不是要相信的形容词。</dd></div><div><dt>策略目标</dt><dd>把标准公开化，并做成可复用的栏目格式，而不是一次性创意。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">完整文案 · 原文</span>Every object in Delta has to pass four questions.\n\n1. Is it quiet? — no logo, no shouting.\n2. Is it smart? — $68. Not cheap. Fairly priced.\n3. Is it worth circulating? — brass. It gets better, not worse.\n4. Is it usable? — you\u2019ll turn it on every night.\n\nThis one passed. Most don\u2019t.\n\nObject No.007. Save this if you have a corner that needs it.</div>",
       note:"<b>判断。</b>把内部选品标准变成公开栏目，是竞品在结构上给不出的东西：Depop 靠算法（没有可展示的标准），Feather 靠买手（标准不公开），Worn Wear 只讲耐用。更重要的是，四道题是一个格式而不是一次性创意——可以无限复用，并且天然契合「不设门槛」的定位（标准是送出去的，谁都能用）。CTA 用 Save 而不是赞：Reels 的推荐权重里 save 最高，而且这类内容天然的行为就是「收起来」。"},
 
     c2:{no:"C2 · 支柱 03 — The Graceful Exit（体面的出口）",title:"The moving box test",
-      meta:["IG Carousel · 8 帧","体面的出口","CTA：搬家前收藏","Mock 07"],
+      meta:["IG Carousel · 8 帧","体面的出口","CTA：搬家前收藏","样张 07"],
       body:"<dl><div><dt>分页</dt><dd>S1 搬家纸箱测试 → S2 三周后你要搬家，什么能进纸箱？→ S3 明天就愿意再买的东西 → 留。→ S4 出于愧疚才留着的东西 → 放手。→ S5 太大、太易碎、和这套房子绑定的东西 → 放手。→ S6 爱但带不走的东西 → 寄回。→ S7 这就是出口——你拥有它，只要你还在用它；你搬家时，它继续流转。→ S8 抵扣下一次寻获。我们清洁、整备，让它找到新家。</dd></div><div><dt>受众</dt><dd>几周内即将面对搬家的人——真实的决策时刻，不是闲逛。</dd></div><div><dt>策略目标</dt><dd>把回流机制挂在一个具体场景上，让机制被「理解」而不是被「解释」。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">完整文案 · 原文</span>Moving isn\u2019t a reason to own less beauty.\nIt\u2019s a reason to own it differently.\n\nSave this before your next move.</div>",
       note:"<b>判断。</b>一个没有场景的机制是没人读完的规则。品牌文档把回流的第一个理由写成「because you\u2019re moving」，所以载体就该是搬家纸箱本身，而不是「我们的退货政策」。前六页给的是真实有用、与品牌无关的决策建议，机制只在 7、8 两页出现——价值在前，自我在后。Carousel 的收藏率天然高于单图，而「搬家清单」正是收藏率最高的内容形态。"},
 
     c3:{no:"C3 · 支柱 02 — Moving Life（搬家生活）",title:"I moved 4 times in 3 years. Here\u2019s what I stopped buying.",
-      meta:["TikTok · 20s","搬家生活","CTA：评论区接力——无链接、无品牌名","Mock 02"],
-      body:"<dl><div><dt>结构</dt><dd>0–2s 空房间 + 一个行李箱，字幕 \u201c4 moves. 3 years. One rule.\u201d → 2–6s 「我不再买大件家具」→ 6–10s 「我不再买『暂时用用』的东西，它们最先被扔」→ 10–14s 「我不再买走了会有负罪感的东西」→ 14–20s 拿起一盏灯：「现在我只买搬走时能寄回去的东西」→ 尾帧。</dd></div><div><dt>保留的约束</dt><dd>不出现品牌名、不出现价格、不放链接。前 20 秒没有任何推销，品牌只出现在主页和评论区。</dd></div><div><dt>受众</dt><dd>刻意筛选——开头几句同时劝退捡漏党和租赁用户，留下的正是 ICP。</dd></div><div><dt>策略目标</dt><dd>用共鸣完成人群筛选——真正要做的不是曝光量，是选对看到的人。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">尾帧文案 · 原文</span>nothing good stays behind.\n#movingtips #apartmenthacks #slowliving #secondhandhome</div>",
+      meta:["TikTok · 20s","搬家生活","CTA：评论区接力——无链接、无品牌名","样张 02"],
+      body:"<div class=\"mfig\"><img src=\"assets/c3-storyboard.jpg\" alt=\"Concept visual — nine-frame storyboard\" decoding=\"async\"></div><dl><div><dt>结构</dt><dd>0–2s 离开，字幕「Another move?」→ 2–4s 椅子包纸 → 4–6s 陶器装箱 → 6–8s 黄铜台灯 → 8–10s 羊毛围巾 → 10–12s 抱着纸箱走过街 → 12–14s 新房间，灯亮 → 14–17s 「会跟着你搬的东西，让临时的家像家」→ 17–20s 品牌片尾。</dd></div><div><dt>保留的约束</dt><dd>不出现品牌名、不出现价格、不放链接。前 20 秒没有任何推销，品牌只出现在主页和评论区。</dd></div><div><dt>受众</dt><dd>刻意筛选——开头几句同时劝退捡漏党和租赁用户，留下的正是 ICP。</dd></div><div><dt>策略目标</dt><dd>用共鸣完成人群筛选——真正要做的不是曝光量，是选对看到的人。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">片尾文案 · 原文</span>DELTA\n\nGood Things, Going Places.\n#movingtips #apartmenthacks #slowliving #secondhandhome</div>",
       note:"<b>判断。</b>TikTok 的搬家 / 公寓内容池巨大，且几乎全是「搬家必备」推荐——这条反着做：我不再买什么。反直觉、有共鸣、什么都不卖。它真正的任务不是曝光，是<b>人群筛选</b>：前三句同时劝退捡漏党和租房党，留下的正是「能搬、不愿将就」的人。结尾句是品牌主张的口语版，可以做成常设系列的标题。"},
 
     c4:{no:"C4 · 支柱 02 — Moving Life（搬家生活）",title:"First Apartment Essentials Under $100",
-      meta:["Pinterest · 1 个 Idea Pin + 6 个商品 Pin","搬家生活","CTA：出站点击","Mock 03"],
-      body:"<dl><div><dt>形态</dt><dd>1 个 Idea Pin（8 件物品顺序播放）+ 6 个商品 Pin，分别进 3 个 Board：First Apartment · Small Space Warmth · Secondhand Home。</dd></div><div><dt>标题逻辑</dt><dd>没有品牌词、没有诗意——只写用户真的会搜的话。这是全案唯一主动放弃品牌调性的地方。</dd></div><div><dt>受众</dt><dd>正在规划第一间公寓或小空间改造的高意图搜索者——需求已经存在。</dd></div><div><dt>策略目标</dt><dd>长尾搜索流量——在投放月结束后仍持续复利。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Pin 文案 · 原文</span>First Apartment Essentials Under $100 — small space, warm, mostly secondhand.\n\nA brass lamp. A wool scarf. Two cups. One small bag.\nEverything here can move with you, and everything here can be sent back when it\u2019s time.\n\n#firstapartment #apartmentessentials #smallspace #secondhandhome</div>",
-      note:"<b>判断。</b>「First apartment」是 Pinterest 的头部搜索词，且这类 Pin 能活几个月——同样的图在 IG 上几天就被算法埋掉。Feather 已经用场景内容验证过这个流量池，Delta 的逐件「聪明定价」比订阅制更天然地接住它。这里要看的指标是出站 CTR，不是点赞。"},
+      meta:["Pinterest · 板块封面 + 6 个商品 Pin","搬家生活","CTA：出站点击","样张 03"],
+      body:"<div class=\"mfig\"><img src=\"assets/c4-collected-home.jpg\" alt=\"Concept visual — Pinterest board cover\" decoding=\"async\"></div><dl><div><dt>形态</dt><dd>一张带调性的板块封面 + 6 枚关键词标题的商品 Pin，分别进 3 个 Board：First Apartment · Small Space Warmth · Secondhand Home。封面是全案唯一被允许「像品牌」的素材。</dd></div><div><dt>标题逻辑</dt><dd>板块名与 Pin 标题都写成搜索词——「first apartment essentials under $100」「warm brass lamp」。标题栏里不放诗意，氛围交给图片。</dd></div><div><dt>受众</dt><dd>正在规划第一间公寓或小空间改造的高意图搜索者——需求已经存在。</dd></div><div><dt>策略目标</dt><dd>长尾搜索流量——在投放月结束后仍持续复利。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">板块文案 · 原文</span>Board: First Apartment Essentials Under $100\n\nCover pin: A Collected Home — secondhand pieces for spaces in motion.\n\nPins: warm brass lamp · small-space ceramics · wool throw, all under $100.\nEverything here can move with you, and everything here can be sent back when it is time.\n\n#firstapartment #apartmentessentials #smallspace #secondhandhome</div>",
+      note:"<b>判断。</b>「First apartment」是 Pinterest 的头部搜索词，且这类 Pin 能活几个月——同样的图在 IG 上几天就被算法埋掉。Feather 的场景内容说明这个流量池是真实的，Delta 的逐件「聪明定价」比订阅制更天然地接住它。这里要看的指标是出站 CTR，不是点赞。"},
 
     c5:{no:"C5 · 品类定义 — Day 1 首发帖",title:"We\u2019re not a rental company.",
-      meta:["X Thread · 5 条","品类定义","CTA：引用与转发","Mock 04"],
+      meta:["X Thread · 5 条","品类定义","CTA：引用与转发","样张 04"],
       body:"<dl><div><dt>角色</dt><dd>30 天计划的 Day 1 首发，也是唯一一条什么都不卖的内容。它的全部工作是在别人把 Delta 装进抽屉之前，先占住品类定义。</dd></div><div><dt>关键资产</dt><dd>中间的对照卡（Rental vs Delta）——唯一能被截图、被转发时不依赖上下文的部分，Delta 列用视觉高亮。</dd></div><div><dt>受众</dt><dd>X 上的可持续 / 设计 / 创业圈层——引用、质疑并放大「定义」的人。</dd></div><div><dt>策略目标</dt><dd>品类定义。一旦被归进「二手店」或「租赁」，之后每条内容都在替别人做解释。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Thread · 原文</span>1/5  People keep asking if Delta is a rental company. It isn\u2019t.\n     Here\u2019s the difference — and why it matters.\n\n2/5  Rental: you never own it. You pay monthly. You give it back because a contract says so.\n\n3/5  Delta: you buy it. You own it. You send it back when you\u2019re done — not when a term ends.\n     [comparison card: monthly fee / ownership / reason for return / where the money goes]\n\n4/5  You get credit toward your next find. The object is cleaned, restaged, and finds a new home.\n     Part of that resale goes to animal rescue and children\u2019s literacy — records published quarterly.\n\n5/5  Ownership, with an exit. Beautiful things should circulate. That\u2019s all.</div>",
       note:"<b>判断。</b>创造品类的品牌最贵的成本是被误读。X 是做定义的最好场地：这里的流通货币是「观点 + 清晰」，这类 Thread 会被平台外引用。捐赠数字放在 4/5 是刻意的——这个圈层对形容词过敏，对金额、受助方与回执有反应。"},
 
     c6:{no:"C6 · 支柱 03 — The Graceful Exit（体面的出口）",title:"she returned the lamp — she\u2019s moving to Lisbon",
-      meta:["Threads · 短文本 + 图片","体面的出口","CTA：回复你的故事","无 mockup 占位"],
+      meta:["Threads · 短文本 + 图片","体面的出口","CTA：回复你的故事","文本样张"],
       body:"<dl><div><dt>形态</dt><dd>坐在桌前的人的声音，不是品牌的声音。不 tag 商品、不放链接、不加 hashtag——Threads 对链接降权，这条的目的不是转化。</dd></div><div><dt>受众</dt><dd>已有社区；用作低成本探测哪些故事形态有共鸣。</dd></div><div><dt>策略目标</dt><dd>素材测试——24 小时内自然互动最高的故事升级为下周 Reels；低于阈值的直接淘汰，不浪费拍摄预算。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">文案 · 原文</span>someone returned a lamp last week because she\u2019s moving to Lisbon.\nshe wrote: \u201cit did its job for two winters. send it somewhere warm.\u201d\n\nwe\u2019ve had the note on the desk since. [photo]\n\nfollow-up (2h later):\nthe exit thing is weird at first — you buy something knowing you might send it back.\nbut people keep telling us it changes how they pack.</div>",
       note:"<b>判断。</b>这是一条<b>素材测试</b>，不是营销贴。Threads 的回复—触达比远高于 X，是低成本试故事的正确场地：<b>用制作成本最低的平台筛出值得高成本制作的内容</b>——这是整个排期里最重要的成本控制机制。字条同时直接服务品牌线：放手不是失败。"},
 
     c7:{no:"C7 · 支柱 03 — The Graceful Exit（体面的出口）",title:"Restaging a returned lamp (no music)",
-      meta:["YouTube Shorts · 静音 ASMR","体面的出口","CTA：订阅","无 mockup 占位"],
+      meta:["YouTube Shorts · 静音 ASMR","体面的出口","CTA：订阅","分镜条"],
       body:"<dl><div><dt>结构</dt><dd>无对白、纯 ASMR：拆回流包裹 → 清洁 → 擦拭黄铜 → 换线 → 重新打光 → 放进新场景。字幕只有四个词：<b>returned → cleaned → restaged → next home</b>。结尾卡：\u201cPart 2: the one that didn\u2019t pass.\u201d</dd></div><div><dt>受众</dt><dd>对机制好奇的观众与安静内容受众；零语言依赖，跨地区可用。</dd></div><div><dt>策略目标</dt><dd>让回流机制以画面证据的方式被看见，并用系列结构解决 Shorts 订阅转化弱的问题。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">文案 · 原文</span>Restaging a returned brass lamp. No music — just the sound.\nPart 2: the one that didn\u2019t pass the four questions.</div>",
       note:"<b>判断。</b>「整备一件被寄回的物品」是竞品都拍不出来的镜头：Depop 看不到（卖家直发）、Feather 不展示（退租即结束）、Worn Wear 只拍修补。这段画面是<b>机制的可视化证据</b>，比任何解释都有说服力。同时它是零语言内容，可以在 Shorts / Reels / TikTok 之间复剪而不必重拍；上下集结构给订阅一个理由。"},
 
     c8:{no:"C8 · 支柱 02 — Moving Life（搬家生活）",title:"What I learned furnishing a life that keeps moving",
-      meta:["Reddit · 长经验帖","搬家生活","CTA：无——只讨论","Mock 05"],
+      meta:["Reddit · 长经验帖","搬家生活","CTA：无——只讨论","样张 05"],
       body:"<dl><div><dt>投放</dt><dd>r/ApartmentHacks · r/expats · r/Frugal——按社区分别改写，绝不一稿多投。</dd></div><div><dt>语气约束</dt><dd>Reddit 是全案语气最极端的平台：任何营销腔都会被踩到负分，未披露身份的推广同时威胁账号与声誉。纯经验 + 明确披露 + 评论区答疑；无链接、无 CTA。</dd></div><div><dt>受众</dt><dd>正在主动搜索「会搬家的生活怎么布置」答案的人——高意图、长尾。</dd></div><div><dt>策略目标</dt><dd>搜索资产沉淀——Google 对 Reddit 收录权重极高，这条内容的生命周期超过本组所有社媒贴。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">帖子节选 · 原文</span>Title: I\u2019ve moved 5 times in 4 years — what I learned about furnishing a life that keeps moving\n\n- Buy at a size that can travel. A lamp, a cup, a scarf. Not a bookcase.\n- Stop buying \"for now\" things. They\u2019re the first to get thrown out, and the least enjoyable while you have them.\n- Secondhand doesn\u2019t mean settling, but it does mean you need a filter. I use four: is it quiet, is it smartly priced, will it survive another owner, will I actually use it.\n- The hardest part isn\u2019t buying. It\u2019s leaving. I\u2019ve started only buying things I can send back.\n\nDisclosure: I run a small curated secondhand project, which is why I think about this far too much.\nNot here to sell anything; happy to answer questions about the framework.</div>",
       note:"<b>判断。</b>把 Reddit 放进矩阵，是这份提案里「平台适配」最强的证明：它要求放弃品牌语气、放弃 CTA、披露身份——与 Pinterest 放弃调性是同一种判断的两个方向（一个为了搜索，一个为了社区规则）。回报是 Google 对「搬家 + 二手 + 公寓」高意图长尾词的收录权重。四道题在帖子里以「我用的筛选器」出现——可争论而非推销，正是它能活下来的原因。"},
 
     c9:{no:"C9 · 支柱 04 — Where It Went（它去了哪里）",title:"Object No.007: the lamp that moved four times",
-      meta:["Substack · 600–900 字","它去了哪里","CTA：订阅，提前 24h 看上新","Mock 06"],
+      meta:["Substack · 600–900 字","它去了哪里","CTA：订阅，提前 24h 看上新","样张 06"],
       body:"<dl><div><dt>结构</dt><dd>开头——这盏灯的四个住处：跳蚤市场 → 第一间公寓 → 另一个城市 → 回到我们手上。中间——我们做了什么：换线、清锈、重新抛光；哪些痕迹被保留。数据——本季回流 N 件 / 捐赠 ¥X / 动物救助 + 儿童阅读 / 回执链接。结尾——下周上新 3–5 件，订阅者提前 24 小时看。</dd></div><div><dt>受众</dt><dd>愿意读长文的那少数人——复购意图最高的一批，也是媒体与合作方会用「纸面记录」评判品牌的样本。</dd></div><div><dt>策略目标</dt><dd>复购 + 季度捐赠承诺的可核验载体。</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">邮件主题行 · 原文</span>the lamp that moved four times (and came back)</div>",
       note:"<b>判断。</b>长内容不是给所有人的——它给愿意读的人，而愿意读的人正是复购的核心，也是媒体与合作方检验品牌的样本。Newsletter 同时承担两件事：它是<b>公益承诺的可核验载体</b>（社媒贴放不下回执，而季度公示是品牌文档里的公开承诺），而「提前 24 小时」是唯一需要的订阅激励——在一物一件的生意里，「先看到」比任何折扣都值钱。"}
   };
