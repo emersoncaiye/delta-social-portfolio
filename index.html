@@ -68,7 +68,7 @@ h4{font-family:Georgia,serif;font-weight:600}
 .lede{color:var(--ink2);max-width:720px;font-size:16px;line-height:1.85}
 .sec{padding:96px 0;border-top:1px solid var(--line)}
 .sec-head{margin-bottom:44px}
-.sec-head .lede{margin-top:4px}
+.sec-head .lede{margin-top:4px;max-width:660px}
 .note{font-size:12px;color:var(--muted);line-height:1.7}
 .small{font-size:13px;color:var(--ink2)}
 b{color:var(--ink)}
@@ -106,7 +106,7 @@ h1 .t2{display:block;font-style:italic;font-weight:400;font-size:.44em;line-heig
 .lamp-art .shade{position:absolute;left:50%;top:21%;width:110px;height:44px;transform:translateX(-50%);background:#1e1c19;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%)}
 .lamp-art .stem{position:absolute;left:50%;top:29%;height:23.5%;width:3px;transform:translateX(-50%);background:#2a2724}
 .lamp-art .base{position:absolute;left:50%;top:52.5%;width:62px;height:7px;transform:translateX(-50%);background:#2a2724;border-radius:3px}
-.lamp-art .floor{position:absolute;left:50%;top:53%;bottom:0;width:100%;transform:translateX(-50%);background:radial-gradient(ellipse 52% 42% at 50% 0,rgba(42,36,30,.16),rgba(42,36,30,0) 72%)}
+.lamp-art .floor{position:absolute;left:50%;top:53%;width:240px;height:30px;transform:translate(-50%,-46%);background:radial-gradient(ellipse at center,rgba(42,36,30,.17),rgba(42,36,30,.05) 46%,rgba(42,36,30,0) 72%)}
 .lamp-art::after{content:"";position:absolute;left:50%;top:53%;width:280px;height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(42,36,30,.22),transparent)}
 .lamp-art .cap{position:absolute;left:0;right:0;bottom:26px;text-align:center;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
 .lamp-art .cap b{color:var(--ink2);font-weight:500}
@@ -214,18 +214,26 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .plat .tone{font-size:12.5px;color:var(--ink2)}
 .plat.flag{background:rgba(93,113,96,.06);border-left:2px solid var(--sage);padding-left:14px}
 
+/* scope groups */
+.plat-group{display:flex;align-items:center;gap:10px;margin:24px 0 2px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.plat-group::after{content:"";flex:1;height:1px;background:var(--line)}
+.plat-group .sc{font-size:8.5px;letter-spacing:.16em;padding:2px 8px;border:1px solid var(--line);color:var(--ink2)}
+.plat-group .sc.core{background:var(--dark);color:var(--cream);border-color:var(--dark)}
+.plat-list>.plat-group:first-child{margin-top:10px}
+
 /* creative pillars */
 .pillar{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:var(--panel);margin-bottom:26px}
 @media(max-width:860px){.pillar{grid-template-columns:1fr}}
-.pillar .txt{padding:34px 38px}
+.pillar .txt{padding:38px 42px}
 .pillar .viz{border-left:1px solid var(--line);background:var(--paper);display:flex;align-items:center;justify-content:center;padding:34px;min-height:300px;position:relative}
 @media(max-width:860px){.pillar .viz{border-left:none;border-top:1px solid var(--line);min-height:240px}}
 .pillar .pno{font-family:Georgia,serif;font-size:12px;color:var(--sage);letter-spacing:.2em;margin-bottom:12px}
 .pillar h4{font-size:23px;margin-bottom:16px}
 .pillar dl{display:grid;gap:0;margin-top:6px}
-.pillar dl>div{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:9px 0;border-top:1px dotted var(--line)}
+.pillar dl>div{display:grid;grid-template-columns:104px 1fr;gap:16px;padding:12px 0;border-top:1px dotted var(--line)}
 .pillar dt{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:3px}
-.pillar dd{font-size:13.5px;color:var(--ink2)}
+.pillar dd{font-size:13.8px;line-height:1.7;color:var(--ink2)}
+.pillar dd .tg{display:block;width:fit-content;margin:0 0 6px}
 .pillar dd b{color:var(--ink)}
 .viz-frame{background:#fffdf8;border:1px solid var(--line);padding:28px 30px;box-shadow:0 8px 22px rgba(29,27,23,.05);max-width:340px}
 .viz-q{font-family:Georgia,serif;font-size:17px;line-height:2}
@@ -255,19 +263,14 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .gal-item:focus-visible{outline:2px solid var(--sage);outline-offset:2px}
 .g-s4{grid-column:span 4}.g-s5{grid-column:span 5}.g-s7{grid-column:span 7}.g-s8{grid-column:span 8}.g-s12{grid-column:span 12}
 @media(max-width:960px){.g-s4,.g-s5,.g-s7,.g-s8{grid-column:span 12}}
-.gal-hd{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:16px 22px;border-bottom:1px solid var(--line2)}
-.gal-hd .no{font-family:Georgia,serif;font-size:12.5px;color:var(--sage);letter-spacing:.1em}
-.gal-hd .ti{font-family:Georgia,serif;font-size:16.5px;flex:1;min-width:200px}
-.gal-hd .fm{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:2px 8px;white-space:nowrap}
+.gal-hd{padding:16px 22px 15px;border-bottom:1px solid var(--line2)}
+.gal-hd .no{display:block;font-family:Georgia,serif;font-size:11px;color:var(--sage);letter-spacing:.16em;margin-bottom:5px}
+.gal-hd .ti{display:block;font-family:Georgia,serif;font-size:16.5px;line-height:1.3}
+.gal-hd .fm{display:inline-block;margin:10px 6px 0 0;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:2px 8px;white-space:nowrap}
 .gal-hd .fm.pl{background:var(--dark);color:var(--cream);border-color:var(--dark)}
 .stage{flex:1;background:#efeadd;display:flex;justify-content:center;align-items:center;padding:26px;overflow-x:auto;min-height:200px}
-.stage > .placeholder{align-self:stretch;justify-content:center}
 .gal-foot{display:flex;align-items:center;gap:10px;padding:13px 22px;border-top:1px solid var(--line2);font-size:11px;color:var(--muted)}
 .gal-foot .open{margin-left:auto;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-t);font-size:10px}
-.placeholder{border:1.5px dashed var(--line);background:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(93,113,96,.04) 12px,rgba(93,113,96,.04) 24px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:40px 24px;text-align:center;width:100%;min-height:220px}
-.placeholder .glyph{font-family:Georgia,serif;font-size:28px;color:var(--sage);opacity:.75}
-.placeholder p{font-size:12px;color:var(--muted);max-width:340px;line-height:1.7}
-.placeholder b{color:var(--ink2);font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:10.5px}
 /* preserved mock components */
 .phone{width:264px;aspect-ratio:9/17;border:8px solid #171514;border-radius:34px;overflow:hidden;position:relative;background:#000;box-shadow:0 14px 30px rgba(0,0,0,.18);flex:none}
 .screen{position:absolute;inset:0;overflow:hidden}
@@ -278,10 +281,7 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .shade{position:absolute;left:50%;top:22%;width:68px;height:28px;transform:translateX(-50%);background:#1e1e1c;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%)}
 .stem{position:absolute;left:50%;top:30%;width:3px;height:90px;transform:translateX(-50%);background:#2a2724}
 .base{position:absolute;left:50%;top:53%;width:40px;height:6px;transform:translateX(-50%);background:#2a2724;border-radius:3px}
-.case{position:absolute;left:18px;bottom:120px;width:92px;height:62px;border-radius:9px;background:#3a2f28;border:1px solid rgba(255,255,255,.14)}
 .ui-top{position:absolute;top:13px;left:15px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9)}
-.tabs{position:absolute;top:14px;left:0;right:0;display:flex;justify-content:center;gap:16px;font-size:10.5px;color:rgba(255,255,255,.55)}
-.tabs span.on{color:#fff;font-weight:600;border-bottom:2px solid #fff;padding-bottom:3px}
 .hook{position:absolute;left:0;right:52px;bottom:114px;padding:0 15px}
 .hk1{font-family:Georgia,serif;font-size:13.5px;line-height:1.35;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.55)}
 .hk1 em{font-style:italic;color:#ffd7a5}
@@ -298,25 +298,17 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .flw{border:1px solid #fff;border-radius:3px;font-size:9px;padding:2px 7px;color:#fff}
 .cap{margin-top:7px;font-size:9px;color:rgba(255,255,255,.85);line-height:1.5}
 .cap i{font-style:normal;color:rgba(255,255,255,.55)}
-.chips{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
-.chips span{font-size:9px;color:rgba(255,255,255,.85)}
 .acts{position:absolute;right:7px;bottom:22px;display:grid;gap:13px;justify-items:center}
 .a{display:grid;justify-items:center;gap:3px}
 .a b{font-size:9px;color:#fff;font-weight:600}
-.prog{position:absolute;left:0;right:0;bottom:4px;height:2px;background:rgba(255,255,255,.22)}
-.prog i{display:block;height:100%;width:62%;background:#fff}
 .ico{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .ico.xs{width:12px;height:12px;stroke:#9fd8ae}
 .ico.dark{stroke:var(--ink2);width:15px;height:15px}
 
 .xwrap{max-width:560px;width:100%;background:#15202b;border:1px solid #22303c;border-radius:14px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,.15)}
-.xbar{display:flex;align-items:center;gap:16px;padding:10px 16px;border-bottom:1px solid #22303c}
-.xbar .lg{font-size:14px;color:#e7e9ea;font-weight:600}
-.xbar .tb{margin-left:auto;display:flex;gap:14px;font-size:11.5px;color:#71767b}
-.xbar .tb span.on{color:#e7e9ea;font-weight:600;border-bottom:2px solid #1d9bf0;padding-bottom:3px}
 .xthread{display:grid;grid-template-columns:36px 1fr;gap:11px;padding:14px 16px 6px}
 .xav{width:36px;height:36px;border-radius:50%;background:#f3f0e9;color:#15202b;font-family:Georgia,serif;display:flex;align-items:center;justify-content:center;font-size:15px}
-.xline{justify-self:center;width:2px;height:100%;background:#31414f;margin-top:6px;border-radius:2px}
+.xline{justify-self:center;width:1px;height:100%;background:linear-gradient(#31414f,rgba(49,65,79,0));margin-top:8px}
 .xmeta{display:flex;align-items:center;gap:6px;font-size:12px;flex-wrap:wrap}
 .xmeta b{color:#e7e9ea}
 .xmeta span{color:#71767b}
@@ -331,26 +323,7 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .xcmp div.hr{border-top:none;background:#1d2b36;color:#71767b;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
 .xcmp div.hr.dl{color:#e0a888}
 .xcmp div.dl{color:#f4e3d4}
-.xacts{display:flex;gap:18px;padding:2px 0 14px;color:#71767b;font-size:11px;align-items:center;flex-wrap:wrap}
-.xacts span{display:flex;align-items:center;gap:6px}
 .ico.x{width:14px;height:14px;stroke:#71767b}
-
-.ptwrap{width:100%;max-width:560px}
-.ptsearch{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:8px 16px;margin-bottom:16px;font-size:12px;color:var(--ink2)}
-.ptgrid{columns:3;column-gap:12px}
-.ptile{border:1px solid var(--line2);border-radius:13px;overflow:hidden;background:#efeadf;margin-bottom:12px;break-inside:avoid;position:relative}
-.ptile.other{opacity:.5}
-.ptile.mine{border:2px solid var(--rust);box-shadow:0 8px 20px rgba(0,0,0,.1)}
-.ph{position:relative;background:linear-gradient(160deg,#e9e2d6,#d9d0c1)}
-.ph.mine{background:linear-gradient(180deg,#f0e7d9 0%,#e3d4c0 55%,#d2c3ac 55%,#c5b49c 100%);height:220px}
-.mini{position:absolute}
-.mini.lamp{left:50%;top:32%;width:88px;height:88px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,214,152,.95),rgba(255,190,110,.22) 46%,transparent 70%)}
-.ph.mine::after{content:"";position:absolute;left:12%;right:12%;bottom:39%;height:1px;background:rgba(90,70,50,.22)}
-.mini.cup{left:20%;bottom:41%;width:20px;height:26px;background:#f8f3e8;border:1px solid rgba(90,70,50,.12);border-radius:2px 2px 5px 5px;box-shadow:0 2px 5px rgba(0,0,0,.06)}
-.mini.vase{right:22%;bottom:41%;width:16px;height:34px;background:#cbbda6;border-radius:7px 7px 3px 3px}
-.ptile .plabel{padding:8px 10px;font-size:10px;color:var(--ink2);line-height:1.5}
-.ptitle{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 11px;font-family:Georgia,serif;font-size:12px;line-height:1.35;color:#fff;background:linear-gradient(180deg,rgba(40,32,24,0),rgba(40,32,24,.72));text-shadow:0 1px 6px rgba(0,0,0,.45)}
-.badge{position:absolute;top:9px;left:9px;background:var(--rust);color:#fff;font-size:9px;letter-spacing:.1em;padding:3px 7px;border-radius:3px}
 .ptmeta{margin-top:14px;border:1px solid var(--line2);background:#fff;padding:13px 15px;font-size:12px;color:var(--ink2);line-height:1.7}
 .ptmeta h5{font-family:Georgia,serif;font-size:12.5px;color:var(--ink);margin-bottom:5px;font-weight:600}
 .ptmeta .kw{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
@@ -359,15 +332,12 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .rdwrap{width:100%;max-width:460px;background:#fff;border:1px solid var(--line2);border-radius:5px}
 .rdtop{display:flex;align-items:center;gap:7px;padding:8px 13px;border-bottom:1px solid var(--line2);background:#f6f4ef;font-size:10.5px;color:var(--muted)}
 .rdtop .rdsub{font-weight:600;color:var(--ink);font-size:11.5px}
-.rdbody{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:13px 14px}
-.rdvote{display:grid;justify-items:center;gap:3px;color:var(--muted);font-size:10px}
-.rdvote .up{font-size:12px;color:var(--rust)}
+.rdbody{display:grid;grid-template-columns:1fr;gap:12px;padding:13px 14px}
 .rdmeta{display:flex;gap:6px;font-size:10.5px;color:var(--muted)}
 .rdtitle{font-family:Georgia,serif;font-size:15px;line-height:1.32;margin:6px 0 9px}
 .rdtext{font-size:11.5px;line-height:1.7;color:var(--ink2)}
 .rdtext p{margin-bottom:8px}
 .rdwarn{margin:10px 0 0;padding:9px 11px;background:#fdf6ec;border-left:3px solid var(--rust);font-size:10.5px;line-height:1.6;color:var(--ink2)}
-.rdacts{margin-top:11px;padding-top:9px;border-top:1px dashed var(--line2);display:flex;gap:16px;font-size:10.5px;color:var(--muted)}
 .rdtag{margin-top:9px;font-size:10px;color:var(--muted);letter-spacing:.08em}
 
 .sswrap{width:100%;max-width:460px;background:#fff;border:1px solid var(--line2)}
@@ -382,24 +352,86 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .ssfoot{margin-top:14px;border-top:1px dashed var(--line2);padding:11px 16px;font-size:10.5px;color:var(--muted);line-height:1.7}
 
 .igcwrap{width:100%;max-width:640px}
-.igc-top{display:flex;align-items:center;gap:9px;padding:9px 12px;background:#fff;border:1px solid var(--line2)}
-.igc-strip{display:flex;gap:10px;overflow-x:auto;padding:12px;background:#fff;border:1px solid var(--line2);border-top:none;border-bottom:none}
-.igc-cell{flex:none;width:118px}
-.igc-f{position:relative;aspect-ratio:1/1;border:1px solid var(--line2);display:flex;flex-direction:column;justify-content:flex-end;padding:10px;overflow:hidden;background:linear-gradient(170deg,#2f2a26,#54473c)}
-.igc-f .pg{position:absolute;top:7px;left:8px;font-size:8.5px;letter-spacing:.14em;color:rgba(255,255,255,.6)}
-.igc-f .dot{position:absolute;left:10px;right:10px;bottom:50%;height:1px;background:rgba(255,255,255,.16)}
-.igc-f h6{font-family:Georgia,serif;font-size:11.5px;line-height:1.34;color:#fff;font-weight:400}
-.igc-f h6 em{font-style:italic;color:#ffd7a5}
-.igc-f p{font-size:9px;line-height:1.5;color:rgba(255,255,255,.72);margin-top:5px}
-.igc-f .tickq{margin-bottom:7px;font-size:9.5px;color:#9fd8ae;letter-spacing:.04em}
-.igc-f .glowx{position:absolute;left:50%;top:30%;width:86px;height:86px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,214,152,.85),rgba(255,190,110,.2) 45%,transparent 70%)}
-.igc-f.last{background:linear-gradient(170deg,#3a332e,#63513f)}
-.igc-lb{font-size:9.5px;color:var(--muted);margin-top:6px;letter-spacing:.04em}
-.igc-foot{display:flex;align-items:center;gap:13px;padding:9px 12px;background:#fff;border:1px solid var(--line2);font-size:10.5px;color:var(--muted)}
-.igc-foot .dots{display:flex;gap:5px;margin:0 auto}
-.igc-foot .dots i{width:5px;height:5px;border-radius:50%;background:var(--line)}
-.igc-foot .dots i.on{background:var(--rust)}
-.igc-foot b{color:var(--ink);font-weight:600}
+
+/* ============ round 2: specimen plates ============ */
+.stage{background:#ece5d7;padding:30px}
+.spec{width:100%;display:flex;flex-direction:column;gap:12px}
+.spec-bar{display:flex;align-items:center;gap:9px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);flex-wrap:wrap}
+.spec-bar .rule{flex:1;min-width:16px;height:1px;background:rgba(29,27,23,.14)}
+.spec-bar .flag{color:var(--rust);border:1px solid rgba(164,79,42,.3);padding:2px 7px;letter-spacing:.14em;white-space:nowrap}
+.spec-bar .fmt{color:var(--ink2);letter-spacing:.16em}
+.spec-note{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:10.5px;line-height:1.65;color:var(--ink2);border-top:1px solid rgba(29,27,23,.12);padding-top:10px}
+.spec-note b{font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:2px;white-space:nowrap}
+@media(max-width:560px){.spec-note{grid-template-columns:1fr;gap:2px 0}.spec-note b{margin-top:6px}}
+
+/* contact sheet — IG carousel */
+.sheet{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(29,27,23,.16);border:1px solid rgba(29,27,23,.16);box-shadow:0 12px 28px rgba(29,27,23,.1)}
+.cf{position:relative;aspect-ratio:4/5;background:linear-gradient(168deg,#2c2723,#463a31 64%,#514437);padding:11px 10px 34px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.cf.end{background:linear-gradient(168deg,#3a332d,#64503d)}
+.cf .n{position:absolute;top:8px;left:9px;font-size:8px;letter-spacing:.16em;color:rgba(255,255,255,.5)}
+.cf .tick{position:absolute;top:8px;right:9px;font-size:8px;letter-spacing:.1em;color:#a9c8ae}
+.cf .h{font-family:Georgia,serif;font-size:11px;line-height:1.38;color:#fdfaf3}
+.cf .h em{font-style:italic;color:#f0c99a}
+.cf .s{font-size:8px;line-height:1.5;color:rgba(255,255,255,.62);margin-top:5px}
+.cf .halo{position:absolute;left:50%;top:33%;width:104px;height:104px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,211,150,.9),rgba(255,190,110,.16) 46%,transparent 70%)}
+.cf .strip{position:absolute;left:0;right:0;bottom:0;height:16px;background:rgba(0,0,0,.22);display:flex;align-items:center;padding:0 9px;font-size:7.5px;letter-spacing:.14em;color:rgba(255,255,255,.55)}
+.sheet-seq{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.sheet-seq i{font-style:normal;color:rgba(29,27,23,.3)}
+.sheet-seq span{color:var(--ink2)}
+
+/* storyboard — TikTok */
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.bf{display:flex;flex-direction:column;gap:7px}
+.bf .pane{position:relative;aspect-ratio:9/16;background:linear-gradient(170deg,#2a2521,#4b3e34);border:1px solid rgba(29,27,23,.18);overflow:hidden;box-shadow:0 8px 20px rgba(29,27,23,.1)}
+.bf .pane .tc{position:absolute;top:7px;left:7px;font-size:7.5px;letter-spacing:.12em;color:rgba(255,255,255,.6);background:rgba(0,0,0,.32);padding:2px 5px}
+.bf .pane .ln{position:absolute;left:8px;right:8px;bottom:9px;font-family:Georgia,serif;font-size:10px;line-height:1.36;color:#fdfaf3;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.bf .pane .ln em{font-style:normal;color:#f0c99a}
+.bf .pane .halo{position:absolute;left:50%;top:38%;width:96px;height:96px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,211,150,.85),rgba(255,190,110,.12) 48%,transparent 70%)}
+.bf .shot{font-size:9px;line-height:1.55;color:var(--ink2)}
+.bf .shot b{display:block;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+@media(max-width:420px){.board{gap:8px}.bf .pane .ln{font-size:9px}}
+
+/* pin ladder — Pinterest */
+.boardhead{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid rgba(29,27,23,.12);padding-bottom:8px}
+.boardhead b{font-family:Georgia,serif;font-size:13px;letter-spacing:0;text-transform:none;color:var(--ink);white-space:nowrap}
+.pinladder{display:grid;grid-template-columns:1.4fr .95fr .95fr;gap:9px;align-items:end;margin-top:12px}
+.pin{position:relative;border:1px solid rgba(29,27,23,.16);background:#fffdf8;box-shadow:0 8px 18px rgba(29,27,23,.08);overflow:hidden}
+.pin .img{position:relative;background:linear-gradient(180deg,#f3ead9,#e4d5bf 60%,#d5c4ab)}
+.pin.p1 .img{aspect-ratio:2/3}
+.pin.p2 .img{aspect-ratio:3/4}
+.pin.p3 .img{aspect-ratio:1/1}
+.pin .img .halo{position:absolute;left:50%;top:36%;width:120px;height:120px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,214,152,.95),rgba(255,190,110,.18) 46%,transparent 72%)}
+.pin .img .ttl{position:absolute;left:0;right:0;bottom:0;padding:34px 10px 11px;font-family:Georgia,serif;font-size:10px;line-height:1.32;color:#fff;background:linear-gradient(180deg,rgba(40,32,24,0),rgba(40,32,24,.74))}
+.pin .img .dim{position:absolute;top:6px;right:6px;font-size:7.5px;letter-spacing:.1em;color:rgba(255,255,255,.85);background:rgba(0,0,0,.3);padding:1px 5px}
+.pin .pm{padding:6px 8px;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line2)}
+.pin .pm b{color:var(--ink2);letter-spacing:.06em;text-transform:none;font-weight:500}
+
+/* type specimen — Threads / text-first piece */
+.quote{position:relative;background:#fffdf8;border:1px solid rgba(29,27,23,.16);padding:34px 30px 30px;box-shadow:0 10px 24px rgba(29,27,23,.07)}
+.quote .qmark{font-family:Georgia,serif;font-size:44px;line-height:.6;color:var(--sage);opacity:.6}
+.quote p{font-family:Georgia,serif;font-size:15px;line-height:1.72;color:var(--ink);margin-top:8px}
+.quote .sig{margin-top:16px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line2);padding-top:10px}
+
+/* motion beat strip — Shorts */
+.beats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(29,27,23,.16);border:1px solid rgba(29,27,23,.16)}
+.beat{position:relative;background:linear-gradient(170deg,#2b2622,#4a3d33);padding:12px 10px 14px;min-height:118px;display:flex;flex-direction:column;justify-content:space-between}
+.beat .w{font-family:Georgia,serif;font-size:13px;color:#fdfaf3}
+.beat .t{font-size:8px;letter-spacing:.14em;color:rgba(255,255,255,.5)}
+.beat .why{font-size:8.5px;line-height:1.5;color:rgba(255,255,255,.62);margin-top:8px}
+@media(max-width:560px){.beats{grid-template-columns:repeat(2,1fr)}}
+
+/* specimen responsive: keep the sheet/board metaphor, scroll instead of shrink */
+@media(max-width:640px){
+  .stage{padding:20px}
+  .sheet{display:flex;overflow-x:auto;gap:2px}
+  .cf{flex:none;width:134px}
+  .board{display:flex;overflow-x:auto;gap:10px;padding-bottom:2px}
+  .bf{flex:none;width:146px}
+  .pinladder{grid-template-columns:1fr 1fr;align-items:start}
+  .pin.p1{grid-column:span 1}
+  .spec-note{font-size:10px}
+  .spec-bar{font-size:8.5px}
+}
 
 /* rollout */
 .week-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
@@ -427,7 +459,19 @@ details .dbody li::before{content:"—";position:absolute;left:0;color:var(--sag
 .day .pl.yt{color:#a8322a;border-color:#ecd4d2;background:#fbf3f2}
 .day .pl.nl{color:var(--sage-t);border-color:#d3dbd4;background:#f3f6f4}
 .day .pl.rd{color:#c4622d;border-color:#ecd8c6;background:#fbf5ee}
+.day .pl.sh{color:#3f5343;border-color:#c8d4ca;background:#e9efe9;font-weight:600}
+.day .pl.st{color:#8a3f6d;border-color:#e3cddb;background:#faf3f8}
+.day .pl.opt{color:var(--muted);border-color:var(--line);border-style:dashed;background:#f8f5ed}
+.day.shoot{background:#f3f5f0}
 .day .t{font-size:12px;line-height:1.55;color:var(--ink2)}
+
+/* constraint facts */
+.facts{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:34px 0 40px}
+.facts div{background:var(--panel);padding:15px 16px}
+.facts b{display:block;font-family:Georgia,serif;font-size:20px;font-weight:600;line-height:1.15;color:var(--ink)}
+.facts span{display:block;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:5px;line-height:1.5}
+@media(max-width:900px){.facts{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.facts{grid-template-columns:repeat(2,1fr)}}
 
 .kpi-table{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--panel)}
 .kpi-table th,.kpi-table td{border:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top}
@@ -508,7 +552,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
 <header class="hero" id="overview">
   <div class="hero-grid">
     <div class="wrap hero-l">
-      <div class="hero-tag rv">Case 01 · Independent Project <span>·</span> Not a client commission</div>
+      <div class="hero-tag rv">Case 01 · Independent project <span>·</span> Pre-launch, no campaign data</div>
       <h1 class="rv">DELTA
         <span class="t2">Good Things, Going&nbsp;Places.</span>
       </h1>
@@ -533,7 +577,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <div class="glow"></div>
         <div class="shade"></div><div class="stem"></div><div class="base"></div>
         <div class="floor"></div>
-        <div class="cap"><b>Object No.007</b> — brass lamp · returned · restaged · re-homed</div>
+        <div class="cap"><b>Object No.007</b> — brass lamp · the example object throughout this case</div>
       </div>
     </div>
   </div>
@@ -668,7 +712,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       </div>
       <div class="map-side">
         <h3>The empty intersection</h3>
-        <p>Each competitor owns exactly one axis Delta needs. Nobody combines
+        <p>On public evidence, each competitor occupies one axis Delta needs. None of the three combines
         <b>one person's standard</b> with <b>owning with an exit</b>. That intersection is where the content strategy starts —
         the four content pillars are derived from this gap, not from a moodboard.</p>
         <div class="take">
@@ -698,7 +742,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <span class="axl">Furniture rental for movers; mid-size social presence (public estimates)</span>
       </div>
       <div class="comp-b">
-        <div class="cell"><div class="lb">What it does well</div><p>Proves people will pay not to own; moving and first-apartment scenes executed precisely; strong Pinterest / SEO ground game.</p></div>
+        <div class="cell"><div class="lb">What it does well</div><p>Evidence that people will pay not to own; moving and first-apartment scenes executed precisely; strong Pinterest / SEO ground game.</p></div>
         <div class="cell"><div class="lb">What it leaves empty</div><p>Ownership never happens — nothing to love, nothing to pass on. The exit is a contract, not a choice.</p></div>
       </div>
     </div>
@@ -729,7 +773,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         </table>
       </div>
     </details>
-    <div class="note rv" style="margin-top:12px">Competitor follower counts and cadences are public estimates used to judge scale and content investment — the shape of the market matters here, not the precise numbers.</div>
+    <div class="note rv" style="margin-top:12px">Desk research only: public sources, no interviews or primary data. Competitor follower counts and cadences are estimates used to judge scale, and the three readings below are treated as <b>hypotheses to test</b>, not findings.</div>
 
     <div class="pos-grid rv">
       <div class="pos-card dark">
@@ -764,23 +808,31 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       <div class="pos-card">
         <div class="lb">Platform selection rationale</div>
         <p class="small">The test for every platform is the same: <b>can it complete one job by itself in the decision journey?</b>
-        If not, it doesn't get a slot. Discovery belongs to Pinterest, definition to X, belief to Substack.</p>
+        If not, it doesn't get a slot. Month one is carried by three — Instagram for belief and conversion,
+        TikTok for reach, Pinterest for search.</p>
         <p class="small" style="margin-top:10px">Two calls cut against brand instinct on purpose:
         <b>Pinterest gives up tone for search rank</b>; <b>Reddit gives up the CTA for community trust</b>.
-        Both are measured by outcomes that aren't likes.</p>
+        The second is a later-stage experiment — it needs a history worth posting about.</p>
       </div>
     </div>
 
-    <h3 class="rv" style="margin-top:48px">Platform roles</h3>
+    <h3 class="rv" style="margin-top:48px">Platform map — three carry month one</h3>
+    <p class="small rv" style="max-width:760px;margin-bottom:6px">Eight platforms and one part-time person is a plan that fails quietly. Only three earn a slot in the first thirty days;
+    the other five are kept as named experiments with a condition for starting, not as commitments made in advance.</p>
     <div class="plat-list rv">
-      <div class="plat"><div class="pn">Instagram<span class="pf">Showroom · 5+ / wk</span></div><div class="job">Brand showroom &amp; conversion hub — Reels 3, Carousel 1, daily Stories<i>Metric: saves, profile clicks</i></div><div class="tone">Restrained, specific, short sentences.</div></div>
-      <div class="plat"><div class="pn">TikTok<span class="pf">Reach · 4 / wk</span></div><div class="job">Reach and resonance — 15–30s vertical<i>Metric: 3-sec retention, completion</i></div><div class="tone">First person, a turn, captions first.</div></div>
-      <div class="plat flag"><div class="pn">Pinterest<span class="pf">Search · 5 / wk</span></div><div class="job">Long-tail search traffic — product &amp; idea pins<i>Metric: outbound clicks, saves</i></div><div class="tone"><b>Drops the tone; keyword-first.</b></div></div>
-      <div class="plat"><div class="pn">X<span class="pf">Definition · 3 / wk</span></div><div class="job">Category definition and data — single posts &amp; threads<i>Metric: citations, outbound clicks</i></div><div class="tone">Sharp, numeric, contrarian.</div></div>
-      <div class="plat"><div class="pn">Threads<span class="pf">Testing · 3 / wk</span></div><div class="job">Community and low-cost story testing — short text + image<i>Metric: replies</i></div><div class="tone">A person talking, not a brand.</div></div>
-      <div class="plat"><div class="pn">Shorts<span class="pf">Reuse · 2 / wk</span></div><div class="job">Mechanism visualised + subscribe — silent restaging / repair<i>Metric: subscriber conversion</i></div><div class="tone">Zero language, ASMR.</div></div>
-      <div class="plat flag"><div class="pn">Reddit<span class="pf">Trust · 0.5 / wk</span></div><div class="job">High-intent long tail + trust — long experience posts<i>Metric: upvote ratio, search indexing</i></div><div class="tone"><b>Pure experience; disclosure mandatory.</b></div></div>
-      <div class="plat"><div class="pn">Substack<span class="pf">Depth · 0.5 / wk</span></div><div class="job">Depth and the compliance record — 600–900 words<i>Metric: open rate, replies</i></div><div class="tone">Literary, transparent, verifiable.</div></div>
+      <div class="plat-group"><span class="sc core">Core</span> Month one — all production time goes here</div>
+      <div class="plat flag"><div class="pn">Instagram<span class="pf">Showroom · 4 / wk</span></div><div class="job">Where belief is built and the link lives — Reels 2, Carousel 1, Stories 3<i>Metric: saves, profile clicks</i></div><div class="tone">Restrained, specific, short sentences.</div></div>
+      <div class="plat"><div class="pn">TikTok<span class="pf">Reach · 3 / wk</span></div><div class="job">The only honest test of whether the hook travels — 15–30s vertical<i>Metric: 3-sec retention, completion</i></div><div class="tone">First person, a turn, captions first.</div></div>
+      <div class="plat"><div class="pn">Pinterest<span class="pf">Search · 4 / wk</span></div><div class="job">Long-tail traffic that outlives the feed — 1 idea pin + 3 product pins<i>Metric: outbound clicks</i></div><div class="tone"><b>Drops the tone; keyword-first.</b></div></div>
+
+      <div class="plat-group"><span class="sc">Experiment</span> Only if the core three hold their cadence</div>
+      <div class="plat"><div class="pn">Threads<span class="pf">Test bench · 2 / wk</span></div><div class="job">Cheapest place to try a story shape before shooting it<i>Metric: replies</i></div><div class="tone">A person talking, not a brand.</div></div>
+      <div class="plat"><div class="pn">X<span class="pf">Definition · 1–2 / wk</span></div><div class="job">Category definition, when there is something to define — threads and data cards<i>Metric: citations, outbound clicks</i></div><div class="tone">Sharp, numeric, contrarian.</div></div>
+
+      <div class="plat-group"><span class="sc">Later</span> After the first twenty objects have circulated</div>
+      <div class="plat"><div class="pn">Shorts<span class="pf">Reuse · ad hoc</span></div><div class="job">Mechanism visualised — needs a real return to film<i>Metric: subscriber conversion</i></div><div class="tone">Zero language, ASMR.</div></div>
+      <div class="plat flag"><div class="pn">Reddit<span class="pf">Trust · ad hoc</span></div><div class="job">High-intent long tail + trust — long experience posts<i>Metric: upvote ratio, search indexing</i></div><div class="tone"><b>Pure experience; disclosure mandatory.</b></div></div>
+      <div class="plat"><div class="pn">Substack<span class="pf">Depth · monthly</span></div><div class="job">Depth and the compliance record — 600–900 words<i>Metric: open rate, replies</i></div><div class="tone">Literary, transparent, verifiable.</div></div>
     </div>
     <details class="rv">
       <summary>Why Pinterest and Reddit break the rules on purpose</summary>
@@ -812,8 +864,8 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <div class="pno">PILLAR 01 · 35% OF OUTPUT</div>
         <h4>The Four Questions</h4>
         <dl>
-          <div><dt>Objective</dt><dd>Make the internal selection standard public — the one thing competitors structurally cannot copy.</dd></div>
-          <div><dt>Insight</dt><dd><span class="tg obs">Observation</span> Depop relies on algorithms (no standard to show), Feather on buyers (standard not public), Worn Wear on durability. Nobody publishes a checkable taste framework.</dd></div>
+          <div><dt>Objective</dt><dd>Make the internal selection standard public — the thing the three competitors are least set up to copy.</dd></div>
+          <div><dt>Insight</dt><dd><span class="tg obs">Observation</span> Depop relies on algorithms (no standard to show), Feather on buyers (standard not public), Worn Wear on durability. None of the three publishes a checkable framework.</dd></div>
           <div><dt>Approach</dt><dd>One object passes (or fails) the four questions on camera, weekly — a repeatable series, not a one-off creative.</dd></div>
           <div><dt>Metric</dt><dd>Primary: saves. Saves signal “I'll use this framework”, which is exactly the behaviour this pillar is built for.</dd></div>
         </dl>
@@ -841,7 +893,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <h4>Moving Life</h4>
         <dl>
           <div><dt>Objective</dt><dd>Turn the brand's founding reason — <i>because you're moving</i> — into the campaign's content scene.</dd></div>
-          <div><dt>Insight</dt><dd><span class="tg obs">Observation</span> Moving is high-frequency, predictable, and calendar-aligned (graduation, school terms, lease turnover). No competitor treats it as an emotional moment.</dd></div>
+          <div><dt>Insight</dt><dd><span class="tg obs">Observation</span> Moving is high-frequency, predictable, and calendar-aligned (graduation, school terms, lease turnover). None of the three treats it as an emotional moment.</dd></div>
           <div><dt>Approach</dt><dd>Leases ending, apartments too small, things that travel — told first-person, selling nothing.</dd></div>
           <div><dt>Metric</dt><dd>Primary: completion rate, comment depth.</dd></div>
         </dl>
@@ -854,7 +906,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <h4>The Graceful Exit</h4>
         <dl>
           <div><dt>Objective</dt><dd>Make “returning” feel like participating in something good — not a refund, not a failure.</dd></div>
-          <div><dt>Insight</dt><dd><span class="tg obs">Observation</span> From the brand docs: <i>“Returning something shouldn't feel like I made a mistake. It should feel like I participated in something good.”</i> Nobody in the set occupies that emotional position.</dd></div>
+          <div><dt>Insight</dt><dd><span class="tg obs">Observation</span> From the brand docs: <i>“Returning something shouldn't feel like I made a mistake. It should feel like I participated in something good.”</i> None of the three occupies that emotional position.</dd></div>
           <div><dt>Approach</dt><dd>The people sending things back — the package, the note, the restaging, the next home.</dd></div>
           <div><dt>Metric</dt><dd>Primary: return initiations, story interactions.</dd></div>
         </dl>
@@ -909,14 +961,14 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       <div class="kicker"><span class="no">04</span> The Work</div>
       <h2>Same lamp. Same move.<br><em>Nine different posts.</em></h2>
       <p class="lede">
-        Nine platform-native content pieces and seven layout mockups, from the same source assets. What changes per platform
-        is the hook, the length, the person — and whether there is a CTA at all. Open any piece for the full copy and the judgment behind it.
+        Nine platform-native pieces from the same source material. What changes per platform is the hook, the length,
+        the person — and whether there is a CTA at all. Open any piece for the copy and the judgment behind it.
       </p>
     </div>
-    <div class="note rv" style="margin-bottom:30px">
-      <span class="tg asm">Note</span> Mockups are layout studies, not finished designs: imagery is CSS placeholder,
-      figures illustrative. Specific objects and prices in copy (e.g. $68) are placeholders demonstrating pricing language,
-      to be replaced with real items before launch.
+    <div class="note rv" style="margin-bottom:34px">
+      <span class="tg asm">Draft status</span> Nothing here has been published. These are concept mockups, not screenshots:
+      there is no campaign history, no audience, and <b>no engagement data</b> — so none is shown.
+      Photographs are represented by CSS set-dressing; item names and prices are demonstration values.
     </div>
 
     <div class="gal">
@@ -925,221 +977,288 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c5" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C5</span><span class="ti">We're not a rental company.</span><span class="fm pl">X Thread</span><span class="fm">Definition · Day 1</span></div>
         <div class="stage">
-          <div class="xwrap">
-            <div class="xbar"><span class="lg">&#119961;</span><div class="tb"><span class="on">For you</span><span>Following</span></div></div>
-            <div class="xthread">
-              <div style="display:grid;justify-items:center"><span class="xav">D</span><span class="xline"></span></div>
-              <div>
-                <div class="xmeta"><b>Delta</b><span>@delta.objects · 9:14 AM</span></div>
-                <div class="xpost"><span class="xnum">1/5</span>People keep asking if Delta is a rental company. It isn't.<br><br>Here's the difference — and why it matters.</div>
-                <div class="xpost"><span class="xnum">2/5</span><em>Rental:</em> you never own it. You pay monthly. You give it back because a contract says so.</div>
-                <div class="xcard">
-                  <h6>Why this matters</h6>
-                  <div class="xcmp">
-                    <div class="hr">Rental</div><div class="hr dl">Delta</div>
-                    <div>Monthly fee</div><div class="dl">You buy it</div>
-                    <div>You never own it</div><div class="dl">You own it</div>
-                    <div>Returned when the contract ends</div><div class="dl">Returned when <em>you</em> are done</div>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">X · Thread · 5 posts</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
+            <div class="xwrap">
+              <div class="xthread">
+                <div style="display:grid;justify-items:center"><span class="xav">D</span><span class="xline"></span></div>
+                <div>
+                  <div class="xmeta"><b>Delta</b><span>@delta.objects · draft</span></div>
+                  <div class="xpost"><span class="xnum">1/5</span>People keep asking if Delta is a rental company. It isn't.<br><br>Here's the difference — and why it matters.</div>
+                  <div class="xpost"><span class="xnum">2/5</span><em>Rental:</em> you never own it. You pay monthly. You give it back because a contract says so.</div>
+                  <div class="xcard">
+                    <h6>Why this matters</h6>
+                    <div class="xcmp">
+                      <div class="hr">Rental</div><div class="hr dl">Delta</div>
+                      <div>Monthly fee</div><div class="dl">You buy it</div>
+                      <div>You never own it</div><div class="dl">You own it</div>
+                      <div>Returned when the contract ends</div><div class="dl">Returned when <em>you</em> are done</div>
+                    </div>
                   </div>
+                  <div class="xpost"><span class="xnum">5/5</span>Ownership, with an exit.<br><br>Beautiful things should circulate. That's all.</div>
                 </div>
-                <div class="xpost"><span class="xnum">5/5</span>Ownership, with an exit.<br><br>Beautiful things should circulate. That's all.</div>
-                <div class="xacts"><span>84</span><span>216</span><span>1.2K</span><span>307</span><span>24.8K</span></div>
               </div>
+            </div>
+            <div class="spec-note">
+              <b>Art direction</b><span>System sans for the thread, Georgia only inside the comparison card — so the one screenshot-able element reads as an exhibit, not a post.</span>
+              <b>Draft state</b><span>Posts 3–4 carry the pricing and donation facts; the card is designed to survive being cropped out of context.</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 04 — X thread layout<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Specimen 04 — thread layout<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C1 -->
       <div role="button" tabindex="0" class="gal-item g-s5 rv" data-work="c1" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C1</span><span class="ti">Four questions, one lamp</span><span class="fm pl">IG Reels</span><span class="fm">30s</span></div>
         <div class="stage">
-          <div class="phone">
-            <div class="screen">
-              <div class="room"></div>
-              <div class="glow"></div>
-              <div class="shade"></div><div class="stem"></div><div class="base"></div>
-              <div class="ui-top">Reels</div>
-              <div class="hook">
-                <div class="hk1">Every object here has to pass <em>four questions.</em></div>
-                <ul class="qlist">
-                  <li><svg class="ico xs"><use href="#i-check"/></svg>Is it quiet?</li>
-                  <li><svg class="ico xs"><use href="#i-check"/></svg>Is it smart?</li>
-                  <li><svg class="ico xs"><use href="#i-check"/></svg>Is it worth circulating?</li>
-                  <li><svg class="ico xs"><use href="#i-check"/></svg>Is it usable?</li>
-                </ul>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">IG Reels · 30s · 9:16</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
+            <div class="phone">
+              <div class="screen">
+                <div class="room"></div>
+                <div class="glow"></div>
+                <div class="shade"></div><div class="stem"></div><div class="base"></div>
+                <div class="ui-top">0:03 / 0:30</div>
+                <div class="hook">
+                  <div class="hk1">Every object here has to pass <em>four questions.</em></div>
+                  <ul class="qlist">
+                    <li><svg class="ico xs"><use href="#i-check"/></svg>Is it quiet?</li>
+                    <li><svg class="ico xs"><use href="#i-check"/></svg>Is it smart?</li>
+                    <li><svg class="ico xs"><use href="#i-check"/></svg>Is it worth circulating?</li>
+                    <li><svg class="ico xs"><use href="#i-check"/></svg>Is it usable?</li>
+                  </ul>
+                </div>
+                <div class="ui-bottom">
+                  <div class="prof"><span class="av">D</span><span class="hdl">delta.objects</span><span class="flw">Follow</span></div>
+                  <div class="cap">Object No.007 · brass lamp · $68</div>
+                </div>
+                <div class="acts">
+                  <div class="a"><svg class="ico"><use href="#i-heart"/></svg></div>
+                  <div class="a"><svg class="ico"><use href="#i-comment"/></svg></div>
+                  <div class="a"><svg class="ico"><use href="#i-book"/></svg></div>
+                </div>
               </div>
-              <div class="ui-bottom">
-                <div class="prof"><span class="av">D</span><span class="hdl">delta.objects</span><span class="flw">Follow</span></div>
-                <div class="cap">Object No.007 · brass lamp, $68</div>
-              </div>
-              <div class="acts">
-                <div class="a"><svg class="ico"><use href="#i-heart"/></svg><b>2.4K</b></div>
-                <div class="a"><svg class="ico"><use href="#i-comment"/></svg><b>118</b></div>
-                <div class="a"><svg class="ico"><use href="#i-book"/></svg><b>891</b></div>
-              </div>
+            </div>
+            <div class="spec-note">
+              <b>Art direction</b><span>One light source, one object, no music. Type sits in the lower third so the frame survives being used as a cover.</span>
+              <b>Cover logic</b><span>The four ticks are the thumbnail: the promise of a checklist is legible at 120px, before any caption is read.</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 01 — Reels cover<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Specimen 01 — Reels cover<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C3 -->
       <div role="button" tabindex="0" class="gal-item g-s5 rv" data-work="c3" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C3</span><span class="ti">I moved 4 times in 3 years. Here's what I stopped buying.</span><span class="fm pl">TikTok</span><span class="fm">20s</span></div>
         <div class="stage">
-          <div class="phone">
-            <div class="screen">
-              <div class="room b"></div>
-              <div class="glow sm"></div>
-              <div class="case"></div>
-              <div class="tabs"><span>Following</span><span class="on">For You</span></div>
-              <div class="tt">4 moves.<br>3 years.<br><u>One rule.</u></div>
-              <div class="tt2">I stopped buying things I'd feel guilty leaving behind.</div>
-              <div class="ui-bottom">
-                <div class="prof"><span class="av">D</span><span class="hdl">@delta.objects</span></div>
-                <div class="cap">I moved 4 times in 3 years. Here's what I stopped buying.</div>
-                <div class="chips"><span>#movingtips</span><span>#apartmenthacks</span><span>#secondhandhome</span></div>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">TikTok · 20s · storyboard</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
+            <div class="board">
+              <div class="bf">
+                <div class="pane">
+                  <span class="tc">0–2s</span>
+                  <div style="position:absolute;left:14px;bottom:64px;width:62px;height:44px;border-radius:5px;background:#3a2f28;border:1px solid rgba(255,255,255,.16)"></div>
+                  <div class="ln">4 moves.<br>3 years.<br><em>One rule.</em></div>
+                </div>
+                <div class="shot"><b>Shot 01</b>Empty room, one suitcase. Handheld, no music; the three lines land one at a time.</div>
               </div>
-              <div class="acts">
-                <div class="a"><span class="av sp">D</span></div>
-                <div class="a"><svg class="ico"><use href="#i-heart"/></svg><b>18.2K</b></div>
-                <div class="a"><svg class="ico"><use href="#i-comment"/></svg><b>942</b></div>
-                <div class="a"><svg class="ico"><use href="#i-book"/></svg><b>3.1K</b></div>
+              <div class="bf">
+                <div class="pane">
+                  <span class="tc">6–10s</span>
+                  <div style="position:absolute;left:16px;bottom:70px;width:78px;height:54px;border-radius:6px;background:#4a3d33;border:1px solid rgba(255,255,255,.14)"></div>
+                  <div class="ln">I stopped buying things I'd feel <em>guilty</em> leaving.</div>
+                </div>
+                <div class="shot"><b>Shot 02</b>Hands set the box down. Cut on the word “guilty” — the only hard cut in the piece.</div>
               </div>
-              <div class="prog"><i></i></div>
+              <div class="bf">
+                <div class="pane">
+                  <span class="tc">14–20s</span>
+                  <div class="halo"></div>
+                  <div class="ln">Only things I can <em>send back.</em></div>
+                </div>
+                <div class="shot"><b>Shot 03</b>The lamp switches on. Final line is the only product mention; no logo, no link.</div>
+              </div>
+            </div>
+            <div class="spec-note">
+              <b>Art direction</b><span>First person, one location, three set-ups. Captions are hard-coded for silent viewing and each frame works as a still.</span>
+              <b>Production</b><span>One 20-minute set-up inside the weekly shoot: the same lamp and box reused from C1 and C2.</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 02 — TikTok frame<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Specimen 02 — 20s storyboard<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C2 -->
       <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c2" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C2</span><span class="ti">The moving box test</span><span class="fm pl">IG Carousel</span><span class="fm">8 frames</span></div>
         <div class="stage">
-          <div class="igcwrap">
-            <div class="igc-top">
-              <span class="av" style="width:22px;height:22px;background:#171514;color:#fff">D</span>
-              <span style="font-size:11px;font-weight:600;color:var(--ink)">delta.objects</span>
-              <span style="font-size:10px;color:var(--muted);margin-left:auto">⋯</span>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">IG Carousel · 8 frames · 4:5</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
+            <div class="sheet">
+              <div class="cf"><span class="n">01</span><div class="halo"></div><div class="h">Would it survive<br>your <em>move?</em></div><div class="s">The moving box test</div><div class="strip">COVER</div></div>
+              <div class="cf"><span class="n">02</span><div class="h">If it doesn't fit the box, it doesn't come with you.</div><div class="s">The rule, in one line</div><div class="strip">RULE</div></div>
+              <div class="cf"><span class="n">03</span><span class="tick">Q1</span><div class="h">Is it <em>quiet?</em></div><div class="s">No logos. No noise.</div><div class="strip">QUESTION 1/4</div></div>
+              <div class="cf"><span class="n">04</span><span class="tick">Q2</span><div class="h">Is it smartly priced?</div><div class="s">Enough to risk, good enough to keep.</div><div class="strip">QUESTION 2/4</div></div>
+              <div class="cf"><span class="n">05</span><span class="tick">Q3</span><div class="h">Will it survive another owner?</div><div class="s">Solid, repairable, re-homeable.</div><div class="strip">QUESTION 3/4</div></div>
+              <div class="cf"><span class="n">06</span><span class="tick">Q4</span><div class="h">Will I actually use it?</div><div class="s">Every week, or it's clutter with good taste.</div><div class="strip">QUESTION 4/4</div></div>
+              <div class="cf"><span class="n">07</span><div class="h">When you're done, send it back.</div><div class="s">Cleaned · restaged · credit</div><div class="strip">EXIT</div></div>
+              <div class="cf end"><span class="n">08</span><div class="h">Save this before your move.</div><div class="s">@delta.objects</div><div class="strip">CTA · SAVE</div></div>
             </div>
-            <div class="igc-strip">
-              <div class="igc-cell"><div class="igc-f"><span class="pg">1/8</span><div class="glowx"></div><h6>Would it survive<br>your <em>move?</em></h6><p>The moving box test</p></div><div class="igc-lb">Cover · hook only</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">2/8</span><span class="dot"></span><h6>If it doesn't fit the box,<br>it doesn't come with you.</h6><p>The rule, in one line</p></div><div class="igc-lb">Rule</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">3/8</span><span class="dot"></span><div class="tickq">Q1</div><h6>Is it <em>quiet?</em></h6><p>No logos. No noise.</p></div><div class="igc-lb">Four questions 1/4</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">4/8</span><span class="dot"></span><div class="tickq">Q2</div><h6>Is it smartly priced?</h6><p>Enough to risk, good enough to keep.</p></div><div class="igc-lb">Four questions 2/4</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">5/8</span><span class="dot"></span><div class="tickq">Q3</div><h6>Will it survive<br>another owner?</h6><p>Solid, repairable, re-homeable.</p></div><div class="igc-lb">Four questions 3/4</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">6/8</span><span class="dot"></span><div class="tickq">Q4</div><h6>Will I actually<br>use it?</h6><p>Every week, or it's clutter with good taste.</p></div><div class="igc-lb">Four questions 4/4</div></div>
-              <div class="igc-cell"><div class="igc-f"><span class="pg">7/8</span><span class="dot"></span><h6>When you're done,<br>send it back.</h6><p>Cleaned · restaged · credit</p></div><div class="igc-lb">Mechanism</div></div>
-              <div class="igc-cell"><div class="igc-f last"><span class="pg">8/8</span><h6>Save this<br>before your move.</h6><p>@delta.objects</p></div><div class="igc-lb">CTA · Save</div></div>
-            </div>
-            <div class="igc-foot">
-              <span><svg class="ico dark"><use href="#i-heart"/></svg> <b>1.8K</b></span>
-              <span><svg class="ico dark"><use href="#i-comment"/></svg> <b>74</b></span>
-              <span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-              <span><svg class="ico dark"><use href="#i-book"/></svg> <b>692</b></span>
+            <div class="sheet-seq"><span>Sequence</span><i>—</i> hook <i>→</i> rule <i>→</i> four questions <i>→</i> exit <i>→</i> save</div>
+            <div class="spec-note">
+              <b>Art direction</b><span>One colour ground, one light source, type in the lower half. Frame 1 works alone as a thumbnail; frames 3–6 are a set, so the four ticks align across the swipe.</span>
+              <b>Why eight</b><span>The last frame is the only ask in the piece — which is why the save CTA is a frame, not a caption line.</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 07 — Carousel, 8 frames<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Specimen 07 — carousel contact sheet<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C4 -->
       <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c4" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C4</span><span class="ti">First Apartment Essentials Under $100</span><span class="fm pl">Pinterest</span><span class="fm">Idea + product pins</span></div>
         <div class="stage">
-          <div class="ptwrap">
-            <div class="ptsearch"><svg class="ico dark" style="width:14px;height:14px"><use href="#i-srch"/></svg><span>first apartment essentials under $100</span></div>
-            <div class="ptgrid">
-              <div class="ptile other"><div class="ph" style="height:150px"></div><div class="plabel">apartment must haves</div></div>
-              <div class="ptile mine"><div class="ph mine"><span class="mini lamp"></span><span class="mini cup"></span><span class="mini vase"></span></div><span class="badge">DELTA</span><div class="ptitle">First Apartment Essentials Under $100</div></div>
-              <div class="ptile other"><div class="ph" style="height:180px"></div><div class="plabel">small space ideas</div></div>
-              <div class="ptile other"><div class="ph" style="height:190px"></div><div class="plabel">studio apartment decor</div></div>
-              <div class="ptile other"><div class="ph" style="height:140px"></div><div class="plabel">secondhand home finds</div></div>
-              <div class="ptile other"><div class="ph" style="height:170px"></div><div class="plabel">budget apartment makeover</div></div>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">Pinterest · 1 board · 3 pins</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
+            <div class="boardhead"><b>First apartment</b><span>board · searched as “first apartment essentials under $100”</span></div>
+            <div class="pinladder">
+              <div class="pin p1">
+                <div class="img">
+                  <div class="halo"></div>
+                  <span class="dim">1000×1500</span>
+                  <div class="ttl">First Apartment<br>Essentials Under $100</div>
+                </div>
+                <div class="pm"><b>Cover pin</b> · eight objects, one frame</div>
+              </div>
+              <div class="pin p2">
+                <div class="img">
+                  <div class="halo" style="width:74px;height:74px;top:34%"></div>
+                  <span class="dim">1000×1500</span>
+                  <div class="ttl">Warm light,<br>small room</div>
+                </div>
+                <div class="pm"><b>Idea pin</b> · six frames</div>
+              </div>
+              <div class="pin p3">
+                <div class="img">
+                  <div class="halo" style="width:62px;height:62px;top:44%"></div>
+                  <span class="dim">1000×1000</span>
+                  <div style="position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);width:40px">
+                    <div style="width:34px;height:14px;background:#1e1c19;clip-path:polygon(18% 0,82% 0,100% 100%,0 100%);margin:0 auto"></div>
+                    <div style="width:3px;height:30px;background:#2a2724;margin:0 auto"></div>
+                    <div style="width:22px;height:4px;background:#2a2724;border-radius:2px;margin:0 auto"></div>
+                  </div>
+                </div>
+                <div class="pm"><b>Product pin</b> · No.007</div>
+              </div>
             </div>
             <div class="ptmeta">
-              <h5>Pin title / description — as the user would search, no brand words</h5>
+              <h5>Pin copy — written as the search, not as the brand</h5>
               First Apartment Essentials Under $100 — small space, warm, mostly secondhand.<br>
               A brass lamp. A wool scarf. Two cups. One small bag. Everything here can move with you — and everything here can be sent back when it's time.
               <div class="kw"><span>first apartment</span><span>apartment essentials</span><span>small space</span><span>secondhand home</span><span>under $100</span></div>
             </div>
+            <div class="spec-note">
+              <b>Art direction</b><span>Vertical 2:3 as the default, square only for single-object product pins. Titles sit inside the image so the pin still reads when it is repinned without a description.</span>
+              <b>Trade-off</b><span>This is the one place the brand gives up tone for search rank — the typography is deliberately plain and keyword-led.</span>
+            </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 03 — Pinterest search result<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Specimen 03 — board and pin set<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C8 -->
       <div role="button" tabindex="0" class="gal-item g-s5 rv" data-work="c8" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C8</span><span class="ti">What I learned furnishing a life that keeps moving</span><span class="fm pl">Reddit</span><span class="fm">Experience post</span></div>
         <div class="stage">
-          <div class="rdwrap">
-            <div class="rdtop"><span class="rdsub">r/ApartmentHacks</span><span>·</span><span>u/emersoncaiye</span><span style="margin-left:auto">Sort: Best</span></div>
-            <div class="rdbody">
-              <div class="rdvote"><span class="up">▲</span><b>1.4K</b><span>▼</span></div>
-              <div>
-                <div class="rdmeta"><span>u/emersoncaiye</span><span>· 7 hr. ago</span></div>
-                <div class="rdtitle">I've moved 5 times in 4 years — what I learned about furnishing a life that keeps moving</div>
-                <div class="rdtext">
-                  <p>Buy at a size that can travel. A lamp, a cup, a scarf. Not a bookcase.</p>
-                  <p>Stop buying "for now" things. They're the first to get thrown out, and the least enjoyable while you have them.</p>
-                  <p>Secondhand doesn't mean settling — but it does mean you need a filter. Mine is four questions: is it quiet, is it smartly priced, will it survive another owner, will I actually use it.</p>
-                  <div class="rdwarn"><b>Disclosure</b> — I run a small curated secondhand project, which is why I think about this far too much. Not here to sell anything; happy to answer questions about the framework.</div>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">Reddit · long post · draft</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
+            <div class="rdwrap">
+              <div class="rdtop"><span class="rdsub">r/ApartmentHacks</span><span>·</span><span>proposed post</span><span style="margin-left:auto">no link</span></div>
+              <div class="rdbody">
+                <div>
+                  <div class="rdmeta"><span>u/emersoncaiye</span><span>· author account</span></div>
+                  <div class="rdtitle">I've moved 5 times in 4 years — what I learned about furnishing a life that keeps moving</div>
+                  <div class="rdtext">
+                    <p>Buy at a size that can travel. A lamp, a cup, a scarf. Not a bookcase.</p>
+                    <p>Stop buying "for now" things. They're the first to get thrown out, and the least enjoyable while you have them.</p>
+                    <p>Secondhand doesn't mean settling — but it does mean you need a filter. Mine is four questions: is it quiet, is it smartly priced, will it survive another owner, will I actually use it.</p>
+                    <div class="rdwarn"><b>Disclosure</b> — I run a small curated secondhand project, which is why I think about this far too much. Not here to sell anything; happy to answer questions about the framework.</div>
+                  </div>
+                  <div class="rdtag">NO LINK · NO CTA · ONE COMMUNITY PER REWRITE</div>
                 </div>
-                <div class="rdacts"><span>312 comments</span><span>share</span><span>save</span></div>
-                <div class="rdtag">NO LINK · NO CTA</div>
               </div>
+            </div>
+            <div class="spec-note">
+              <b>Art direction</b><span>Deliberately plain: Reddit's own type, no card, no brand marks. The awkwardness is the point — it has to look like a person typed it.</span>
+              <b>Constraint</b><span>Written per subreddit, never cross-posted verbatim. Any link would cost the account more than it earns.</span>
             </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 05 — Reddit post<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Specimen 05 — long-form post<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C9 -->
       <div role="button" tabindex="0" class="gal-item g-s5 rv" data-work="c9" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C9</span><span class="ti">Object No.007: the lamp that moved four times</span><span class="fm pl">Substack</span><span class="fm">600–900 words</span></div>
         <div class="stage">
-          <div class="sswrap">
-            <div class="ssmail"><b>the lamp that moved four times (and came back)</b><div>Delta · Where It Went · Issue 07</div></div>
-            <div class="sskicker">Where It Went · Object No.007</div>
-            <div class="sshero">Object placeholder · brass lamp</div>
-            <div class="sstitle">Object No.007: the lamp that moved four times</div>
-            <div class="sstext"><p>It started at a flea market in March, went to a first apartment, then a different city, and came back to us last week.</p><p>What we did to it: re-wired, de-rusted, re-polished. What we kept: the dent on the base.</p></div>
-            <div class="sspull">Wear you can date is provenance. Wear you can't is damage.</div>
-            <div class="ssfoot">Returned this season: N objects · donated: ¥X (animal rescue + children's literacy) · receipt links<br>Next drop: 3–5 objects — subscribers see them 24 hours early</div>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">Substack · 600–900 words</span><span class="rule"></span><span class="flag">Draft issue</span></div>
+            <div class="sswrap">
+              <div class="ssmail"><b>the lamp that moved four times (and came back)</b><div>Delta · Where It Went · Issue 01 (sample)</div></div>
+              <div class="sskicker">Where It Went · Object No.007</div>
+              <div class="sshero">Object placeholder · brass lamp</div>
+              <div class="sstitle">Object No.007: the lamp that moved four times</div>
+              <div class="sstext"><p>It started at a flea market in March, went to a first apartment, then a different city, and came back to us last week.</p><p>What we did to it: re-wired, de-rusted, re-polished. What we kept: the dent on the base.</p></div>
+              <div class="sspull">Wear you can date is provenance. Wear you can't is damage.</div>
+              <div class="ssfoot">Returned this season: N objects · donated: ¥X (animal rescue + children's literacy) · receipt links<br>Next drop: 3–5 objects — subscribers see them 24 hours early</div>
+            </div>
           </div>
         </div>
-        <div class="gal-foot">Mock 06 — Newsletter layout<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Specimen 06 — newsletter issue<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C6 -->
       <div role="button" tabindex="0" class="gal-item g-s7 rv" data-work="c6" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C6</span><span class="ti">she returned the lamp — she's moving to Lisbon</span><span class="fm pl">Threads</span><span class="fm">Story test</span></div>
         <div class="stage">
-          <div class="placeholder">
-            <div class="glyph" aria-hidden="true">No. —</div>
-            <b>Placeholder</b>
-            <p>No layout mock was produced for this piece — it is a text-first story test.
-            The full copy and its role as a low-cost production filter are in the detail view.</p>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">Threads · text-first · 2 posts</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
+            <div class="quote">
+              <div class="qmark" aria-hidden="true">&ldquo;</div>
+              <p>someone returned a lamp because she’s moving to Lisbon.<br>
+              she wrote: <i>“it did its job for two winters. send it somewhere warm.”</i></p>
+              <div class="sig">Sample note · draft copy · no link, no hashtag</div>
+            </div>
+            <div class="spec-note">
+              <b>Art direction</b><span>No template and no frame — the note is set as type only, because the note is the asset. Once a real note exists, the photograph replaces this card one-to-one.</span>
+              <b>Role in the plan</b><span>The cheapest test in the system: find out which story shape earns replies before any of them is given a shoot.</span>
+            </div>
           </div>
         </div>
-        <div class="gal-foot">No mockup — text-first piece<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Specimen 08 — type specimen<span class="open">Open piece →</span></div>
       </div>
 
       <!-- C7 -->
       <div role="button" tabindex="0" class="gal-item g-s12 rv" data-work="c7" aria-haspopup="dialog">
         <div class="gal-hd"><span class="no">C7</span><span class="ti">Restaging a returned lamp (no music)</span><span class="fm pl">YouTube Shorts</span><span class="fm">ASMR · silent</span></div>
         <div class="stage">
-          <div class="placeholder">
-            <div class="glyph" aria-hidden="true">returned → cleaned → restaged → next home</div>
-            <b>Placeholder</b>
-            <p>No layout mock was produced for this piece — the format is a four-word caption sequence over ASMR footage.
-            The storyboard and rationale are in the detail view.</p>
+          <div class="spec">
+            <div class="spec-bar"><span class="fmt">YouTube Shorts · 55s · 4 beats</span><span class="rule"></span><span class="flag">Conceptual mock</span></div>
+            <div class="beats">
+              <div class="beat"><span class="t">0:00</span><span class="w">Returned</span><div class="why">Parcel still taped. Room sound only.</div></div>
+              <div class="beat"><span class="t">0:12</span><span class="w">Cleaned</span><div class="why">Wipe-down, brass polish. No music.</div></div>
+              <div class="beat"><span class="t">0:28</span><span class="w">Restaged</span><div class="why">New shelf, warmer bulb, one wide frame.</div></div>
+              <div class="beat"><span class="t">0:44</span><span class="w">Next home</span><div class="why">Cut to black before any caption names it.</div></div>
+            </div>
+            <div class="spec-note">
+              <b>Art direction</b><span>No voice, no score, no language. Four words carry the whole piece, so it can be re-cut for any platform without re-recording.</span>
+              <b>Reality check</b><span>Needs a returned object to film. Until the first real return exists, this stays a storyboard — it is not shot-able on a pre-launch budget.</span>
+            </div>
           </div>
         </div>
-        <div class="gal-foot">No mockup — motion piece<span class="open">Open piece →</span></div>
+        <div class="gal-foot">Specimen 09 — four-beat motion strip<span class="open">Open piece →</span></div>
       </div>
 
     </div>
@@ -1151,69 +1270,76 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
   <div class="wrap">
     <div class="sec-head rv">
       <div class="kicker"><span class="no">05</span> The Rollout</div>
-      <h2>Thirty days, sequenced by production cost<br><em>— not by platform prestige.</em></h2>
+      <h2>Thirty days, sized for<br><em>one person working part-time.</em></h2>
       <p class="lede">
-        Cheapest formats go first, and their results decide what gets the expensive shoot.
-        Every week has one theme and one job. About 68 posts come from 12 source assets — every shoot is designed
-        around how many posts it can be cut into.
+        One shoot a week, about six working hours, no media budget. Twelve source assets become roughly
+        thirty-four posts, and only three platforms are in scope. Each week has a single job: claim the definition,
+        publish the standard, show the exit, then start proving the circulation.
       </p>
     </div>
 
+    <div class="facts rv" aria-label="Production constraints">
+      <div><b>1</b><span>person, part-time</span></div>
+      <div><b>1</b><span>shoot per week</span></div>
+      <div><b>~6h</b><span>total load / week</span></div>
+      <div><b>3</b><span>platforms in scope</span></div>
+      <div><b>12</b><span>source assets</span></div>
+      <div><b>~34</b><span>posts in 30 days</span></div>
+    </div>
+
     <div class="week-tabs rv" role="tablist" aria-label="Campaign weeks">
-      <button class="wtab on" data-week="w1" role="tab" aria-selected="true" aria-controls="w1">Week 1 · Day 1–7<span class="st">Awareness — Definition</span></button>
-      <button class="wtab" data-week="w2" role="tab" aria-selected="false" aria-controls="w2">Week 2 · Day 8–14<span class="st">Engagement — The Standard</span></button>
-      <button class="wtab" data-week="w3" role="tab" aria-selected="false" aria-controls="w3">Week 3 · Day 15–21<span class="st">Consideration — The Exit</span></button>
-      <button class="wtab" data-week="w4" role="tab" aria-selected="false" aria-controls="w4">Week 4 · Day 22–30<span class="st">Testing &amp; Optimisation — Evidence</span></button>
+      <button class="wtab on" data-week="w1" role="tab" aria-selected="true" aria-controls="w1">Week 1 · Day 1–7<span class="st">Definition — 5 posts, 1 shoot</span></button>
+      <button class="wtab" data-week="w2" role="tab" aria-selected="false" aria-controls="w2">Week 2 · Day 8–14<span class="st">The Standard — 6 posts, 1 shoot</span></button>
+      <button class="wtab" data-week="w3" role="tab" aria-selected="false" aria-controls="w3">Week 3 · Day 15–21<span class="st">The Exit — 6 posts, 1 shoot</span></button>
+      <button class="wtab" data-week="w4" role="tab" aria-selected="false" aria-controls="w4">Week 4 · Day 22–30<span class="st">Evidence — 5 posts, 1 shoot</span></button>
     </div>
 
     <div class="week-panel on rv" id="w1" role="tabpanel">
-      <div class="wk-hd"><span class="w">WEEK 1</span><span class="th">Claim the definition — What is Delta?</span><span class="goal">Primary KPI: profile visits · follows</span></div>
+      <div class="wk-hd"><span class="w">WEEK 1</span><span class="th">Claim the definition — what is Delta?</span><span class="goal">Load: shoot 3h · edit 1.5h · publish 1.5h</span></div>
       <div class="days">
-        <div class="day"><div class="d">D1</div><span class="pl tw">X</span><div class="t">C5 “We're not a rental company” — definition launch</div></div>
-        <div class="day"><div class="d">D2</div><span class="pl ig">IG Reels</span><div class="t">C1 Four questions, one lamp</div></div>
-        <div class="day"><div class="d">D3</div><span class="pl tt">TikTok</span><div class="t">15s “not a secondhand store”</div></div>
-        <div class="day"><div class="d">D4</div><span class="pl pt">Pinterest</span><div class="t">Set up 3 boards, first 6 pins</div></div>
-        <div class="day"><div class="d">D5</div><span class="pl th">Threads</span><div class="t">Brand voice in plain words + “how many times have you moved?”</div></div>
-        <div class="day"><div class="d">D6</div><span class="pl ig">IG Carousel</span><div class="t">“Why Delta” — the river-delta metaphor</div></div>
-        <div class="day"><div class="d">D7</div><span class="pl nl">Substack</span><div class="t">Issue 01: Objects for a moving life</div></div>
+        <div class="day"><div class="d">D1</div><span class="pl ig">IG Reels</span><div class="t">C1 Four questions, one lamp — the anchor post</div></div>
+        <div class="day"><div class="d">D2</div><span class="pl tt">TikTok</span><div class="t">Same footage, different hook: “not a secondhand store”</div></div>
+        <div class="day shoot"><div class="d">D3</div><span class="pl sh">Shoot</span><div class="t">Session 01 — lamp in two rooms, 4 stills + 2 vertical clips</div></div>
+        <div class="day"><div class="d">D4</div><span class="pl pt">Pinterest</span><div class="t">Board set-up + 4 pins cut from shoot 01</div></div>
+        <div class="day"><div class="d">D5</div><span class="pl ig">IG Carousel</span><div class="t">“Why Delta” — 5 frames, stills only</div></div>
+        <div class="day"><div class="d">D6</div><span class="pl st">Stories</span><div class="t">3 frames: the object, the standard, the exit</div></div>
+        <div class="day"><div class="d">D7</div><span class="pl opt">Optional</span><div class="t">Threads: one text post, no link — first reply test</div></div>
       </div>
     </div>
     <div class="week-panel" id="w2" role="tabpanel">
-      <div class="wk-hd"><span class="w">WEEK 2</span><span class="th">Set the standard — The Four Questions</span><span class="goal">Primary KPI: completion · saves</span></div>
+      <div class="wk-hd"><span class="w">WEEK 2</span><span class="th">Publish the standard — The Four Questions</span><span class="goal">Load: shoot 3h · edit 2h · publish 1h</span></div>
       <div class="days">
-        <div class="day"><div class="d">D8</div><span class="pl ig">IG Reels</span><div class="t">Second object through the four questions: a wool scarf that lasts ten years</div></div>
-        <div class="day"><div class="d">D9</div><span class="pl tt">TikTok</span><div class="t">“quiet things only” — why there are no big logos</div></div>
-        <div class="day"><div class="d">D10</div><span class="pl pt">Pinterest</span><div class="t">C4 First Apartment Essentials Under $100</div></div>
-        <div class="day"><div class="d">D11</div><span class="pl yt">Shorts</span><div class="t">C7 Restaging a returned lamp, part 1</div></div>
-        <div class="day"><div class="d">D12</div><span class="pl th">Threads</span><div class="t">C6 Test three object stories; promote the winner</div></div>
-        <div class="day"><div class="d">D13</div><span class="pl ig">IG Carousel</span><div class="t">Four-questions framework poster (pinned long-term)</div></div>
-        <div class="day"><div class="d">D14</div><span class="pl rd">Reddit</span><div class="t">C8 r/ApartmentHacks experience post (first placement)</div></div>
+        <div class="day shoot"><div class="d">D8</div><span class="pl sh">Shoot</span><div class="t">Session 02 — second object (scarf) + lamp detail, 3 clips</div></div>
+        <div class="day"><div class="d">D9</div><span class="pl ig">IG Reels</span><div class="t">A scarf through the four questions</div></div>
+        <div class="day"><div class="d">D10</div><span class="pl tt">TikTok</span><div class="t">“quiet things only” — why there is no big logo</div></div>
+        <div class="day"><div class="d">D11</div><span class="pl pt">Pinterest</span><div class="t">C4 First Apartment Essentials Under $100 — 1 idea + 3 product pins</div></div>
+        <div class="day"><div class="d">D12</div><span class="pl ig">IG Carousel</span><div class="t">C2 The moving box test — 8 frames</div></div>
+        <div class="day"><div class="d">D13</div><span class="pl st">Stories</span><div class="t">Poll: “what would you keep if you moved in a month?”</div></div>
+        <div class="day"><div class="d">D14</div><span class="pl opt">Optional</span><div class="t">X: C5 definition thread — only if there is time to answer replies</div></div>
       </div>
     </div>
     <div class="week-panel" id="w3" role="tabpanel">
-      <div class="wk-hd"><span class="w">WEEK 3</span><span class="th">Show the exit — The Graceful Exit</span><span class="goal">Primary KPI: return initiations · comment depth</span></div>
+      <div class="wk-hd"><span class="w">WEEK 3</span><span class="th">Show the exit — The Graceful Exit</span><span class="goal">Load: shoot 3h · edit 1.5h · publish 1.5h</span></div>
       <div class="days">
-        <div class="day"><div class="d">D15</div><span class="pl ig">IG Reels</span><div class="t">Return-package unboxing (authorised UGC)</div></div>
-        <div class="day"><div class="d">D16</div><span class="pl ig">IG Stories</span><div class="t">Moving-season reminder sequence</div></div>
-        <div class="day"><div class="d">D17</div><span class="pl tt">TikTok</span><div class="t">C3 Four moves — what I stopped buying</div></div>
-        <div class="day"><div class="d">D18</div><span class="pl tw">X</span><div class="t">Data card: average holding days / return rate</div></div>
-        <div class="day"><div class="d">D19</div><span class="pl ig">IG Carousel</span><div class="t">C2 The moving box test</div></div>
-        <div class="day"><div class="d">D20</div><span class="pl yt">Shorts</span><div class="t">Part 2: the one that didn't pass</div></div>
-        <div class="day"><div class="d">D21</div><span class="pl pt">Pinterest</span><div class="t">“what to do with things when you move”</div></div>
+        <div class="day shoot"><div class="d">D15</div><span class="pl sh">Shoot</span><div class="t">Session 03 — return-style still life, packing, one clip</div></div>
+        <div class="day"><div class="d">D16</div><span class="pl tt">TikTok</span><div class="t">C3 Four moves — what I stopped buying</div></div>
+        <div class="day"><div class="d">D17</div><span class="pl ig">IG Reels</span><div class="t">The packing test — cut-down of the TikTok</div></div>
+        <div class="day"><div class="d">D18</div><span class="pl pt">Pinterest</span><div class="t">“what to do with things when you move” — 4 pins</div></div>
+        <div class="day"><div class="d">D19</div><span class="pl st">Stories</span><div class="t">Moving-season countdown, 3 frames</div></div>
+        <div class="day"><div class="d">D20</div><span class="pl ig">IG Carousel</span><div class="t">The four questions, pinned as a standing post</div></div>
+        <div class="day"><div class="d">D21</div><span class="pl opt">Optional</span><div class="t">Threads: C6 story test — the note that came with the return</div></div>
       </div>
     </div>
     <div class="week-panel" id="w4" role="tabpanel">
-      <div class="wk-hd"><span class="w">WEEK 4</span><span class="th">Prove the circulation — Where It Went</span><span class="goal">Primary KPI: transparency clicks · conversion · subscriptions</span></div>
+      <div class="wk-hd"><span class="w">WEEK 4</span><span class="th">Start proving the circulation — Where It Went</span><span class="goal">Load: shoot 2h · edit 2h · publish 2h</span></div>
       <div class="days">
-        <div class="day"><div class="d">D22</div><span class="pl tw">X</span><div class="t">Quarterly data thread + donation figures</div></div>
-        <div class="day"><div class="d">D23</div><span class="pl nl">Substack</span><div class="t">C9 Four homes of the lamp + donation record</div></div>
-        <div class="day"><div class="d">D24</div><span class="pl ig">IG Reels</span><div class="t">Where the donations went — rescue visit, 30s</div></div>
-        <div class="day"><div class="d">D25</div><span class="pl tt">TikTok</span><div class="t">Montage: returned → restaged → new home</div></div>
-        <div class="day"><div class="d">D26</div><span class="pl pt">Pinterest</span><div class="t">Seasonal batch of 10 pins</div></div>
-        <div class="day"><div class="d">D27</div><span class="pl ig">IG Carousel</span><div class="t">Where this season's ten objects went</div></div>
-        <div class="day"><div class="d">D28</div><span class="pl rd">Reddit</span><div class="t">r/expats second placement + comment Q&amp;A</div></div>
-        <div class="day"><div class="d">D29</div><span class="pl ig">IG Stories</span><div class="t">Drop preview — subscribers 24h early</div></div>
-        <div class="day"><div class="d">D30</div><span class="pl nl">Internal</span><div class="t">Review + next month's planning</div></div>
+        <div class="day shoot"><div class="d">D22</div><span class="pl sh">Shoot</span><div class="t">Session 04 — first objects going out, addresses covered</div></div>
+        <div class="day"><div class="d">D23</div><span class="pl ig">IG Reels</span><div class="t">“Where this one went” — first dispatch, no donation claims yet</div></div>
+        <div class="day"><div class="d">D24</div><span class="pl tt">TikTok</span><div class="t">Packaging BTS, 15s — the least edited post of the month</div></div>
+        <div class="day"><div class="d">D25</div><span class="pl pt">Pinterest</span><div class="t">Seasonal batch: 6 pins from all four shoots</div></div>
+        <div class="day"><div class="d">D26</div><span class="pl st">Stories</span><div class="t">Q&amp;A: the return mechanic, answered in ten frames</div></div>
+        <div class="day"><div class="d">D27</div><span class="pl ig">IG Reels</span><div class="t">Best performer re-cut with the winning hook</div></div>
+        <div class="day"><div class="d">D28–30</div><span class="pl nl">Internal</span><div class="t">Review, kill list, next month — no publishing</div></div>
       </div>
     </div>
 
@@ -1223,10 +1349,11 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <table class="kpi-table">
           <thead><tr><th>Layer</th><th>What</th><th>Why this</th><th>Source of the number</th></tr></thead>
           <tbody>
-            <tr><td><b>Objective</b></td><td>Within 30 days, make the target audience understand Delta is <b>neither a thrift store nor a rental</b>, and trigger a first purchase and a first return.</td><td>No category → comprehension before conversion; the return is the one proof point only this brand can produce</td><td>—</td></tr>
-            <tr><td><b>KR1 · Comprehension</b></td><td>≥30% of comments describe the mechanism without asking “is this rental?”; ≥10 external citations of the X thread</td><td>Directly observable proof the definition was claimed, without backend access</td><td><span class="tg asm">Project assumption</span></td></tr>
-            <tr><td><b>KR2 · Reach</b></td><td>Non-follower reach ≥60% on Reels / TikTok; Pinterest outbound CTR ≥1%</td><td>Separates real reach from re-serving the same small audience</td><td><span class="tg asm">Industry benchmark</span></td></tr>
-            <tr><td><b>KR3 · Conversion</b></td><td>Bio link CTR ≥2%; +300 newsletter subscribers; <b>returns initiated / units sold ≥15%</b></td><td>First two are standard commerce numbers; the last tests whether the mechanism itself works</td><td><span class="tg asm">Benchmark</span> + <span class="tg asm">assumption</span></td></tr>
+            <tr><td><b>Objective</b></td><td>Within 30 days, make a cold audience able to describe Delta as <b>ownership with an exit</b>, and get the first objects into hands.</td><td>The category doesn't exist yet, so comprehension has to precede conversion; the return is a 90-day question, not a 30-day one</td><td>—</td></tr>
+            <tr><td><b>KR1 · Comprehension</b></td><td>≥30% of comments describe the mechanism without asking “is this rental?”</td><td>Observable without backend access; the definition either landed or it didn't</td><td><span class="tg asm">Project assumption</span></td></tr>
+            <tr><td><b>KR2 · Reach</b></td><td>TikTok 3-second retention ≥65%; Pinterest outbound CTR ≥1%</td><td>Separates real reach from re-serving the same small audience</td><td><span class="tg asm">Industry benchmark</span></td></tr>
+            <tr><td><b>KR3 · Conversion</b></td><td>Bio-link CTR ≥2%; ≥60 newsletter sign-ups; ≥5 first orders</td><td>Small absolute numbers on purpose — this is a one-person launch, not a scale test</td><td><span class="tg asm">Benchmark</span> + <span class="tg asm">assumption</span></td></tr>
+            <tr><td><b>KR4 · Day 90</b></td><td>Returns initiated / units sold ≥15%</td><td>Deliberately outside the 30-day window: the shortest holding tier is 7 days, the default is 30–90</td><td><span class="tg asm">Assumption</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1247,7 +1374,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
           <tr><td>Comprehension</td><td>Comments asking about returning / moving</td><td><span class="tg asm">Assumption</span> ≥15%</td><td>Shows the exit pillar is seen, not scrolled past</td></tr>
           <tr><td>Trust</td><td>Reddit upvote ratio</td><td><span class="tg asm">Assumption</span> ≥85%</td><td>Below this, the tone still reads as marketing</td></tr>
           <tr><td>Conversion</td><td>Pinterest outbound CTR / bio CTR</td><td><span class="tg asm">Benchmark</span> ≥1% / ≥2%</td><td>Only traffic that can be cleanly attributed</td></tr>
-          <tr><td>Retention</td><td>Return initiations / units sold</td><td><span class="tg asm">Assumption</span> ≥15%</td><td>No public baseline; the only proof the mechanism works</td></tr>
+          <tr><td>Retention</td><td>Return initiations / units sold <i>(day 90)</i></td><td><span class="tg asm">Assumption</span> ≥15%</td><td>No public baseline; the only proof the mechanism works</td></tr>
         </tbody>
       </table>
     </div>
@@ -1271,15 +1398,17 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
     </details>
 
     <details class="rv kpi">
-      <summary>Investment tiers &amp; the cut order when behind schedule</summary>
+      <summary>Weekly load, and the cut order when the week slips</summary>
       <div class="dbody">
-        <p>Eight platforms and ~68 posts is aggressive for one part-time person. It holds only because
-        <b>the weekly shoot goes to TikTok and IG exclusively</b>, and most other posts are rewrites rather than new production.</p>
+        <p>The plan is sized backwards from six hours a week, because that is the realistic ceiling for one part-time person.
+        One shoot, three assets, then everything else is a rewrite of material that already exists.</p>
         <ul>
-          <li><b>Never cut:</b> TikTok and IG — they are the only source of new assets.</li>
-          <li><b>Cut first:</b> Substack pauses → Threads / X drops to 3 per week → Shorts stops → Pinterest stops new boards → Reddit stops new placements.</li>
-          <li><b>Reuse chain:</b> Threads tests the story → TikTok tests the hook → winners become Reels → then Shorts → Pinterest rewrites for search → Reddit rewrites as experience → Substack collects the depth.</li>
-          <li><b>Calendar alignment:</b> graduation season (May–Jun), school terms (Aug–Sep), lease turnover (Dec–Jan) — Exit content temporarily raised to 50% in these windows.</li>
+          <li><b>The week:</b> 3h shoot · 1.5h edit · 1.5h copy and publishing. Four shoots a month, twelve assets, ~34 posts.</li>
+          <li><b>Never cut:</b> the shoot. Without it the following week has nothing to publish, and the plan stops being a plan.</li>
+          <li><b>Cut in this order:</b> optional Threads / X posts → Pinterest product pins (keep the idea pin) → second IG Reel → Stories.</li>
+          <li><b>Reuse chain, core three only:</b> TikTok tests the hook → the winner becomes the IG Reel → the stills become the carousel and the Pinterest pins.</li>
+          <li><b>Calendar alignment:</b> graduation (May–Jun), school terms (Aug–Sep), lease turnover (Dec–Jan) — in those windows the Exit pillar temporarily takes half the output.</li>
+          <li><b>Stop rule:</b> if two consecutive weeks slip by more than two hours, drop to two posts a week rather than publishing late or thin.</li>
         </ul>
       </div>
     </details>
@@ -1309,9 +1438,9 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       <div class="refl rv">
         <div class="n">02</div>
         <h4>Why prioritisation beats coverage</h4>
-        <p>With limited resources, platform breadth is a trap. Assigning each platform a single job it can complete alone —
-        and being willing to drop tone on Pinterest and drop the CTA on Reddit — mattered more than being present everywhere.
-        The cut order was written before launch, because decisions made under pressure are worse decisions.</p>
+        <p>The first version of this plan named eight platforms and would have failed quietly. Naming all eight as research,
+        committing to three, and writing down the order in which the rest get dropped is what makes it executable.
+        A scope you can defend is worth more than a coverage you can only describe.</p>
       </div>
       <div class="refl rv">
         <div class="n">03</div>
@@ -1325,7 +1454,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <h4>What I would test before launch</h4>
         <p>The definition claim first: whether the comparison card alone lets a cold audience repeat back what Delta is.
         Then the return mechanism: whether “send it back” reads as a feature or as friction — before a single dollar
-        of inventory depends on it. Eight single-variable A/B tests are already specified for exactly this.</p>
+        of inventory depends on it. A test list exists for exactly this — the definition card first, the return mechanic second.</p>
       </div>
       <div class="refl wide rv">
         <div class="n">05</div>
@@ -1436,47 +1565,47 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
   /* ---------- work detail data ---------- */
   var WORK = {
     c1:{no:"C1 · Pillar 01 — The Four Questions",title:"Four questions, one lamp",
-      meta:["Instagram Reels · 30s","The Four Questions","CTA: Save","Mock 01"],
+      meta:["Instagram Reels · 30s","The Four Questions","CTA: Save","Specimen 01"],
       body:"<dl><div><dt>Hook 0–3s</dt><dd>The four questions type on screen; the first three tick, and the fourth tick is the moment the lamp lights up. \u201cEvery object here has to pass four questions.\u201d</dd></div><div><dt>Structure</dt><dd>3s — the four questions thrown out → 8s — Quiet (no logo, no shouting) → 14s — Smart ($68: not cheap, fairly priced) → 20s — Worth circulating (brass gets better, not worse) → 25s — Usable (you\u2019ll turn it on every night) → end card.</dd></div><div><dt>Visual treatment</dt><dd>Handheld micro-shake, natural light, no soundtrack; captions hardcoded (85% of viewing is muted); cover shows the four questions and one lit lamp.</dd></div><div><dt>Intended audience</dt><dd>The ICP scanning for curated, defensible taste — people who want a standard they can use, not an adjective to believe.</dd></div><div><dt>Strategic objective</dt><dd>Establish the standard publicly and make it a repeatable series format, not a one-off creative.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Full caption</span>Every object in Delta has to pass four questions.\n\n1. Is it quiet? — no logo, no shouting.\n2. Is it smart? — $68. Not cheap. Fairly priced.\n3. Is it worth circulating? — brass. It gets better, not worse.\n4. Is it usable? — you\u2019ll turn it on every night.\n\nThis one passed. Most don\u2019t.\n\nObject No.007. Save this if you have a corner that needs it.</div>",
-      note:"<b>Judgment.</b> Turning the internal selection standard into a public column is something competitors structurally cannot offer: Depop leans on algorithms (no standard to show), Feather on buyers (standard not public), Worn Wear only on durability. More importantly, the four questions are a format, not a one-time idea — endlessly reusable, and naturally aligned with the no-gatekeeping position (the standard is given away; anyone can use it). The CTA is Save, not like, because saves carry the highest weight in Reels and this content\u2019s natural behaviour is to be kept."},
+      note:"<b>Judgment.</b> Turning the internal selection standard into a public column is something none of the three competitors currently offers: Depop leans on algorithms (no standard to show), Feather on buyers (standard not public), Worn Wear only on durability. More importantly, the four questions are a format, not a one-time idea — endlessly reusable, and naturally aligned with the no-gatekeeping position (the standard is given away; anyone can use it). The CTA is Save, not like, because saves carry the highest weight in Reels and this content\u2019s natural behaviour is to be kept."},
 
     c2:{no:"C2 · Pillar 03 — The Graceful Exit",title:"The moving box test",
-      meta:["IG Carousel · 8 frames","The Graceful Exit","CTA: Save before your move","Mock 07"],
+      meta:["IG Carousel · 8 frames","The Graceful Exit","CTA: Save before your move","Specimen 07"],
       body:"<dl><div><dt>Slides</dt><dd>S1 — The moving box test. S2 — You\u2019re moving in three weeks. What goes in the box? S3 — Things you\u2019d buy again tomorrow → keep. S4 — Things you\u2019re keeping out of guilt → let them go. S5 — Things too big, too fragile, too tied to one flat → let them go. S6 — Things you love but can\u2019t carry → send them back. S7 — That\u2019s the exit. You own it while you have it. When you move, it keeps moving. S8 — Credit toward your next find. We clean it, restage it, it finds a new home.</dd></div><div><dt>Intended audience</dt><dd>Anyone facing a move within weeks — a moment of genuine decision-making, not idle browsing.</dd></div><div><dt>Strategic objective</dt><dd>Attach the return mechanism to a concrete scene, so the mechanism is understood rather than explained.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Caption</span>Moving isn\u2019t a reason to own less beauty.\nIt\u2019s a reason to own it differently.\n\nSave this before your next move.</div>",
-      note:"<b>Judgment.</b> A mechanism without a scene is a rule nobody finishes reading. The brand documents name the first reason for returning as \u201cbecause you\u2019re moving\u201d, so the right vehicle is the moving box itself — not \u201cour return policy\u201d. The first six slides are genuinely useful, brand-agnostic decision advice; the mechanism only appears on slides 7–8: value first, self second. Carousels save better than single images, and a moving checklist is the most saveable content shape there is."},
+      note:"<b>Judgment.</b> A mechanism without a scene is a rule most people never finish reading. The brand documents name the first reason for returning as \u201cbecause you\u2019re moving\u201d, so the right vehicle is the moving box itself — not \u201cour return policy\u201d. The first six slides are genuinely useful, brand-agnostic decision advice; the mechanism only appears on slides 7–8: value first, self second. Carousels tend to save better than single images, and a moving checklist is the most saveable content shape there is."},
 
     c3:{no:"C3 · Pillar 02 — Moving Life",title:"I moved 4 times in 3 years. Here\u2019s what I stopped buying.",
-      meta:["TikTok · 20s","Moving Life","CTA: comment chain — no link, no brand name","Mock 02"],
+      meta:["TikTok · 20s","Moving Life","CTA: comment chain — no link, no brand name","Specimen 02"],
       body:"<dl><div><dt>Structure</dt><dd>0–2s — empty room, one suitcase, caption \u201c4 moves. 3 years. One rule.\u201d → 2–6s — \u201cI stopped buying big furniture\u201d → 6–10s — \u201cI stopped buying for-now things; they\u2019re the first to go\u201d → 10–14s — \u201cI stopped buying things I\u2019d feel guilty leaving behind\u201d → 14–20s — picks up a lamp: \u201cnow I only buy things I can send back\u201d → end card.</dd></div><div><dt>Constraints kept</dt><dd>No brand name, no price, no link in the video. The first 20 seconds contain nothing being sold; the brand appears only on the profile and in comments.</dd></div><div><dt>Intended audience</dt><dd>Deliberately filtered: the opening lines push bargain hunters and rental users away, leaving exactly the ICP.</dd></div><div><dt>Strategic objective</dt><dd>Audience filtering through resonance — the real job is not raw reach but selecting the right viewers.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">End card</span>nothing good stays behind.\n#movingtips #apartmenthacks #slowliving #secondhandhome</div>",
-      note:"<b>Judgment.</b> TikTok\u2019s moving / apartment pool is enormous and almost entirely \u201cmoving essentials\u201d recommendations. This runs the other way — what I stopped buying — which is contrarian, familiar, and sells nothing. Its real job isn\u2019t reach, it\u2019s <b>audience filtering</b>: the first three lines push bargain hunters and renters away and leave exactly the \u201ccan move, won\u2019t settle\u201d audience. The closing line is the brand proposition in spoken form and can become a long-running series title."},
+      note:"<b>Judgment.</b> TikTok\u2019s moving / apartment pool is large and almost entirely \u201cmoving essentials\u201d recommendations. This runs the other way — what I stopped buying — which is contrarian, familiar, and sells nothing. Its real job isn\u2019t reach, it\u2019s <b>audience filtering</b>: the first three lines push bargain hunters and renters away and leave exactly the \u201ccan move, won\u2019t settle\u201d audience. The closing line is the brand proposition in spoken form and can become a long-running series title."},
 
     c4:{no:"C4 · Pillar 02 — Moving Life",title:"First Apartment Essentials Under $100",
-      meta:["Pinterest · 1 Idea Pin + 6 product pins","Moving Life","CTA: outbound click","Mock 03"],
+      meta:["Pinterest · 1 Idea Pin + 6 product pins","Moving Life","CTA: outbound click","Specimen 03"],
       body:"<dl><div><dt>Format</dt><dd>One Idea Pin (8 objects in sequence) + 6 product pins, distributed across three boards: First Apartment · Small Space Warmth · Secondhand Home.</dd></div><div><dt>Title logic</dt><dd>No brand words, no poetry — only what users actually search. This is the one place in the whole campaign where brand tone is deliberately dropped.</dd></div><div><dt>Intended audience</dt><dd>High-intent searchers planning a first apartment or a small-space refresh — demand that already exists.</dd></div><div><dt>Strategic objective</dt><dd>Long-tail search traffic that keeps compounding after the campaign month ends.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Pin copy</span>First Apartment Essentials Under $100 — small space, warm, mostly secondhand.\n\nA brass lamp. A wool scarf. Two cups. One small bag.\nEverything here can move with you, and everything here can be sent back when it\u2019s time.\n\n#firstapartment #apartmentessentials #smallspace #secondhandhome</div>",
-      note:"<b>Judgment.</b> \u201cFirst apartment\u201d is a top Pinterest search term, and this kind of Pin lives for months — the same image would be buried by the algorithm on IG within days. Feather has already validated this traffic pool with its scene content; Delta\u2019s smart per-item pricing converts it more naturally than a subscription. The metric that matters here is outbound CTR, not likes."},
+      note:"<b>Judgment.</b> \u201cFirst apartment\u201d is a top Pinterest search term, and this kind of Pin lives for months — the same image would be buried by the algorithm on IG within days. Feather\u2019s scene content suggests this traffic pool is real; Delta\u2019s smart per-item pricing converts it more naturally than a subscription. The metric that matters here is outbound CTR, not likes."},
 
     c5:{no:"C5 · Definition — Day 1 launch post",title:"We\u2019re not a rental company.",
-      meta:["X Thread · 5 posts","Category definition","CTA: citation &amp; repost","Mock 04"],
+      meta:["X Thread · 5 posts","Category definition","CTA: citation &amp; repost","Specimen 04"],
       body:"<dl><div><dt>Role</dt><dd>The Day 1 post of the 30-day plan — and the only one that sells nothing. Its entire job is claiming the category before anyone else files Delta into a drawer.</dd></div><div><dt>Key asset</dt><dd>The middle comparison card (Rental vs Delta) — the one screenshot that survives being reposted without context, with the Delta column visually highlighted.</dd></div><div><dt>Intended audience</dt><dd>Sustainability / design / founder circles on X — the people who quote, dispute, and amplify definitions.</dd></div><div><dt>Strategic objective</dt><dd>Category definition. Once Delta is filed as \u201cthrift\u201d or \u201crental\u201d, every later post pays for someone else\u2019s explanation.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Thread</span>1/5  People keep asking if Delta is a rental company. It isn\u2019t.\n     Here\u2019s the difference — and why it matters.\n\n2/5  Rental: you never own it. You pay monthly. You give it back because a contract says so.\n\n3/5  Delta: you buy it. You own it. You send it back when you\u2019re done — not when a term ends.\n     [comparison card: monthly fee / ownership / reason for return / where the money goes]\n\n4/5  You get credit toward your next find. The object is cleaned, restaged, and finds a new home.\n     Part of that resale goes to animal rescue and children\u2019s literacy — records published quarterly.\n\n5/5  Ownership, with an exit. Beautiful things should circulate. That\u2019s all.</div>",
       note:"<b>Judgment.</b> The most expensive cost for a category-creating brand is being misread. X is the best venue for definition work: its currency is \u201copinion + clarity\u201d, and threads of this kind get cited beyond the platform. Donation figures sit in post 4/5 deliberately — this audience is allergic to adjectives and responds to amounts, recipients and receipts."},
 
     c6:{no:"C6 · Pillar 03 — The Graceful Exit",title:"she returned the lamp — she\u2019s moving to Lisbon",
-      meta:["Threads · short text + photo","The Graceful Exit","CTA: reply with your story","Placeholder — no mockup"],
+      meta:["Threads · short text + photo","The Graceful Exit","CTA: reply with your story","Type specimen"],
       body:"<dl><div><dt>Format</dt><dd>A human voice at a desk, not a brand voice. No product tags, no links, no hashtags — Threads deprioritises links, and this post\u2019s job is not conversion.</dd></div><div><dt>Intended audience</dt><dd>The existing community; used as a low-cost probe for which story formats resonate.</dd></div><div><dt>Strategic objective</dt><dd>Asset testing: whichever story earns the most natural interaction in 24 hours is promoted to next week\u2019s Reels; below-threshold stories are dropped without wasting shoot budget.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Copy</span>someone returned a lamp last week because she\u2019s moving to Lisbon.\nshe wrote: \u201cit did its job for two winters. send it somewhere warm.\u201d\n\nwe\u2019ve had the note on the desk since. [photo]\n\nfollow-up (2h later):\nthe exit thing is weird at first — you buy something knowing you might send it back.\nbut people keep telling us it changes how they pack.</div>",
-      note:"<b>Judgment.</b> This is a <b>material test</b>, not a marketing post. Threads\u2019 reply-to-reach ratio is far higher than X\u2019s, which makes it the right place to try stories cheaply: <b>use the low-production platform to filter what earns high-production treatment</b> — the most important cost-control mechanism in the whole schedule. The note also directly serves the brand line: letting go is not failure."},
+      note:"<b>Judgment.</b> This is a <b>material test</b>, not a marketing post. Threads\u2019 reply-to-reach ratio tends to be far higher than X\u2019s, which makes it the right place to try stories cheaply: <b>use the low-production platform to filter what earns high-production treatment</b> — the most important cost-control mechanism in the whole schedule. The note also directly serves the brand line: letting go is not failure."},
 
     c7:{no:"C7 · Pillar 03 — The Graceful Exit",title:"Restaging a returned lamp (no music)",
-      meta:["YouTube Shorts · silent ASMR","The Graceful Exit","CTA: Subscribe","Placeholder — no mockup"],
+      meta:["YouTube Shorts · silent ASMR","The Graceful Exit","CTA: Subscribe","Storyboard only"],
       body:"<dl><div><dt>Structure</dt><dd>No dialogue, pure ASMR: unbox the return → clean → de-rust the brass → re-wire → re-light → place in a new scene. Captions are only four words: <b>returned → cleaned → restaged → next home</b>. End card: \u201cPart 2: the one that didn\u2019t pass.\u201d</dd></div><div><dt>Intended audience</dt><dd>Mechanism-curious viewers and quiet-content audiences; language-independent, so it works across regions.</dd></div><div><dt>Strategic objective</dt><dd>Make the return mechanism visible as visual evidence, and solve Shorts\u2019 weak subscriber conversion through series structure.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Copy</span>Restaging a returned brass lamp. No music — just the sound.\nPart 2: the one that didn\u2019t pass the four questions.</div>",
-      note:"<b>Judgment.</b> \u201cRestaging a returned object\u201d is a shot no competitor can produce: on Depop you never see it (sellers ship directly), Feather doesn\u2019t show it (return ends the contract), Worn Wear only films repairs. This footage is <b>the mechanism made visible</b> — more persuasive than any explanation. It is also zero-language content that can be re-cut across Shorts / Reels / TikTok without re-recording, and the two-part structure gives viewers a reason to subscribe."},
+      note:"<b>Judgment.</b> \u201cRestaging a returned object\u201d is a shot none of these three currently produces: on Depop you never see it (sellers ship directly), Feather doesn\u2019t show it (return ends the contract), Worn Wear only films repairs. This footage is <b>the mechanism made visible</b> — more persuasive than any explanation. It is also zero-language content that can be re-cut across Shorts / Reels / TikTok without re-recording, and the two-part structure gives viewers a reason to subscribe."},
 
     c8:{no:"C8 · Pillar 02 — Moving Life",title:"What I learned furnishing a life that keeps moving",
-      meta:["Reddit · long experience post","Moving Life","CTA: none — discussion only","Mock 05"],
-      body:"<dl><div><dt>Placement</dt><dd>r/ApartmentHacks · r/expats · r/Frugal — each rewritten separately for the community; never cross-posted verbatim.</dd></div><div><dt>Tone constraints</dt><dd>Reddit is the most extreme register in the set: any marketing tone gets downvoted, and undisclosed promotion risks the account and the reputation. Pure experience + explicit disclosure + answer questions in comments; no link, no CTA.</dd></div><div><dt>Intended audience</dt><dd>People actively searching for answers about furnishing a moving life — high-intent, long-tail.</dd></div><div><dt>Strategic objective</dt><dd>Search-equity building: Google indexes Reddit heavily, so this outlives every social post in the set.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Post (excerpt)</span>Title: I\u2019ve moved 5 times in 4 years — what I learned about furnishing a life that keeps moving\n\n- Buy at a size that can travel. A lamp, a cup, a scarf. Not a bookcase.\n- Stop buying \"for now\" things. They\u2019re the first to get thrown out, and the least enjoyable while you have them.\n- Secondhand doesn\u2019t mean settling, but it does mean you need a filter. I use four: is it quiet, is it smartly priced, will it survive another owner, will I actually use it.\n- The hardest part isn\u2019t buying. It\u2019s leaving. I\u2019ve started only buying things I can send back.\n\nDisclosure: I run a small curated secondhand project, which is why I think about this far too much.\nNot here to sell anything; happy to answer questions about the framework.</div>",
-      note:"<b>Judgment.</b> Putting Reddit in the matrix is the strongest proof of platform fit in this proposal: it requires giving up the brand voice, the CTA, and disclosing interest — the same kind of judgment as Pinterest dropping tone, in the opposite direction (one for search, one for community rules). The reward is Google\u2019s crawl weight on high-intent long-tail queries around moving + secondhand + apartment. The four questions appear as \u201cthe filter I use\u201d — arguable rather than promotional, which is exactly why it survives."},
+      meta:["Reddit · long experience post","Moving Life","CTA: none — discussion only","Specimen 05"],
+      body:"<dl><div><dt>Placement</dt><dd>r/ApartmentHacks · r/expats · r/Frugal — each rewritten separately for the community; never cross-posted verbatim.</dd></div><div><dt>Tone constraints</dt><dd>Reddit is the most extreme register in the set: any marketing tone gets downvoted, and undisclosed promotion risks the account and the reputation. Pure experience + explicit disclosure + answer questions in comments; no link, no CTA.</dd></div><div><dt>Intended audience</dt><dd>People actively searching for answers about furnishing a moving life — high-intent, long-tail.</dd></div><div><dt>Strategic objective</dt><dd>Search-equity building: Reddit ranks well for many high-intent queries, so this tends to outlive the social posts in the set.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Post (excerpt)</span>Title: I\u2019ve moved 5 times in 4 years — what I learned about furnishing a life that keeps moving\n\n- Buy at a size that can travel. A lamp, a cup, a scarf. Not a bookcase.\n- Stop buying \"for now\" things. They\u2019re the first to get thrown out, and the least enjoyable while you have them.\n- Secondhand doesn\u2019t mean settling, but it does mean you need a filter. I use four: is it quiet, is it smartly priced, will it survive another owner, will I actually use it.\n- The hardest part isn\u2019t buying. It\u2019s leaving. I\u2019ve started only buying things I can send back.\n\nDisclosure: I run a small curated secondhand project, which is why I think about this far too much.\nNot here to sell anything; happy to answer questions about the framework.</div>",
+      note:"<b>Judgment.</b> Putting Reddit in the matrix is the clearest test of platform fit in this proposal: it requires giving up the brand voice, the CTA, and disclosing interest — the same kind of judgment as Pinterest dropping tone, in the opposite direction (one for search, one for community rules). The reward is Google\u2019s crawl weight on high-intent long-tail queries around moving + secondhand + apartment. The four questions appear as \u201cthe filter I use\u201d — arguable rather than promotional, which is exactly why it survives."},
 
     c9:{no:"C9 · Pillar 04 — Where It Went",title:"Object No.007: the lamp that moved four times",
-      meta:["Substack · 600–900 words","Where It Went","CTA: subscribe for 24h early access","Mock 06"],
+      meta:["Substack · 600–900 words","Where It Went","CTA: subscribe for 24h early access","Specimen 06"],
       body:"<dl><div><dt>Structure</dt><dd>Open — the lamp\u2019s four homes: flea market → first apartment → another city → back with us. Middle — what we did: re-wired, de-rusted, re-polished; which marks we kept. Data — returned this season: N objects / donated: ¥X / animal rescue + children\u2019s literacy / receipt links. Close — next drop of 3–5 objects, subscribers see them 24 hours early.</dd></div><div><dt>Intended audience</dt><dd>The minority who read long-form: the highest-intent repeat buyers, and the media / partners who judge a brand by its paper trail.</dd></div><div><dt>Strategic objective</dt><dd>Repeat purchase + the compliance record for the quarterly donation promise.</dd></div></dl><div class=\"copy\"><span class=\"cap-lb\">Subject line</span>the lamp that moved four times (and came back)</div>",
       note:"<b>Judgment.</b> Long content isn\u2019t for everyone — it\u2019s for the people willing to read, who are the repeat-purchase core and the sample media and partners will inspect. The newsletter carries two jobs at once: it is the <b>verifiable vehicle for the charity promise</b> (social posts can\u2019t hold receipts; the quarterly publication is a public commitment in the brand docs), and \u201c24 hours early\u201d is the only subscription incentive needed — in a one-of-one business, seeing it first beats any discount."}
   };
