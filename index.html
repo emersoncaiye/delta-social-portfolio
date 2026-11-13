@@ -538,6 +538,47 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
 .modal .mfig{margin:0 0 24px;border:1px solid var(--line);background:#efece3;max-width:322px}
 .modal .mfig img{display:block;width:100%;height:auto}
 
+/* ===== recruiter-first refinements ===== */
+.hero-pos{margin-top:24px;max-width:620px;font-size:15.5px;line-height:1.8;color:var(--ink2)}
+.hero-pos b{color:var(--ink)}
+.deliv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);max-width:560px;margin-top:26px}
+.deliv div{background:var(--panel);padding:13px 16px 12px}
+.deliv b{display:block;font-family:Georgia,serif;font-size:26px;font-weight:600;line-height:1.05;color:var(--ink)}
+.deliv span{display:block;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:5px;line-height:1.5}
+.hero-tiles{position:relative;height:100%;display:flex;flex-direction:column;padding-top:44px}
+.hero-tiles .hero-meta{position:absolute;top:22px;left:26px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.htile{flex:1;display:flex;align-items:center;gap:16px;padding:14px 26px;border-top:1px solid var(--line2);text-decoration:none;color:inherit;min-height:112px;transition:background .25s}
+.htile:first-of-type{border-top:none}
+.htile:hover{background:rgba(93,113,96,.06)}
+.htile .hv{flex:none;width:88px;align-self:stretch;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);background:#e8e1d2}
+.htile .hv img{width:100%;height:100%;object-fit:cover;display:block}
+.htile .hv .cf{width:100%}
+.htile .hti{min-width:0}
+.htile .tm{display:inline-block;font-size:9px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);padding:2px 7px;color:var(--ink2);background:var(--paper);margin-bottom:7px;white-space:nowrap}
+.htile .tm.pl{background:var(--dark);color:var(--cream);border-color:var(--dark)}
+.htile .tt2{display:block;font-family:Georgia,serif;font-size:15.5px;line-height:1.3;color:var(--ink)}
+.htile .td{display:block;font-size:11.5px;color:var(--ink2);line-height:1.55;margin-top:5px}
+.htile .go{display:block;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-t);margin-top:8px}
+.sec.sel{padding:72px 0}
+.sel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+@media(max-width:920px){.sel-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+.sel-card .stage{padding:22px}
+.sel-card .plate{max-width:236px}
+@media(max-width:920px){.sel-card .plate{max-width:280px}}
+.sel-obj{padding:12px 22px;border-top:1px solid var(--line2);font-size:12.5px;color:var(--ink2);line-height:1.65}
+.sel-obj b{color:var(--ink)}
+@media(max-width:900px){
+  .hero-l{padding-top:52px;padding-bottom:44px}
+  .htile{padding:12px 20px;min-height:96px}
+}
+@media(max-width:520px){.deliv{max-width:none}.deliv b{font-size:22px}}
+@media(max-width:640px){
+  .sec{padding:64px 0}
+  .sec.sel{padding:56px 0}
+  .gal-foot{padding:15px 22px}
+  .htile .hv{width:72px}
+}
+
 </style>
 </head>
 <body id="top">
@@ -555,6 +596,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
     <a class="brand" href="#top">Delta <i>/</i> Strategy Portfolio</a>
     <div class="links" id="navlinks">
       <a href="#overview">Overview</a>
+      <a href="#selected">Selected</a>
       <a href="#challenge">Challenge</a>
       <a href="#thinking">Thinking</a>
       <a href="#creative">Creative</a>
@@ -570,36 +612,130 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
 <header class="hero" id="overview">
   <div class="hero-grid">
     <div class="wrap hero-l">
-      <div class="hero-tag rv">Case 01 · Independent project <span>·</span> Pre-launch, no campaign data</div>
+      <div class="hero-tag rv">Case 01 · Independent &amp; conceptual project <span>·</span> Pre-launch, no campaign data</div>
       <h1 class="rv">DELTA
         <span class="t2">Good Things, Going&nbsp;Places.</span>
       </h1>
+      <p class="hero-pos rv"><b>Brand &amp; Social Media Strategy.</b> A complete launch strategy and content system I developed
+        independently for Delta, a curated circular lifestyle concept — from audience definition and platform plan
+        to finished, platform-native creative.</p>
       <div class="hero-sub rv">
         <div class="row">
           <span class="who">Emerson Cai</span>
           <span class="sep">·</span>
-          <span>An Independent Brand &amp; Social Strategy Project</span>
+          <span>Independent project — not a client commission</span>
         </div>
         <div class="row" style="margin-top:8px">
           <span class="caps">Brand Strategy / Consumer Insight / Social Content / Creative Direction</span>
         </div>
       </div>
+      <div class="deliv rv" aria-label="Key deliverables">
+        <div><b>9</b><span>English content concepts</span></div>
+        <div><b>3</b><span>Priority platforms</span></div>
+        <div><b>30</b><span>Day content plan</span></div>
+      </div>
       <div class="hero-cta rv">
-        <a class="btn" href="#work">View the work</a>
-        <a class="btn ghost" href="#challenge">Read the strategy</a>
+        <a class="btn" href="#selected">See the three strongest pieces</a>
+        <a class="btn ghost" href="#work">Browse all nine</a>
       </div>
     </div>
-    <div class="hero-r" aria-hidden="true">
-      <div class="lamp-art">
-        <div class="hero-meta">Delta · Objects in Motion</div>
-        <div class="glow"></div>
-        <div class="shade"></div><div class="stem"></div><div class="base"></div>
-        <div class="floor"></div>
-        <div class="cap"><b>Object No.007</b> — brass lamp · the example object throughout this case</div>
+    <div class="hero-r">
+      <div class="hero-tiles">
+        <div class="hero-meta">Selected work · preview</div>
+        <a class="htile" href="#selected">
+          <div class="hv"><div class="cf"><span class="n">01</span><div class="halo"></div><div class="h">Would it survive your <em>move?</em></div><div class="s">The moving box test</div><div class="strip">COVER</div></div></div>
+          <span class="hti">
+            <span class="tm pl">Instagram · Carousel</span>
+            <span class="tt2">The moving box test</span>
+            <span class="td">The return mechanism, staged as a real moving decision.</span>
+            <span class="go">Preview ↓</span>
+          </span>
+        </a>
+        <a class="htile" href="#selected">
+          <div class="hv"><img src="assets/c3-storyboard.jpg" width="940" height="1672" loading="eager" decoding="async" alt="TikTok storyboard concept visual: nine frames of a moving-day story"></div>
+          <span class="hti">
+            <span class="tm">TikTok · Storyboard</span>
+            <span class="tt2">I moved 4 times in 3 years.</span>
+            <span class="td">&ldquo;Because you&rsquo;re moving,&rdquo; turned into the campaign scene.</span>
+            <span class="go">Preview ↓</span>
+          </span>
+        </a>
+        <a class="htile" href="#selected">
+          <div class="hv"><img src="assets/c4-collected-home.jpg" width="1024" height="1536" loading="eager" decoding="async" alt="Pinterest board cover concept visual: A Collected Home"></div>
+          <span class="hti">
+            <span class="tm">Pinterest · Board cover</span>
+            <span class="tt2">First Apartment Essentials Under $100</span>
+            <span class="td">Search-first titles; long-tail traffic that compounds.</span>
+            <span class="go">Preview ↓</span>
+          </span>
+        </a>
       </div>
     </div>
   </div>
 </header>
+
+<!-- ============ 00 SELECTED WORK ============ -->
+<section class="sec sel" id="selected">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker"><span class="no">00</span> Selected Work <span class="no">· 3 of 9</span></div>
+      <h2>Start here — <em>the three strongest pieces.</em></h2>
+      <p class="lede">If you have one minute, these three show the strategy in its final form.
+        Every piece opens with the full copy and the strategic judgement behind it.</p>
+    </div>
+    <div class="sel-grid">
+
+      <div role="button" tabindex="0" class="gal-item sel-card rv" data-work="c2" aria-haspopup="dialog">
+        <div class="gal-hd"><span class="no">C2</span><span class="ti">The moving box test</span><span class="fm pl">Instagram</span><span class="fm">Carousel · 8 frames</span></div>
+        <div class="stage">
+          <div class="sheet">
+            <div class="cf"><span class="n">01</span><div class="halo"></div><div class="h">Would it survive<br>your <em>move?</em></div><div class="s">The moving box test</div><div class="strip">COVER</div></div>
+            <div class="cf"><span class="n">02</span><div class="h">If it doesn't fit the box, it doesn't come with you.</div><div class="s">The rule, in one line</div><div class="strip">RULE</div></div>
+            <div class="cf"><span class="n">03</span><span class="tick">Q1</span><div class="h">Is it <em>quiet?</em></div><div class="s">No logos. No noise.</div><div class="strip">QUESTION 1/4</div></div>
+            <div class="cf"><span class="n">04</span><span class="tick">Q2</span><div class="h">Is it smartly priced?</div><div class="s">Enough to risk, good enough to keep.</div><div class="strip">QUESTION 2/4</div></div>
+            <div class="cf"><span class="n">05</span><span class="tick">Q3</span><div class="h">Will it survive another owner?</div><div class="s">Solid, repairable, re-homeable.</div><div class="strip">QUESTION 3/4</div></div>
+            <div class="cf"><span class="n">06</span><span class="tick">Q4</span><div class="h">Will I actually use it?</div><div class="s">Every week, or it's clutter with good taste.</div><div class="strip">QUESTION 4/4</div></div>
+            <div class="cf"><span class="n">07</span><div class="h">When you're done, send it back.</div><div class="s">Cleaned · restaged · credit</div><div class="strip">EXIT</div></div>
+            <div class="cf end"><span class="n">08</span><div class="h">Save this before your move.</div><div class="s">@delta.objects</div><div class="strip">CTA · SAVE</div></div>
+          </div>
+        </div>
+        <div class="sel-obj"><b>Objective</b> — turn the return mechanism into a scene every mover recognises: the moving box test.</div>
+        <div class="gal-foot">Full copy &amp; rationale<span class="open">Open piece →</span></div>
+      </div>
+
+      <div role="button" tabindex="0" class="gal-item sel-card rv" data-work="c3" aria-haspopup="dialog">
+        <div class="gal-hd"><span class="no">C3</span><span class="ti">I moved 4 times in 3 years. Here's what I stopped buying.</span><span class="fm pl">TikTok</span><span class="fm">20s · storyboard</span></div>
+        <div class="stage">
+          <div class="plate w2">
+            <img src="assets/c3-storyboard.jpg" width="940" height="1672" loading="eager" decoding="async"
+                 alt="Nine-panel storyboard with timecodes: leaving, packing a chair, packing ceramics, the brass lamp, the wool scarf, transit, the new room, the closing line, and the DELTA end card.">
+          </div>
+          <div class="plate-cap"><span>C3 · nine frames, 0:00–0:20</span><span>940 × 1672 · 9:16</span></div>
+        </div>
+        <div class="sel-obj"><b>Objective</b> — turn &ldquo;because you&rsquo;re moving&rdquo; into the campaign&rsquo;s content scene, told first-person.</div>
+        <div class="gal-foot">Full copy &amp; rationale<span class="open">Open piece →</span></div>
+      </div>
+
+      <div role="button" tabindex="0" class="gal-item sel-card rv" data-work="c4" aria-haspopup="dialog">
+        <div class="gal-hd"><span class="no">C4</span><span class="ti">First Apartment Essentials Under $100</span><span class="fm pl">Pinterest</span><span class="fm">Board cover · 2:3</span></div>
+        <div class="stage">
+          <div class="plate w3">
+            <img src="assets/c4-collected-home.jpg" width="1024" height="1536" loading="eager" decoding="async"
+                 alt="Concept visual: a Pinterest cover pin titled A Collected Home, a grid of second-hand objects closing with the line Good Things, Going Places.">
+          </div>
+          <div class="plate-cap"><span>Cover pin · 2:3</span><span>1024 × 1536</span></div>
+        </div>
+        <div class="sel-obj"><b>Objective</b> — capture high-intent search traffic (&ldquo;first apartment&rdquo;) that outlives the feed.</div>
+        <div class="gal-foot">Full copy &amp; rationale<span class="open">Open piece →</span></div>
+      </div>
+
+    </div>
+    <p class="note rv" style="margin-top:20px">
+      <span class="tg asm">Draft status</span> Concept work — nothing published, no performance data.
+      The remaining six pieces, with platform-native treatments, are in <a href="#work" style="color:var(--sage-t)">The Work</a>.
+    </p>
+  </div>
+</section>
 
 <!-- ============ 02 THE CHALLENGE ============ -->
 <section class="sec" id="challenge">
@@ -621,28 +757,37 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
         <em>desirable</em>, <em>trustworthy</em>, and <em>relevant to mobile consumers</em>?</p>
     </div>
 
-    <div class="ch-grid rv">
-      <div class="ch-card">
-        <div class="n">Tension 01</div>
-        <p><b>The category doesn't exist yet.</b> Users already have two drawers for this — “thrift store” and “rental”.
-        If Delta gets filed into either one, every later post spends its budget explaining someone else's product.</p>
+    <p class="small rv" style="margin-top:36px;max-width:780px">Four tensions shape every decision that follows:
+      <b>no category precedent</b> · <b>a mechanism without a scene</b> · <b>taste that must be checkable</b> ·
+      <b>one person, part-time, zero budget</b>.</p>
+
+    <details class="rv">
+      <summary>Four tensions — full reasoning</summary>
+      <div class="dbody">
+        <div class="ch-grid" style="margin-top:8px">
+          <div class="ch-card">
+            <div class="n">Tension 01</div>
+            <p><b>The category doesn't exist yet.</b> Users already have two drawers for this — “thrift store” and “rental”.
+            If Delta gets filed into either one, every later post spends its budget explaining someone else's product.</p>
+          </div>
+          <div class="ch-card">
+            <div class="n">Tension 02</div>
+            <p><b>The mechanism has no scene.</b> “You can send it back” is a feature. What makes it real is the moment:
+            <i>you're moving</i>. Without that moment, the mechanism reads as small print.</p>
+          </div>
+          <div class="ch-card">
+            <div class="n">Tension 03</div>
+            <p><b>Taste can't be asserted.</b> Claiming “we have taste” convinces no one. The standard has to be made public,
+            checkable, and arguable — or it is just another adjective.</p>
+          </div>
+          <div class="ch-card">
+            <div class="n">Tension 04</div>
+            <p><b>One person, part-time, zero ad budget.</b> The strategy has to survive its constraints:
+            one shooting window per week, and content planned around reuse rather than volume.</p>
+          </div>
+        </div>
       </div>
-      <div class="ch-card">
-        <div class="n">Tension 02</div>
-        <p><b>The mechanism has no scene.</b> “You can send it back” is a feature. What makes it real is the moment:
-        <i>you're moving</i>. Without that moment, the mechanism reads as small print.</p>
-      </div>
-      <div class="ch-card">
-        <div class="n">Tension 03</div>
-        <p><b>Taste can't be asserted.</b> Claiming “we have taste” convinces no one. The standard has to be made public,
-        checkable, and arguable — or it is just another adjective.</p>
-      </div>
-      <div class="ch-card">
-        <div class="n">Tension 04</div>
-        <p><b>One person, part-time, zero ad budget.</b> The strategy has to survive its constraints:
-        one shooting window per week, and content planned around reuse rather than volume.</p>
-      </div>
-    </div>
+    </details>
 
     <details class="rv">
       <summary>Project background &amp; constraints</summary>
@@ -741,57 +886,63 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
       </div>
     </div>
 
-    <h3 class="rv" style="margin-top:26px">Three competitors, three axes</h3>
-    <div class="comp-row rv">
-      <div class="axis">
-        <span class="ax">Axis · Aesthetic</span>
-        <span class="nm">Depop</span>
-        <span class="axl">Gen-Z resale marketplace; IG &amp; TikTok at million-follower scale (public estimates)</span>
-      </div>
-      <div class="comp-b">
-        <div class="cell"><div class="lb">What it does well</div><p>Crowd-sourced trend curation; resale fluent in the exact 20–30 audience; turned search data into a quotable annual trend report.</p></div>
-        <div class="cell"><div class="lb">What it leaves empty</div><p>The taste is crowd-sourced, not authored — no public standard, and nothing after checkout.</p></div>
-      </div>
-    </div>
-    <div class="comp-row rv">
-      <div class="axis">
-        <span class="ax">Axis · Mobility</span>
-        <span class="nm">Feather</span>
-        <span class="axl">Furniture rental for movers; mid-size social presence (public estimates)</span>
-      </div>
-      <div class="comp-b">
-        <div class="cell"><div class="lb">What it does well</div><p>Evidence that people will pay not to own; moving and first-apartment scenes executed precisely; strong Pinterest / SEO ground game.</p></div>
-        <div class="cell"><div class="lb">What it leaves empty</div><p>Ownership never happens — nothing to love, nothing to pass on. The exit is a contract, not a choice.</p></div>
-      </div>
-    </div>
-    <div class="comp-row rv">
-      <div class="axis">
-        <span class="ax">Axis · Circularity</span>
-        <span class="nm">Worn Wear</span>
-        <span class="axl">Patagonia's repair / resale programme; six-figure IG (public estimates)</span>
-      </div>
-      <div class="comp-b">
-        <div class="cell"><div class="lb">What it does well</div><p>Makes repair normal and credible — sustainability with receipts; “the mechanism is the content”.</p></div>
-        <div class="cell"><div class="lb">What it leaves empty</div><p>Says “don't throw it away”, not “you may let it go”. No aesthetic curation, no emotional permission to exit.</p></div>
-      </div>
-    </div>
+    <p class="small rv" style="margin-top:48px;max-width:760px">Each competitor is strong on one axis Delta needs —
+      none combines <b>one person's standard</b> with <b>owning with an exit</b>.</p>
     <details class="rv">
-      <summary>Full competitor comparison table</summary>
-      <div class="dbody tbl-wrap" style="padding:0">
-        <table class="kpi-table">
-          <thead><tr><th>Dimension</th><th>Depop (aesthetic)</th><th>Feather (mobility)</th><th>Worn Wear (circularity)</th><th>Delta's position</th></tr></thead>
-          <tbody>
-            <tr><td>Source of taste</td><td>Crowd-sourced trends</td><td>Style categories</td><td>None</td><td><b>One person's framework · four public questions</b></td></tr>
-            <tr><td>Ownership</td><td>Buy outright</td><td>Rental (never own)</td><td>Buy outright</td><td><b>Ownership, with an exit</b></td></tr>
-            <tr><td>Reason to exit</td><td>None</td><td>Contract ends</td><td>Only when broken</td><td><b>Moving / taste changed / no longer needed</b></td></tr>
-            <tr><td>Life scene</td><td>Outfits</td><td>Moving, first apartment</td><td>Outdoor use</td><td><b>A moving life</b></td></tr>
-            <tr><td>Charity</td><td>None</td><td>None</td><td>Environmental (non-donation)</td><td><b>Animal rescue + children's literacy, published quarterly</b></td></tr>
-            <tr><td>Pricing</td><td>Low</td><td>Mid monthly fee</td><td>Mid-high</td><td><b>“Smart pricing”: per-item, fair — not cheapest</b></td></tr>
-          </tbody>
-        </table>
+      <summary>Competitor deep-dive — three platforms, three axes</summary>
+      <div class="dbody">
+        <div class="comp-row">
+          <div class="axis">
+            <span class="ax">Axis · Aesthetic</span>
+            <span class="nm">Depop</span>
+            <span class="axl">Gen-Z resale marketplace; IG &amp; TikTok at million-follower scale (public estimates)</span>
+          </div>
+          <div class="comp-b">
+            <div class="cell"><div class="lb">What it does well</div><p>Crowd-sourced trend curation; resale fluent in the exact 20–30 audience; turned search data into a quotable annual trend report.</p></div>
+            <div class="cell"><div class="lb">What it leaves empty</div><p>The taste is crowd-sourced, not authored — no public standard, and nothing after checkout.</p></div>
+          </div>
+        </div>
+        <div class="comp-row">
+          <div class="axis">
+            <span class="ax">Axis · Mobility</span>
+            <span class="nm">Feather</span>
+            <span class="axl">Furniture rental for movers; mid-size social presence (public estimates)</span>
+          </div>
+          <div class="comp-b">
+            <div class="cell"><div class="lb">What it does well</div><p>Evidence that people will pay not to own; moving and first-apartment scenes executed precisely; strong Pinterest / SEO ground game.</p></div>
+            <div class="cell"><div class="lb">What it leaves empty</div><p>Ownership never happens — nothing to love, nothing to pass on. The exit is a contract, not a choice.</p></div>
+          </div>
+        </div>
+        <div class="comp-row">
+          <div class="axis">
+            <span class="ax">Axis · Circularity</span>
+            <span class="nm">Worn Wear</span>
+            <span class="axl">Patagonia's repair / resale programme; six-figure IG (public estimates)</span>
+          </div>
+          <div class="comp-b">
+            <div class="cell"><div class="lb">What it does well</div><p>Makes repair normal and credible — sustainability with receipts; “the mechanism is the content”.</p></div>
+            <div class="cell"><div class="lb">What it leaves empty</div><p>Says “don't throw it away”, not “you may let it go”. No aesthetic curation, no emotional permission to exit.</p></div>
+          </div>
+        </div>
+        <details>
+          <summary>Full competitor comparison table</summary>
+          <div class="dbody tbl-wrap" style="padding:0">
+            <table class="kpi-table">
+              <thead><tr><th>Dimension</th><th>Depop (aesthetic)</th><th>Feather (mobility)</th><th>Worn Wear (circularity)</th><th>Delta's position</th></tr></thead>
+              <tbody>
+                <tr><td>Source of taste</td><td>Crowd-sourced trends</td><td>Style categories</td><td>None</td><td><b>One person's framework · four public questions</b></td></tr>
+                <tr><td>Ownership</td><td>Buy outright</td><td>Rental (never own)</td><td>Buy outright</td><td><b>Ownership, with an exit</b></td></tr>
+                <tr><td>Reason to exit</td><td>None</td><td>Contract ends</td><td>Only when broken</td><td><b>Moving / taste changed / no longer needed</b></td></tr>
+                <tr><td>Life scene</td><td>Outfits</td><td>Moving, first apartment</td><td>Outdoor use</td><td><b>A moving life</b></td></tr>
+                <tr><td>Charity</td><td>None</td><td>None</td><td>Environmental (non-donation)</td><td><b>Animal rescue + children's literacy, published quarterly</b></td></tr>
+                <tr><td>Pricing</td><td>Low</td><td>Mid monthly fee</td><td>Mid-high</td><td><b>“Smart pricing”: per-item, fair — not cheapest</b></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <p class="note" style="margin-top:12px">Desk research only: public sources, no interviews or primary data. Competitor follower counts and cadences are estimates used to judge scale, and the three readings above are treated as <b>hypotheses to test</b>, not findings.</p>
       </div>
     </details>
-    <div class="note rv" style="margin-top:12px">Desk research only: public sources, no interviews or primary data. Competitor follower counts and cadences are estimates used to judge scale, and the three readings below are treated as <b>hypotheses to test</b>, not findings.</div>
 
     <div class="pos-grid rv">
       <div class="pos-card dark">
@@ -1224,11 +1375,11 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
   <div class="wrap">
     <div class="sec-head rv">
       <div class="kicker"><span class="no">05</span> The Rollout</div>
-      <h2>Thirty days, sized for<br><em>one person working part-time.</em></h2>
+      <h2>30-Day Content Execution Plan<br><em>From strategy to a sustainable publishing rhythm.</em></h2>
       <p class="lede">
-        One shoot a week, about six working hours, no media budget. Twelve source assets become roughly
-        thirty-four posts, and only three platforms are in scope. Each week has a single job: claim the definition,
-        publish the standard, show the exit, then start proving the circulation.
+        Designed around a part-time, one-person operation, the plan translates 12 source assets into
+        approximately 34 content outputs across three priority platforms, supported by one weekly
+        production session and around six working hours.
       </p>
     </div>
 
@@ -1585,7 +1736,7 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
     document.body.style.overflow = '';
     if(lastFocus) lastFocus.focus();
   }
-  document.querySelectorAll('.gal-item').forEach(function(btn){
+  document.querySelectorAll('[data-work]').forEach(function(btn){
     btn.addEventListener('click', function(){ openWork(btn.dataset.work); });
     btn.addEventListener('keydown', function(e){
       if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openWork(btn.dataset.work); }

@@ -538,6 +538,47 @@ footer .disc{margin-top:22px;font-size:11.5px;color:var(--muted);line-height:1.8
 .modal .mfig{margin:0 0 24px;border:1px solid var(--line);background:#efece3;max-width:322px}
 .modal .mfig img{display:block;width:100%;height:auto}
 
+/* ===== recruiter-first refinements ===== */
+.hero-pos{margin-top:24px;max-width:620px;font-size:15.5px;line-height:1.8;color:var(--ink2)}
+.hero-pos b{color:var(--ink)}
+.deliv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);max-width:560px;margin-top:26px}
+.deliv div{background:var(--panel);padding:13px 16px 12px}
+.deliv b{display:block;font-family:Georgia,serif;font-size:26px;font-weight:600;line-height:1.05;color:var(--ink)}
+.deliv span{display:block;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:5px;line-height:1.5}
+.hero-tiles{position:relative;height:100%;display:flex;flex-direction:column;padding-top:44px}
+.hero-tiles .hero-meta{position:absolute;top:22px;left:26px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.htile{flex:1;display:flex;align-items:center;gap:16px;padding:14px 26px;border-top:1px solid var(--line2);text-decoration:none;color:inherit;min-height:112px;transition:background .25s}
+.htile:first-of-type{border-top:none}
+.htile:hover{background:rgba(93,113,96,.06)}
+.htile .hv{flex:none;width:88px;align-self:stretch;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);background:#e8e1d2}
+.htile .hv img{width:100%;height:100%;object-fit:cover;display:block}
+.htile .hv .cf{width:100%}
+.htile .hti{min-width:0}
+.htile .tm{display:inline-block;font-size:9px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:2px 7px;color:var(--ink2);background:var(--paper);margin-bottom:7px;white-space:nowrap}
+.htile .tm.pl{background:var(--dark);color:var(--cream);border-color:var(--dark)}
+.htile .tt2{display:block;font-family:Georgia,serif;font-size:15.5px;line-height:1.3;color:var(--ink)}
+.htile .td{display:block;font-size:11.5px;color:var(--ink2);line-height:1.55;margin-top:5px}
+.htile .go{display:block;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-t);margin-top:8px}
+.sec.sel{padding:72px 0}
+.sel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+@media(max-width:920px){.sel-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+.sel-card .stage{padding:22px}
+.sel-card .plate{max-width:236px}
+@media(max-width:920px){.sel-card .plate{max-width:280px}}
+.sel-obj{padding:12px 22px;border-top:1px solid var(--line2);font-size:12.5px;color:var(--ink2);line-height:1.65}
+.sel-obj b{color:var(--ink)}
+@media(max-width:900px){
+  .hero-l{padding-top:52px;padding-bottom:44px}
+  .htile{padding:12px 20px;min-height:96px}
+}
+@media(max-width:520px){.deliv{max-width:none}.deliv b{font-size:22px}}
+@media(max-width:640px){
+  .sec{padding:64px 0}
+  .sec.sel{padding:56px 0}
+  .gal-foot{padding:15px 22px}
+  .htile .hv{width:72px}
+}
+
 
 /* 中文版排版覆写：中文字距收紧 */
 .hero-tag{letter-spacing:.18em}
@@ -577,6 +618,7 @@ details summary{letter-spacing:.04em}
     <a class="brand" href="#top">Delta <i>/</i> 战略作品集</a>
     <div class="links" id="navlinks">
       <a href="#overview">概览</a>
+      <a href="#selected">精选</a>
       <a href="#challenge">挑战</a>
       <a href="#thinking">思考</a>
       <a href="#creative">创意</a>
@@ -592,36 +634,129 @@ details summary{letter-spacing:.04em}
 <header class="hero" id="overview">
   <div class="hero-grid">
     <div class="wrap hero-l">
-      <div class="hero-tag rv">案例 01 · 独立项目 <span>·</span> 未上线，无 campaign 数据</div>
+      <div class="hero-tag rv">案例 01 · 独立概念项目 <span>·</span> 未上线，无 campaign 数据</div>
       <h1 class="rv">DELTA
         <span class="t2">Good Things, Going&nbsp;Places.</span>
       </h1>
+      <p class="hero-pos rv"><b>品牌与社媒战略。</b>为 Delta——一个由个人审美策展的循环生活方式概念——
+        独立完成的完整上线策略与内容体系：从人群定义、平台规划到成品平台原生创意。</p>
       <div class="hero-sub rv">
         <div class="row">
           <span class="who">Emerson Cai</span>
           <span class="sep">·</span>
-          <span>独立品牌与社媒战略项目</span>
+          <span>独立项目——非客户委托</span>
         </div>
         <div class="row" style="margin-top:8px">
           <span class="caps">品牌战略 / 消费者洞察 / 社媒内容 / 创意方向</span>
         </div>
       </div>
+      <div class="deliv rv" aria-label="核心交付物">
+        <div><b>9</b><span>英文内容概念</span></div>
+        <div><b>3</b><span>优先平台</span></div>
+        <div><b>30</b><span>天内容排期</span></div>
+      </div>
       <div class="hero-cta rv">
-        <a class="btn" href="#work">查看作品</a>
-        <a class="btn ghost" href="#challenge">阅读策略</a>
+        <a class="btn" href="#selected">查看三件最强作品</a>
+        <a class="btn ghost" href="#work">浏览全部九件</a>
       </div>
     </div>
-    <div class="hero-r" aria-hidden="true">
-      <div class="lamp-art">
-        <div class="hero-meta">Delta · Objects in Motion</div>
-        <div class="glow"></div>
-        <div class="shade"></div><div class="stem"></div><div class="base"></div>
-        <div class="floor"></div>
-        <div class="cap"><b>Object No.007</b> — 黄铜台灯 · 本案贯穿使用的示例物件</div>
+    <div class="hero-r">
+      <div class="hero-tiles">
+        <div class="hero-meta">精选作品 · 预览</div>
+        <a class="htile" href="#selected">
+          <div class="hv"><div class="cf"><span class="n">01</span><div class="halo"></div><div class="h">Would it survive your <em>move?</em></div><div class="s">The moving box test</div><div class="strip">COVER</div></div></div>
+          <span class="hti">
+            <span class="tm pl">Instagram · 轮播</span>
+            <span class="tt2">The moving box test</span>
+            <span class="td">把寄回机制放进一个每个搬家的人都认得的场景。</span>
+            <span class="go">预览 ↓</span>
+          </span>
+        </a>
+        <a class="htile" href="#selected">
+          <div class="hv"><img src="assets/c3-storyboard.jpg" width="940" height="1672" loading="eager" decoding="async" alt="TikTok 分镜概念视觉：搬家故事的九个画面"></div>
+          <span class="hti">
+            <span class="tm">TikTok · 分镜</span>
+            <span class="tt2">I moved 4 times in 3 years.</span>
+            <span class="td">把「因为你要搬走了」变成 campaign 的内容场景。</span>
+            <span class="go">预览 ↓</span>
+          </span>
+        </a>
+        <a class="htile" href="#selected">
+          <div class="hv"><img src="assets/c4-collected-home.jpg" width="1024" height="1536" loading="eager" decoding="async" alt="Pinterest 板封面概念视觉：A Collected Home"></div>
+          <span class="hti">
+            <span class="tm">Pinterest · 板封面</span>
+            <span class="tt2">First Apartment Essentials Under $100</span>
+            <span class="td">搜索词优先的标题；能长期复利的搜索流量。</span>
+            <span class="go">预览 ↓</span>
+          </span>
+        </a>
       </div>
     </div>
   </div>
 </header>
+
+<!-- ============ 00 精选作品 ============ -->
+<section class="sec sel" id="selected">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker"><span class="no">00</span> 精选作品 <span class="no">· 9 选 3</span></div>
+      <h2>从这里开始 — <em>三件最强的作品。</em></h2>
+      <p class="lede">如果你只有一分钟，这三件足以看到策略的最终形态。
+        每一件都可以展开，查看完整文案与背后的策略判断。</p>
+    </div>
+    <div class="sel-grid">
+
+      <div role="button" tabindex="0" class="gal-item sel-card rv" data-work="c2" aria-haspopup="dialog">
+        <div class="gal-hd"><span class="no">C2</span><span class="ti">The moving box test 搬家纸箱测试</span><span class="fm pl">Instagram</span><span class="fm">轮播 · 8 帧</span></div>
+        <div class="stage">
+          <div class="sheet">
+            <div class="cf"><span class="n">01</span><div class="halo"></div><div class="h">Would it survive<br>your <em>move?</em></div><div class="s">The moving box test</div><div class="strip">COVER</div></div>
+            <div class="cf"><span class="n">02</span><div class="h">If it doesn't fit the box, it doesn't come with you.</div><div class="s">The rule, in one line</div><div class="strip">RULE</div></div>
+            <div class="cf"><span class="n">03</span><span class="tick">Q1</span><div class="h">Is it <em>quiet?</em></div><div class="s">No logos. No noise.</div><div class="strip">QUESTION 1/4</div></div>
+            <div class="cf"><span class="n">04</span><span class="tick">Q2</span><div class="h">Is it smartly priced?</div><div class="s">Enough to risk, good enough to keep.</div><div class="strip">QUESTION 2/4</div></div>
+            <div class="cf"><span class="n">05</span><span class="tick">Q3</span><div class="h">Will it survive another owner?</div><div class="s">Solid, repairable, re-homeable.</div><div class="strip">QUESTION 3/4</div></div>
+            <div class="cf"><span class="n">06</span><span class="tick">Q4</span><div class="h">Will I actually use it?</div><div class="s">Every week, or it's clutter with good taste.</div><div class="strip">QUESTION 4/4</div></div>
+            <div class="cf"><span class="n">07</span><div class="h">When you're done, send it back.</div><div class="s">Cleaned · restaged · credit</div><div class="strip">EXIT</div></div>
+            <div class="cf end"><span class="n">08</span><div class="h">Save this before your move.</div><div class="s">@delta.objects</div><div class="strip">CTA · SAVE</div></div>
+          </div>
+        </div>
+        <div class="sel-obj"><b>目标</b>——把寄回机制变成一个每个搬家的人都认得的场景：搬家纸箱测试。</div>
+        <div class="gal-foot">完整文案与判断<span class="open">展开作品 →</span></div>
+      </div>
+
+      <div role="button" tabindex="0" class="gal-item sel-card rv" data-work="c3" aria-haspopup="dialog">
+        <div class="gal-hd"><span class="no">C3</span><span class="ti">I moved 4 times in 3 years. Here's what I stopped buying.</span><span class="fm pl">TikTok</span><span class="fm">20 秒 · 分镜</span></div>
+        <div class="stage">
+          <div class="plate w2">
+            <img src="assets/c3-storyboard.jpg" width="940" height="1672" loading="eager" decoding="async"
+                 alt="九格分镜，带时间码：离开、打包椅子、打包陶瓷、黄铜台灯、羊毛围巾、路上、新房间、收尾句、DELTA 结尾卡。">
+          </div>
+          <div class="plate-cap"><span>C3 · 九格，0:00–0:20</span><span>940 × 1672 · 9:16</span></div>
+        </div>
+        <div class="sel-obj"><b>目标</b>——用第一人称，把「因为你要搬走了」变成 campaign 的内容场景。</div>
+        <div class="gal-foot">完整文案与判断<span class="open">展开作品 →</span></div>
+      </div>
+
+      <div role="button" tabindex="0" class="gal-item sel-card rv" data-work="c4" aria-haspopup="dialog">
+        <div class="gal-hd"><span class="no">C4</span><span class="ti">First Apartment Essentials Under $100</span><span class="fm pl">Pinterest</span><span class="fm">板封面 · 2:3</span></div>
+        <div class="stage">
+          <div class="plate w3">
+            <img src="assets/c4-collected-home.jpg" width="1024" height="1536" loading="eager" decoding="async"
+                 alt="概念视觉：题为 A Collected Home 的 Pinterest 封面 Pin，一组二手物品拼贴，收尾于 Good Things, Going Places。">
+          </div>
+          <div class="plate-cap"><span>封面 Pin · 2:3</span><span>1024 × 1536</span></div>
+        </div>
+        <div class="sel-obj"><b>目标</b>——接住「first apartment」这类高意图搜索流量，让它比信息流活得更久。</div>
+        <div class="gal-foot">完整文案与判断<span class="open">展开作品 →</span></div>
+      </div>
+
+    </div>
+    <p class="note rv" style="margin-top:20px">
+      <span class="tg asm">草稿状态</span> 概念作品——未发布，无实测数据。
+      其余六件及各平台原生处理，见 <a href="#work" style="color:var(--sage-t)">作品</a>。
+    </p>
+  </div>
+</section>
 <!-- ============ 02 挑战 ============ -->
 <section class="sec" id="challenge">
   <div class="wrap">
@@ -641,28 +776,37 @@ details summary{letter-spacing:.04em}
         <em>令人想要</em>、<em>值得信任</em>，并且<em>与搬家的人真实相关</em>？</p>
     </div>
 
-    <div class="ch-grid rv">
-      <div class="ch-card">
-        <div class="n">张力 01</div>
-        <p><b>品类还不存在。</b>用户手里已经有两个抽屉——「二手店」和「租赁」。
-        Delta 一旦被放进任何一个，之后每条内容都在替别人的产品做解释。</p>
+    <p class="small rv" style="margin-top:36px;max-width:780px">四个张力决定了之后的每一个决策：
+      <b>品类先例不存在</b> · <b>机制没有场景</b> · <b>品味必须可核对</b> ·
+      <b>一个人、兼职、零预算</b>。</p>
+
+    <details class="rv">
+      <summary>四个张力——完整推理</summary>
+      <div class="dbody">
+        <div class="ch-grid" style="margin-top:8px">
+          <div class="ch-card">
+            <div class="n">张力 01</div>
+            <p><b>品类还不存在。</b>用户手里已经有两个抽屉——「二手店」和「租赁」。
+            Delta 一旦被放进任何一个，之后每条内容都在替别人的产品做解释。</p>
+          </div>
+          <div class="ch-card">
+            <div class="n">张力 02</div>
+            <p><b>机制没有场景。</b>「可以寄回」是一个功能；让它变真的，是那个时刻：
+            <i>你要搬走了</i>。没有那个时刻，机制读起来就像小字条款。</p>
+          </div>
+          <div class="ch-card">
+            <div class="n">张力 03</div>
+            <p><b>品味无法空口宣称。</b>说「我们有品味」谁也不会信。
+            标准必须被公开、可核对、可争论——否则它只是又一个形容词。</p>
+          </div>
+          <div class="ch-card">
+            <div class="n">张力 04</div>
+            <p><b>一个人、兼职、零广告预算。</b>策略必须在自己的约束里活下来：
+            每周一个拍摄窗口，内容围绕复用而不是数量来规划。</p>
+          </div>
+        </div>
       </div>
-      <div class="ch-card">
-        <div class="n">张力 02</div>
-        <p><b>机制没有场景。</b>「可以寄回」是一个功能；让它变真的，是那个时刻：
-        <i>你要搬走了</i>。没有那个时刻，机制读起来就像小字条款。</p>
-      </div>
-      <div class="ch-card">
-        <div class="n">张力 03</div>
-        <p><b>品味无法空口宣称。</b>说「我们有品味」谁也不会信。
-        标准必须被公开、可核对、可争论——否则它只是又一个形容词。</p>
-      </div>
-      <div class="ch-card">
-        <div class="n">张力 04</div>
-        <p><b>一个人、兼职、零广告预算。</b>策略必须在自己的约束里活下来：
-        每周一个拍摄窗口，内容围绕复用而不是数量来规划。</p>
-      </div>
-    </div>
+    </details>
 
     <details class="rv">
       <summary>项目背景与约束</summary>
@@ -760,57 +904,63 @@ details summary{letter-spacing:.04em}
       </div>
     </div>
 
-    <h3 class="rv" style="margin-top:26px">三家竞品，三条轴</h3>
-    <div class="comp-row rv">
-      <div class="axis">
-        <span class="ax">轴 · 审美</span>
-        <span class="nm">Depop</span>
-        <span class="axl">Gen Z 二手时尚 marketplace；IG 与 TikTok 百万级（公开估算）</span>
-      </div>
-      <div class="comp-b">
-        <div class="cell"><div class="lb">做得好的</div><p>众包的趋势策展；对 20–30 人群的转售语言极其熟练；把搜索数据做成被媒体反复引用的年度趋势报告。</p></div>
-        <div class="cell"><div class="lb">留下的空白</div><p>品味是众包的，不是署名的——没有公开标准，买完关系就结束。</p></div>
-      </div>
-    </div>
-    <div class="comp-row rv">
-      <div class="axis">
-        <span class="ax">轴 · 移动</span>
-        <span class="nm">Feather</span>
-        <span class="axl">为搬家人群设计的家具租赁；社媒体量中等（公开估算）</span>
-      </div>
-      <div class="comp-b">
-        <div class="cell"><div class="lb">做得好的</div><p>提供了「有人愿意为不拥有而付费」的证据；搬家与首间公寓场景执行精准；Pinterest / SEO 铺得很稳。</p></div>
-        <div class="cell"><div class="lb">留下的空白</div><p>拥有权从未发生——没有可以爱的东西，也没有可以传下去的东西。退出是合同到期，不是选择。</p></div>
-      </div>
-    </div>
-    <div class="comp-row rv">
-      <div class="axis">
-        <span class="ax">轴 · 循环</span>
-        <span class="nm">Worn Wear</span>
-        <span class="axl">Patagonia 的维修 / 转售计划；IG 十万级（公开估算）</span>
-      </div>
-      <div class="comp-b">
-        <div class="cell"><div class="lb">做得好的</div><p>把修补变得正常、可信——带凭据的可持续；「机制即内容」。</p></div>
-        <div class="cell"><div class="lb">留下的空白</div><p>讲的是「别扔」，不是「你可以放手」。没有审美策展，也没有对放手的情绪许可。</p></div>
-      </div>
-    </div>
+    <p class="small rv" style="margin-top:48px;max-width:760px">三个竞品各占一条 Delta 需要的轴——
+      但没有人同时做到<b>一个人的标准</b>与<b>拥有且可退出</b>。</p>
     <details class="rv">
-      <summary>完整竞品对比表</summary>
-      <div class="dbody tbl-wrap" style="padding:0">
-        <table class="kpi-table">
-          <thead><tr><th>维度</th><th>Depop（审美）</th><th>Feather（移动）</th><th>Worn Wear（循环）</th><th>Delta 的位置</th></tr></thead>
-          <tbody>
-            <tr><td>品味来源</td><td>众包趋势</td><td>风格分类</td><td>无</td><td><b>一人框架 · 四道公开的题</b></td></tr>
-            <tr><td>所有权</td><td>买断</td><td>租赁（不拥有）</td><td>买断</td><td><b>拥有 + 出口</b></td></tr>
-            <tr><td>退出原因</td><td>无</td><td>合同到期</td><td>坏了才修</td><td><b>搬家 / 审美变了 / 不再需要</b></td></tr>
-            <tr><td>人生场景</td><td>穿搭</td><td>搬家、首间公寓</td><td>户外使用</td><td><b>流动的生活</b></td></tr>
-            <tr><td>公益</td><td>无</td><td>无</td><td>环保（非捐赠）</td><td><b>动物救助 + 儿童阅读，季度公示</b></td></tr>
-            <tr><td>定价</td><td>低</td><td>中等月费</td><td>中高</td><td><b>「聪明定价」：逐件设定、价实——不是最便宜</b></td></tr>
-          </tbody>
-        </table>
+      <summary>竞品深读——三家竞品，三条轴</summary>
+      <div class="dbody">
+        <div class="comp-row">
+          <div class="axis">
+            <span class="ax">轴 · 审美</span>
+            <span class="nm">Depop</span>
+            <span class="axl">Gen Z 二手时尚 marketplace；IG 与 TikTok 百万级（公开估算）</span>
+          </div>
+          <div class="comp-b">
+            <div class="cell"><div class="lb">做得好的</div><p>众包的趋势策展；对 20–30 人群的转售语言极其熟练；把搜索数据做成被媒体反复引用的年度趋势报告。</p></div>
+            <div class="cell"><div class="lb">留下的空白</div><p>品味是众包的，不是署名的——没有公开标准，买完关系就结束。</p></div>
+          </div>
+        </div>
+        <div class="comp-row">
+          <div class="axis">
+            <span class="ax">轴 · 移动</span>
+            <span class="nm">Feather</span>
+            <span class="axl">为搬家人群设计的家具租赁；社媒体量中等（公开估算）</span>
+          </div>
+          <div class="comp-b">
+            <div class="cell"><div class="lb">做得好的</div><p>提供了「有人愿意为不拥有而付费」的证据；搬家与首间公寓场景执行精准；Pinterest / SEO 铺得很稳。</p></div>
+            <div class="cell"><div class="lb">留下的空白</div><p>拥有权从未发生——没有可以爱的东西，也没有可以传下去的东西。退出是合同到期，不是选择。</p></div>
+          </div>
+        </div>
+        <div class="comp-row">
+          <div class="axis">
+            <span class="ax">轴 · 循环</span>
+            <span class="nm">Worn Wear</span>
+            <span class="axl">Patagonia 的维修 / 转售计划；IG 十万级（公开估算）</span>
+          </div>
+          <div class="comp-b">
+            <div class="cell"><div class="lb">做得好的</div><p>把修补变得正常、可信——带凭据的可持续；「机制即内容」。</p></div>
+            <div class="cell"><div class="lb">留下的空白</div><p>讲的是「别扔」，不是「你可以放手」。没有审美策展，也没有对放手的情绪许可。</p></div>
+          </div>
+        </div>
+        <details>
+          <summary>完整竞品对比表</summary>
+          <div class="dbody tbl-wrap" style="padding:0">
+            <table class="kpi-table">
+              <thead><tr><th>维度</th><th>Depop（审美）</th><th>Feather（移动）</th><th>Worn Wear（循环）</th><th>Delta 的位置</th></tr></thead>
+              <tbody>
+                <tr><td>品味来源</td><td>众包趋势</td><td>风格分类</td><td>无</td><td><b>一人框架 · 四道公开的题</b></td></tr>
+                <tr><td>所有权</td><td>买断</td><td>租赁（不拥有）</td><td>买断</td><td><b>拥有 + 出口</b></td></tr>
+                <tr><td>退出原因</td><td>无</td><td>合同到期</td><td>坏了才修</td><td><b>搬家 / 审美变了 / 不再需要</b></td></tr>
+                <tr><td>人生场景</td><td>穿搭</td><td>搬家、首间公寓</td><td>户外使用</td><td><b>流动的生活</b></td></tr>
+                <tr><td>公益</td><td>无</td><td>无</td><td>环保（非捐赠）</td><td><b>动物救助 + 儿童阅读，季度公示</b></td></tr>
+                <tr><td>定价</td><td>低</td><td>中等月费</td><td>中高</td><td><b>「聪明定价」：逐件设定、价实——不是最便宜</b></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <p class="note" style="margin-top:12px">仅为桌面研究：公开资料，无访谈、无一手数据。竞品粉丝量与更新频率为估算，用于判断量级；上面三条读法都是<b>待验证的假设</b>，不是结论。</p>
       </div>
     </details>
-    <div class="note rv" style="margin-top:12px">仅为桌面研究：公开资料，无访谈、无一手数据。竞品粉丝量与更新频率为估算，用于判断量级；下面三条读法都是<b>待验证的假设</b>，不是结论。</div>
 
     <div class="pos-grid rv">
       <div class="pos-card dark">
@@ -1237,10 +1387,9 @@ details summary{letter-spacing:.04em}
   <div class="wrap">
     <div class="sec-head rv">
       <div class="kicker"><span class="no">05</span> 排期</div>
-      <h2>三十天，按一个人的<br><em>兼职容量来排。</em></h2>
+      <h2>30 天内容执行计划<br><em>从策略到可持续的发布节奏。</em></h2>
       <p class="lede">
-        每周一次拍摄、约六小时工时、零媒体预算。十二个母素材变成约三十四条发布，只有三个平台在范围内。
-        每周只做一件事：抢下定义、公开标准、让出口被看见，然后开始证明流转。
+        以单人兼职资源为约束，每周一次拍摄、约 6 小时工时，将 12 个母素材拆分为约 34 条内容，集中运营三个核心平台。
       </p>
     </div>
 
@@ -1591,7 +1740,7 @@ details summary{letter-spacing:.04em}
     document.body.style.overflow = '';
     if(lastFocus) lastFocus.focus();
   }
-  document.querySelectorAll('.gal-item').forEach(function(btn){
+  document.querySelectorAll('[data-work]').forEach(function(btn){
     btn.addEventListener('click', function(){ openWork(btn.dataset.work); });
     btn.addEventListener('keydown', function(e){
       if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openWork(btn.dataset.work); }
